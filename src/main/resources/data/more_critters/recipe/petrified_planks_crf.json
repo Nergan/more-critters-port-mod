@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "more_critters:ghostly_planks"
+    }
+  ],
+  "result": {
+    "id": "more_critters:petrified_ghostly_planks",
+    "count": 2
+  }
+}

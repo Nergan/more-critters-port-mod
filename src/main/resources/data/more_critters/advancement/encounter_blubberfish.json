@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:raw_blubberfish"
+    },
+    "title": {
+      "translate": "advancements.encounter_blubberfish.title"
+    },
+    "description": {
+      "translate": "advancements.encounter_blubberfish.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "encounter_blubberfish_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

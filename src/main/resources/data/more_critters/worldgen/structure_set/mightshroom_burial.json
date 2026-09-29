@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "more_critters:mightshroom_burial",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 17,
+    "separation": 2,
+    "salt": 957993454
+  }
+}

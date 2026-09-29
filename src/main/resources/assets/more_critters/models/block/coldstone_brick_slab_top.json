@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "more_critters:block/coldstone_bricks",
+    "bottom": "more_critters:block/coldstone_bricks",
+    "top": "more_critters:block/coldstone_bricks",
+    "side": "more_critters:block/coldstone_bricks"
+  },
+  "render_type": "solid"
+}

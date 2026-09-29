@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "deep_lukewarm_ocean",
+    "deep_ocean"
+  ],
+  "spawners": {
+    "type": "more_critters:bomb_jelly",
+    "weight": 5,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}

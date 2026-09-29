@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/trophy",
+  "textures": {
+    "all": "more_critters:block/trophy",
+    "particle": "minecraft:block/gold_block",
+    "0": "more_critters:block/trophy"
+  },
+  "render_type": "cutout_mipped"
+}

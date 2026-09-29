@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "more_critters:blocks/cut_glowing_ooze_block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_critters:cut_glowing_ooze_block"
+        }
+      ]
+    }
+  ]
+}

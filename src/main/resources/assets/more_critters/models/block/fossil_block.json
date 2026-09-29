@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/fossil_block",
+    "up": "more_critters:block/fossil_block",
+    "north": "more_critters:block/fossil_block",
+    "east": "more_critters:block/fossil_block",
+    "south": "more_critters:block/fossil_block",
+    "west": "more_critters:block/fossil_block",
+    "particle": "more_critters:block/fossil_block"
+  },
+  "render_type": "solid"
+}

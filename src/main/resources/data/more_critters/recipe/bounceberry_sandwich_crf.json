@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bounceberry_sandwich",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bread"
+    },
+    "b": {
+      "item": "more_critters:cooked_bouncelizard_egg"
+    },
+    "c": {
+      "item": "more_critters:bounceberry_jam"
+    }
+  },
+  "result": {
+    "id": "more_critters:bounceberry_sandwich",
+    "count": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:booster_pump"
+    },
+    "title": {
+      "translate": "advancements.craft_booster_pump.title"
+    },
+    "description": {
+      "translate": "advancements.craft_booster_pump.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_booster_pump_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:booster_pump"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:catch_avoider"
+}

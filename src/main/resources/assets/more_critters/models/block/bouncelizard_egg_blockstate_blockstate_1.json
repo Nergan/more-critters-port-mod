@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/slablizard_egg1",
+  "textures": {
+    "all": "more_critters:block/slablizard_egg1",
+    "particle": "more_critters:block/slablizard_egg0",
+    "1": "more_critters:block/slablizard_egg1"
+  },
+  "render_type": "cutout_mipped"
+}

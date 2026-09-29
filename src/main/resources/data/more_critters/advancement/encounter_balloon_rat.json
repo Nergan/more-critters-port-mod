@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:toxin_bladder_stagnation"
+    },
+    "title": {
+      "translate": "advancements.encounter_balloon_rat.title"
+    },
+    "description": {
+      "translate": "advancements.encounter_balloon_rat.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "encounter_balloon_rat_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

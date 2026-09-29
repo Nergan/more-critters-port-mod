@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:glow",
+    "more_critters:ramchu_bucket_no_oil",
+    "more_critters:ramchu_bucket_no_shell",
+    "more_critters:ramchu_bucket",
+    "more_critters:ramchu_fry_bucket",
+    "more_critters:stinarp_bucket",
+    "more_critters:avoider_fry_bucket",
+    "more_critters:blubberfish_fry_bucket",
+    "more_critters:blubberfish_bucket",
+    "more_critters:black_iropod_bucket",
+    "more_critters:iropod_bucket",
+    "more_critters:avoider_bucket",
+    "more_critters:large_bomb_jelly",
+    "more_critters:medium_bomb_jelly",
+    "more_critters:small_bomb_jelly"
+  ]
+}

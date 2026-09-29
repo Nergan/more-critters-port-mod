@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/mushroom_block_inside",
+    "up": "minecraft:block/mushroom_block_inside",
+    "north": "more_critters:block/chiseled_mushroom_stem_mushroom",
+    "east": "more_critters:block/chiseled_mushroom_stem_mushroom",
+    "south": "more_critters:block/chiseled_mushroom_stem_mushroom",
+    "west": "more_critters:block/chiseled_mushroom_stem_mushroom",
+    "particle": "minecraft:block/mushroom_block_inside"
+  },
+  "render_type": "solid"
+}

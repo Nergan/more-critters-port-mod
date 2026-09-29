@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "spawners": {
+    "type": "more_critters:shriekbat",
+    "weight": 4,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

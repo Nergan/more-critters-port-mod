@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fungal_staff",
+  "category": "equipment",
+  "pattern": [
+    " ab",
+    " cd",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:vita_shroom"
+    },
+    "b": {
+      "item": "more_critters:fungal_flesh"
+    },
+    "c": {
+      "item": "more_critters:ancient_bone"
+    },
+    "d": {
+      "item": "more_critters:mori_shroom"
+    }
+  },
+  "result": {
+    "id": "more_critters:fungal_staff",
+    "count": 1
+  }
+}

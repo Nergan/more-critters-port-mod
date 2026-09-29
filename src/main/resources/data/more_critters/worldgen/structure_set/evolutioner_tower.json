@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "more_critters:evolutioner_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 25,
+    "separation": 2,
+    "salt": 1734929344
+  }
+}

@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.rot_splash",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bone",
+					"parent": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "splash",
+					"parent": "bone2",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-2, 0, -2], "size": [4, 23, 4], "uv": [0, 20]}
+					]
+				},
+				{
+					"name": "hat",
+					"parent": "splash",
+					"pivot": [0, 23, 0],
+					"cubes": [
+						{"origin": [-8, 19, -8], "size": [16, 4, 16], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

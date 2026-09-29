@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/fossil_display_7",
+  "textures": {
+    "all": "more_critters:block/fossil_display",
+    "particle": "more_critters:block/fossil_display",
+    "0": "more_critters:block/fossil_display_7"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:petrified_ghostly_slab",
+    "more_critters:ghostly_slab",
+    "more_critters:black_resin_brick_slab",
+    "more_critters:polished_coldstone_slab",
+    "more_critters:coldstone_brick_slab",
+    "more_critters:coldstone_slab"
+  ]
+}

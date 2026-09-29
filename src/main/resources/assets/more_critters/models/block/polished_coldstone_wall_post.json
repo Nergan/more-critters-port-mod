@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "more_critters:block/polished_coldstone",
+    "particle": "more_critters:block/polished_coldstone"
+  },
+  "render_type": "solid"
+}

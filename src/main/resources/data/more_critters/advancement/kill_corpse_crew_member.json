@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:tattered_cloth"
+    },
+    "title": {
+      "translate": "advancements.kill_corpse_crew_member.title"
+    },
+    "description": {
+      "translate": "advancements.kill_corpse_crew_member.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_corpse_crew_member_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:walk_on_ghostly_planks"
+}

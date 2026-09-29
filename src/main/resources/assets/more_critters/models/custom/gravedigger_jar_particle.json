@@ -1,0 +1,7 @@
+
+{
+  "parent": "more_critters:displaysettings/gravedigger_jar.display",
+  "textures": {
+    "particle": "more_critters:block/gravedigger_jar"
+  }
+}

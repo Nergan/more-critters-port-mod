@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "more_critters:blocks/stripped_ghostly_log",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_critters:stripped_ghostly_log"
+        }
+      ]
+    }
+  ]
+}

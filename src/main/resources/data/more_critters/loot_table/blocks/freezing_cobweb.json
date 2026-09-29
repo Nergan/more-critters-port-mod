@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "more_critters:blocks/freezing_cobweb",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_critters:freezing_string",
+          "functions": [
+            {
+              "count": 2,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

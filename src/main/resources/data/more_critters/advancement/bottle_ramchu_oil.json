@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:ramchu_oil_bottle"
+    },
+    "title": {
+      "translate": "advancements.bottle_ramchu_oil.title"
+    },
+    "description": {
+      "translate": "advancements.bottle_ramchu_oil.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "bottle_ramchu_oil_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:ramchu_oil_bottle"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:encounter_ramchu"
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:petrified_ghostly_stairs",
+    "more_critters:ghostly_stairs",
+    "more_critters:black_resin_brick_stairs",
+    "more_critters:polished_coldstone_stairs",
+    "more_critters:coldstone_brick_stairs",
+    "more_critters:coldstone_stairs"
+  ]
+}

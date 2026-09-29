@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:mushroom_stem"
+  },
+  "result": {
+    "id": "more_critters:chiseled_mushroom_stem_bird",
+    "count": 1
+  }
+}

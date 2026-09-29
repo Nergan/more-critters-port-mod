@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "more_critters:block/mori_shroom",
+    "particle": "more_critters:block/mori_shroom"
+  },
+  "render_type": "cutout"
+}

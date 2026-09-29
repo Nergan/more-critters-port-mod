@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:icon_12"
+    },
+    "title": {
+      "translate": "advancements.feed_shadelet.title"
+    },
+    "description": {
+      "translate": "advancements.feed_shadelet.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "feed_shadelet_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:craft_tooth_melter"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "bunbug_caviar",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:bunbug_eggs"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "id": "more_critters:bunbug_caviar",
+    "count": 1
+  }
+}

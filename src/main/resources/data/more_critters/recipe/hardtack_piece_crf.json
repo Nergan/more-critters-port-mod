@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:hardtack"
+    }
+  ],
+  "result": {
+    "id": "more_critters:hardtack_piece",
+    "count": 9
+  }
+}

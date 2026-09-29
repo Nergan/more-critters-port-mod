@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " aa",
+    "bcc",
+    " aa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:ectometal"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "more_critters:shark_tooth"
+    }
+  },
+  "result": {
+    "id": "more_critters:chattering_teeth_item",
+    "count": 2
+  }
+}

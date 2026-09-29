@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    " a ",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:kelpire_roll_piece"
+    }
+  },
+  "result": {
+    "id": "more_critters:kelpire_rolls",
+    "count": 1
+  }
+}

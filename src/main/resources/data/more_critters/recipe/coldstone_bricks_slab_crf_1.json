@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:coldstone_bricks"
+    }
+  },
+  "result": {
+    "id": "more_critters:coldstone_brick_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "more_critters:ghost_ship_mega",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 400,
+    "separation": 12,
+    "salt": 1517566391
+  }
+}

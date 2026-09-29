@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/custodian_core",
+    "up": "more_critters:block/custodian_core",
+    "north": "more_critters:block/custodian_core",
+    "east": "more_critters:block/custodian_core",
+    "south": "more_critters:block/custodian_core",
+    "west": "more_critters:block/custodian_core",
+    "particle": "more_critters:block/custodian_core"
+  },
+  "render_type": "solid"
+}

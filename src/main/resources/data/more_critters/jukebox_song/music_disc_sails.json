@@ -1,0 +1,8 @@
+{
+  "comparator_output": 0,
+  "description": {
+    "translate": "item.more_critters.music_disc_sails.desc"
+  },
+  "length_in_seconds": 150.0,
+  "sound_event": "more_critters:music_disc.sails"
+}

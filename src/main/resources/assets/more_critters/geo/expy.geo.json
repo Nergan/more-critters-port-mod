@@ -1,0 +1,73 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.expy",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 3, 0]
+				},
+				{
+					"name": "root",
+					"parent": "bone",
+					"pivot": [0, 3, -2]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 3, -2],
+					"cubes": [
+						{"origin": [-2, 3, -4], "size": [4, 2, 4], "uv": [0, 24]}
+					]
+				},
+				{
+					"name": "wings",
+					"parent": "body",
+					"pivot": [0, 5, -2.5]
+				},
+				{
+					"name": "r_wing",
+					"parent": "wings",
+					"pivot": [0, 5, -2.5],
+					"rotation": [0, 0, -45],
+					"cubes": [
+						{"origin": [0, 5, -3.5], "size": [0, 5, 4], "uv": [16, 24]}
+					]
+				},
+				{
+					"name": "l_wing",
+					"parent": "wings",
+					"pivot": [0, 5, -2.5],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{"origin": [0, 5, -3.5], "size": [0, 5, 4], "uv": [16, 24]}
+					]
+				},
+				{
+					"name": "balloon",
+					"parent": "body",
+					"pivot": [0, 3, -2],
+					"cubes": [
+						{"origin": [-4, -5, -4], "size": [8, 8, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "stuff",
+					"parent": "balloon",
+					"pivot": [0, -3, -2],
+					"cubes": [
+						{"origin": [-1.5, -11, -1.5], "size": [3, 8, 3], "uv": [32, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/barnacle_cluster",
+  "textures": {
+    "all": "more_critters:block/barnacle_cluster",
+    "particle": "more_critters:block/barnacle_cluster",
+    "0": "more_critters:block/barnacle_cluster"
+  },
+  "render_type": "cutout_mipped"
+}

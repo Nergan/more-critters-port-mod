@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:moss_clump"
+    },
+    "title": {
+      "translate": "advancements.breed_armossillo.title"
+    },
+    "description": {
+      "translate": "advancements.breed_armossillo.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "breed_armossillo_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:encounter_armossillo"
+}

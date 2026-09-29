@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 0.1,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "more_critters:black_resin_clump"
+  },
+  "result": {
+    "id": "more_critters:black_resin_brick"
+  }
+}

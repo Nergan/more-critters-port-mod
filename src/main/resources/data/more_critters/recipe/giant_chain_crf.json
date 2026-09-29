@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " a ",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:ectometal"
+    }
+  },
+  "result": {
+    "id": "more_critters:giant_chain",
+    "count": 6
+  }
+}

@@ -1,0 +1,69 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ramchu",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root_rotate",
+					"pivot": [0, 7, 0]
+				},
+				{
+					"name": "root",
+					"parent": "root_rotate",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 7, 0],
+					"cubes": [
+						{"origin": [-6, 0, -5], "size": [12, 12, 12], "uv": [0, 0]},
+						{"origin": [-6, 3, -9], "size": [12, 9, 4], "uv": [0, 43]},
+						{"origin": [-6, 4, -9], "size": [12, 6, 2], "inflate": 0.1, "uv": [36, 56]},
+						{"origin": [-6, 3, -9], "size": [12, 9, 10], "inflate": 0.2, "uv": [0, 24]}
+					]
+				},
+				{
+					"name": "dorsal_fin",
+					"parent": "body",
+					"pivot": [0, 12, 6],
+					"cubes": [
+						{"origin": [0, 11, 4], "size": [0, 4, 5], "uv": [1, 54]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 6, 7],
+					"cubes": [
+						{"origin": [0, 2.5, 7], "size": [0, 7, 6], "uv": [32, 43]}
+					]
+				},
+				{
+					"name": "r_fin",
+					"parent": "body",
+					"pivot": [-6, 0, -2],
+					"cubes": [
+						{"origin": [-6, -5, -4], "size": [0, 5, 4], "uv": [44, 24]}
+					]
+				},
+				{
+					"name": "l_fin",
+					"parent": "body",
+					"pivot": [6, 0, -2],
+					"cubes": [
+						{"origin": [6, -5, -4], "size": [0, 5, 4], "uv": [44, 24], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

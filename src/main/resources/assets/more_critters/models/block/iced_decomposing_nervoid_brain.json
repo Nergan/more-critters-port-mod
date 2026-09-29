@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/decomposing_nervoid_brain",
+  "textures": {
+    "all": "more_critters:block/decomposing_nervoid_brain",
+    "particle": "more_critters:block/decomposing_nervoid_brain",
+    "0": "more_critters:block/decomposing_nervoid_brain"
+  },
+  "render_type": "solid"
+}

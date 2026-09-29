@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "more_critters:blocks/bounceberry_bush_empty",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_critters:bounceberry_bush_empty"
+        }
+      ]
+    }
+  ]
+}

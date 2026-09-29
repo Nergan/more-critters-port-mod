@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_top",
+  "textures": {
+    "texture": "more_critters:block/ghostly_trapdoor",
+    "particle": "more_critters:block/ghostly_trapdoor"
+  },
+  "render_type": "cutout_mipped"
+}

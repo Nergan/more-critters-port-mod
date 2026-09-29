@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "end_highlands",
+    "end_midlands"
+  ],
+  "features": "more_critters:shimmer_chorus_1",
+  "step": "surface_structures"
+}

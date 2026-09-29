@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "deep_lukewarm_ocean",
+  "spawners": {
+    "type": "more_critters:blubberfish",
+    "weight": 25,
+    "minCount": 3,
+    "maxCount": 5
+  }
+}

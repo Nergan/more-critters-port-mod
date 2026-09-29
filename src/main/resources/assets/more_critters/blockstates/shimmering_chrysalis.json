@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:block/shimmering_chrysalis"
+    },
+    "facing=east": {
+      "model": "more_critters:block/shimmering_chrysalis",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:block/shimmering_chrysalis",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:block/shimmering_chrysalis",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/chiseled_black_resin_bricks",
+    "up": "more_critters:block/chiseled_black_resin_bricks",
+    "north": "more_critters:block/chiseled_black_resin_bricks",
+    "east": "more_critters:block/chiseled_black_resin_bricks",
+    "south": "more_critters:block/chiseled_black_resin_bricks",
+    "west": "more_critters:block/chiseled_black_resin_bricks",
+    "particle": "more_critters:block/chiseled_black_resin_bricks"
+  },
+  "render_type": "solid"
+}

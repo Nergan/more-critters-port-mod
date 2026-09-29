@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "dripstone_caves",
+  "spawners": {
+    "type": "more_critters:dripper",
+    "weight": 26,
+    "minCount": 2,
+    "maxCount": 6
+  }
+}

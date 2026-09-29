@@ -1,0 +1,95 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:icon_11"
+    },
+    "title": {
+      "translate": "advancements.make_all_cupcakes.title"
+    },
+    "description": {
+      "translate": "advancements.make_all_cupcakes.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "make_all_cupcakes_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:cupcake_stagnation"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "make_all_cupcakes_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:cupcake_muscle_ache"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "make_all_cupcakes_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:cupcake_brittleness"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "make_all_cupcakes_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:cupcake_hallucinazium"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "make_all_cupcakes_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:cupcake_asphyxiation"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:tame_balloon_rat"
+}

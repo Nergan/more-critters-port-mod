@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "desert",
+  "spawners": {
+    "type": "more_critters:bunbug",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

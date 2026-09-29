@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/nervoid_brain",
+  "textures": {
+    "all": "more_critters:block/nervoid_brain",
+    "particle": "more_critters:block/nervoid_brain",
+    "0": "more_critters:block/nervoid_brain"
+  },
+  "render_type": "solid"
+}

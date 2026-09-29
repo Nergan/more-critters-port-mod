@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/nauticrawl_ramen3",
+  "textures": {
+    "all": "more_critters:block/nauticrawl_ramen",
+    "particle": "more_critters:block/nauticrawl_ramen",
+    "0": "more_critters:block/nauticrawl_ramen"
+  },
+  "render_type": "cutout_mipped"
+}

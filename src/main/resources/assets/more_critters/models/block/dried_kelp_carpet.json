@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/dried_kelp_carpet",
+  "textures": {
+    "all": "more_critters:block/dried_kelp_carpet",
+    "particle": "more_critters:block/dried_kelp_carpet",
+    "0": "more_critters:block/dried_kelp_carpet"
+  },
+  "render_type": "cutout_mipped"
+}

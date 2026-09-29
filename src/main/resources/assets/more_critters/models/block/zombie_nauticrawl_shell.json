@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/zombie_nauticrawl_shell",
+  "textures": {
+    "all": "more_critters:block/zombie_nauticrawl_shell",
+    "particle": "more_critters:block/zombie_nauticrawl_shell",
+    "0": "more_critters:block/zombie_nauticrawl_shell"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,31 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "more_critters:custom/fungal_staff",
+    "textures": {
+      "0": "more_critters:block/fungal_staff"
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "more_critters:item/fungal_staff_item"
+      },
+      "gui_light": "front"
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "more_critters:item/fungal_staff_item"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "more_critters:item/fungal_staff_item"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:treasure_key"
+    },
+    "title": {
+      "translate": "advancements.kill_captain.title"
+    },
+    "description": {
+      "translate": "advancements.kill_captain.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_captain_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:kill_corpse_crew_member"
+}

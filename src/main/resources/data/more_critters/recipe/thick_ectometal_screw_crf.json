@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:ectometal_screw"
+    }
+  },
+  "result": {
+    "id": "more_critters:thick_ectometal_screw",
+    "count": 4
+  }
+}

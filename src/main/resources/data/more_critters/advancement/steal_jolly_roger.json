@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:tattered_jolly_roger"
+    },
+    "title": {
+      "translate": "advancements.steal_jolly_roger.title"
+    },
+    "description": {
+      "translate": "advancements.steal_jolly_roger.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "steal_jolly_roger_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:tattered_jolly_roger"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:walk_on_ghostly_planks"
+}

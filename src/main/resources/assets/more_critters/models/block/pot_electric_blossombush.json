@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/pot_electric_blossombush",
+  "textures": {
+    "all": "more_critters:block/pot_electric_blossombush",
+    "particle": "more_critters:block/pot_electric_blossombush",
+    "0": "more_critters:block/pot_electric_blossombush"
+  },
+  "render_type": "cutout_mipped"
+}

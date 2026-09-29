@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "ice_spikes",
+    "snowy_plains",
+    "snowy_slopes"
+  ],
+  "features": "more_critters:snowflake_nest_2",
+  "step": "surface_structures"
+}

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:bounceberry"
+    },
+    "title": {
+      "translate": "advancements.find_bounceberry.title"
+    },
+    "description": {
+      "translate": "advancements.find_bounceberry.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "find_bounceberry_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:bounceberry"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

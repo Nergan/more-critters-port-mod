@@ -1,0 +1,17 @@
+{
+  "type": "more_critters:structure_feature",
+  "config": {
+    "structure": "more_critters:fallen_eerie_birch2",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": [
+      "minecraft:air",
+      "minecraft:structure_block"
+    ],
+    "offset": [
+      0,
+      -1,
+      0
+    ]
+  }
+}

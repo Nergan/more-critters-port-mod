@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/goobulb_base",
+  "textures": {
+    "all": "more_critters:block/goobulb_base",
+    "particle": "more_critters:block/glowing_ooze_block",
+    "0": "more_critters:block/goobulb_base"
+  },
+  "render_type": "translucent"
+}

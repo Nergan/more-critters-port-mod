@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:tattered_cloth"
+    }
+  },
+  "result": {
+    "id": "more_critters:tattered_flag",
+    "count": 4
+  }
+}

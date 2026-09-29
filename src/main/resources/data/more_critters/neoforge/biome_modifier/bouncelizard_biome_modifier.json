@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "jungle",
+    "sparse_jungle"
+  ],
+  "spawners": {
+    "type": "more_critters:bouncelizard",
+    "weight": 15,
+    "minCount": 2,
+    "maxCount": 5
+  }
+}

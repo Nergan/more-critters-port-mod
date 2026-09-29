@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/moss_clump",
+  "textures": {
+    "all": "more_critters:block/moss_clump",
+    "particle": "minecraft:block/moss_block",
+    "0": "more_critters:block/moss_clump"
+  },
+  "render_type": "cutout_mipped"
+}

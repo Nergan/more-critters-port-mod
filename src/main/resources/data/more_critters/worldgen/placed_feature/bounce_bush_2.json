@@ -1,0 +1,32 @@
+{
+  "feature": "more_critters:bounce_bush_2",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 105
+    },
+    {
+      "type": "minecraft:count",
+      "count": 2
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "#minecraft:dirt",
+        "offset": [
+          0,
+          -1,
+          0
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fungal_zombie",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body_r",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "body_r",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "fungus6",
+					"parent": "body",
+					"pivot": [2.25, 17.75, -1.75],
+					"rotation": [56.87402, -10.51794, 6.79286],
+					"cubes": [
+						{"origin": [-0.25, 17.75, -1.75], "size": [5, 5, 0], "pivot": [2.25, 17.75, -1.75], "rotation": [0, -90, 0], "uv": [0, 54], "mirror": true},
+						{"origin": [-0.25, 17.75, -1.75], "size": [5, 5, 0], "uv": [0, 54], "mirror": true}
+					]
+				},
+				{
+					"name": "fungus2",
+					"parent": "body",
+					"pivot": [2.5, 20, 2],
+					"rotation": [-90, 0, 0],
+					"cubes": [
+						{"origin": [0, 20, 2], "size": [5, 5, 0], "pivot": [2.5, 20, 2], "rotation": [0, -90, 0], "uv": [0, 59], "mirror": true},
+						{"origin": [0, 20, 2], "size": [5, 5, 0], "uv": [0, 59], "mirror": true}
+					]
+				},
+				{
+					"name": "head_r",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "head_r",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "fungus4",
+					"parent": "head",
+					"pivot": [-3.75, 29, 2],
+					"rotation": [-12.5, 0, -90],
+					"cubes": [
+						{"origin": [-6.25, 29, 2], "size": [5, 5, 0], "pivot": [-3.75, 29, 2], "rotation": [0, -90, 0], "uv": [0, 59], "mirror": true},
+						{"origin": [-6.25, 29, 2], "size": [5, 5, 0], "uv": [0, 59], "mirror": true}
+					]
+				},
+				{
+					"name": "fungus5",
+					"parent": "head",
+					"pivot": [1.5, 31.75, 1.25],
+					"rotation": [-10, 0, 0],
+					"cubes": [
+						{"origin": [-1, 31.75, 1.25], "size": [5, 5, 0], "pivot": [1.5, 31.75, 1.25], "rotation": [0, -90, 0], "uv": [0, 54], "mirror": true},
+						{"origin": [-1, 31.75, 1.25], "size": [5, 5, 0], "uv": [0, 54], "mirror": true}
+					]
+				},
+				{
+					"name": "r_arm",
+					"parent": "body",
+					"pivot": [-4, 22, 0],
+					"cubes": [
+						{"origin": [-8, 12, -2], "size": [4, 12, 4], "uv": [24, 16]}
+					]
+				},
+				{
+					"name": "fungus7",
+					"parent": "r_arm",
+					"pivot": [-6.75, 16, 1.75],
+					"rotation": [-78.12598, -10.51794, 6.79286],
+					"cubes": [
+						{"origin": [-9.25, 16, 1.75], "size": [5, 5, 0], "pivot": [-6.75, 16, 1.75], "rotation": [0, -90, 0], "uv": [0, 54], "mirror": true},
+						{"origin": [-9.25, 16, 1.75], "size": [5, 5, 0], "uv": [0, 54], "mirror": true}
+					]
+				},
+				{
+					"name": "l_arm",
+					"parent": "body",
+					"pivot": [4, 22, 0],
+					"cubes": [
+						{"origin": [4, 12, -2], "size": [4, 12, 4], "uv": [24, 16], "mirror": true}
+					]
+				},
+				{
+					"name": "fungus1",
+					"parent": "l_arm",
+					"pivot": [6.5, 24, 0],
+					"cubes": [
+						{"origin": [4, 24, 0], "size": [5, 5, 0], "pivot": [6.5, 24, 0], "rotation": [0, -90, 0], "uv": [0, 59], "mirror": true},
+						{"origin": [4, 24, 0], "size": [5, 5, 0], "uv": [0, 59], "mirror": true}
+					]
+				},
+				{
+					"name": "r_leg",
+					"parent": "root",
+					"pivot": [-2, 12, 0],
+					"cubes": [
+						{"origin": [-4, 0, -2], "size": [4, 12, 4], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "fungus3",
+					"parent": "r_leg",
+					"pivot": [-3.5, 8, 2],
+					"rotation": [-90, -45, 0],
+					"cubes": [
+						{"origin": [-6, 8, 2], "size": [5, 5, 0], "pivot": [-3.5, 8, 2], "rotation": [0, -90, 0], "uv": [0, 59], "mirror": true},
+						{"origin": [-6, 8, 2], "size": [5, 5, 0], "uv": [0, 59], "mirror": true}
+					]
+				},
+				{
+					"name": "l_leg",
+					"parent": "root",
+					"pivot": [2, 12, 0],
+					"cubes": [
+						{"origin": [0, 0, -2], "size": [4, 12, 4], "uv": [16, 32]}
+					]
+				},
+				{
+					"name": "fungus8",
+					"parent": "l_leg",
+					"pivot": [3.5, 7, -1.5],
+					"rotation": [69.8481, 54.04001, 172.44736],
+					"cubes": [
+						{"origin": [1, 7, -1.5], "size": [5, 5, 0], "pivot": [3.5, 7, -1.5], "rotation": [0, -90, 0], "uv": [0, 54], "mirror": true},
+						{"origin": [1, 7, -1.5], "size": [5, 5, 0], "uv": [0, 54], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

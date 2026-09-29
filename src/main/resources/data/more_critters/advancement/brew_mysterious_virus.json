@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:mysterious_virus_bottle"
+    },
+    "title": {
+      "translate": "advancements.brew_mysterious_virus.title"
+    },
+    "description": {
+      "translate": "advancements.brew_mysterious_virus.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "brew_mysterious_virus_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:mysterious_virus_bottle"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:ice_off_brain"
+}

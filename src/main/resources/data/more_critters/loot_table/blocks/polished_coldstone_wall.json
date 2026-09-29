@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "more_critters:blocks/polished_coldstone_wall",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_critters:polished_coldstone_wall"
+        }
+      ]
+    }
+  ]
+}

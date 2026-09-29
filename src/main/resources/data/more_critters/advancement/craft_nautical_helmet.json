@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:nautical_helmet_helmet"
+    },
+    "title": {
+      "translate": "advancements.craft_nautical_helmet.title"
+    },
+    "description": {
+      "translate": "advancements.craft_nautical_helmet.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_nautical_helmet_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:nautical_helmet_helmet"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:encounter_nauticrawl"
+}

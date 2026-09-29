@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "more_critters:blocks/fossil_display_17",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_critters:plant_fossil_4"
+        }
+      ]
+    }
+  ]
+}

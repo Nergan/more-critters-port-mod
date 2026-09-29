@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "deep_dark",
+  "features": "more_critters:custodian_base_spawn",
+  "step": "top_layer_modification"
+}

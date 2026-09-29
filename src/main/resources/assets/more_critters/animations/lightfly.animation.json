@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.0": {
+							"vector": [360, 0, -360]
+						}
+					},
+					"scale": {
+						"vector": [
+							"math.cos((query.anim_time -0.2) *360) *0.1 + 1",
+							"math.cos((query.anim_time -0.0) *360) *0.1 + 1",
+							"math.cos((query.anim_time -0.3) *360) *0.1 + 1"
+						]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,0 +1,204 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.nightshroom",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 6.5,
+				"visible_bounds_offset": [0, 2.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 35, 1],
+					"cubes": [
+						{"origin": [-10.5, 26, -12], "size": [21, 18, 26], "uv": [0, 32]},
+						{"origin": [-10.5, 21, -12], "size": [21, 5, 26], "uv": [94, 32]}
+					]
+				},
+				{
+					"name": "fungus1",
+					"parent": "body",
+					"pivot": [6.5, 44, 3.5],
+					"cubes": [
+						{"origin": [6.5, 44, 1], "size": [0, 8, 5], "uv": [0, 170]},
+						{"origin": [6.5, 44, 1], "size": [0, 8, 5], "pivot": [6.5, 44, 3.5], "rotation": [0, 90, 0], "uv": [0, 170]}
+					]
+				},
+				{
+					"name": "fungus2",
+					"parent": "body",
+					"pivot": [-14, 35, 8],
+					"cubes": [
+						{"origin": [-6.5, 44, 6], "size": [0, 8, 5], "uv": [0, 170]},
+						{"origin": [-6.5, 44, 6], "size": [0, 8, 5], "pivot": [-6.5, 44, 8.5], "rotation": [0, 90, 0], "uv": [0, 170]}
+					]
+				},
+				{
+					"name": "fungus3",
+					"parent": "body",
+					"pivot": [-11, 35, -2],
+					"cubes": [
+						{"origin": [-3.5, 44, -4], "size": [0, 8, 5], "uv": [0, 170]},
+						{"origin": [-3.5, 44, -4], "size": [0, 8, 5], "pivot": [-3.5, 44, -1.5], "rotation": [0, 90, 0], "uv": [0, 170]}
+					]
+				},
+				{
+					"name": "neck_main",
+					"parent": "body",
+					"pivot": [0, 34, -6]
+				},
+				{
+					"name": "neck",
+					"parent": "neck_main",
+					"pivot": [0, 34, -6],
+					"cubes": [
+						{"origin": [-5.5, 33, -18], "size": [11, 19, 14], "uv": [0, 120]},
+						{"origin": [0, 44, -22], "size": [0, 11, 10], "uv": [158, 0]},
+						{"origin": [-5.5, 27, -18], "size": [11, 6, 10], "uv": [156, 106]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "neck",
+					"pivot": [0, 52, -8],
+					"cubes": [
+						{"origin": [-10, 71, -18], "size": [20, 5, 20], "uv": [8, 7]},
+						{"origin": [-3.5, 52, -12], "size": [7, 19, 8], "uv": [100, 138]},
+						{"origin": [-10, 68, -18], "size": [20, 3, 20], "uv": [176, 13]},
+						{"origin": [-7, 76, -15], "size": [14, 11, 14], "uv": [192, 38]},
+						{"origin": [-3.5, 58, -30], "size": [7, 4, 2], "uv": [144, 21]},
+						{"origin": [-3.5, 62, -30], "size": [7, 11, 11], "uv": [0, 153]},
+						{"origin": [-3.5, 61, -30], "size": [7, 1, 18], "uv": [108, 0]},
+						{"origin": [-3.5, 62, -19], "size": [7, 8, 7], "uv": [156, 122]}
+					]
+				},
+				{
+					"name": "fungus7",
+					"parent": "head",
+					"pivot": [1.5, 62, -4.25],
+					"rotation": [-88.3425, 12.39135, 7.67995],
+					"cubes": [
+						{"origin": [1.5, 62, -6.75], "size": [0, 8, 5], "uv": [0, 170]},
+						{"origin": [1.5, 62, -6.75], "size": [0, 8, 5], "pivot": [1.5, 62, -4.25], "rotation": [0, 90, 0], "uv": [0, 170]}
+					]
+				},
+				{
+					"name": "fungus6",
+					"parent": "head",
+					"pivot": [-2.5, 56, -4.5],
+					"rotation": [-96.88003, -16.1299, 23.47603],
+					"cubes": [
+						{"origin": [-2.5, 56, -7], "size": [0, 8, 5], "uv": [0, 170]},
+						{"origin": [-2.5, 56, -7], "size": [0, 8, 5], "pivot": [-2.5, 56, -4.5], "rotation": [0, 90, 0], "uv": [0, 170]}
+					]
+				},
+				{
+					"name": "jaw",
+					"parent": "head",
+					"pivot": [0, 62, -12],
+					"cubes": [
+						{"origin": [-2.5, 60, -28], "size": [5, 2, 16], "uv": [50, 120]},
+						{"origin": [-2.5, 62, -28], "size": [5, 2, 16], "uv": [130, 138]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 43, 14],
+					"cubes": [
+						{"origin": [-7, 28, 14], "size": [14, 15, 17], "uv": [94, 106]}
+					]
+				},
+				{
+					"name": "fungus4",
+					"parent": "tail",
+					"pivot": [-5, 34, 19],
+					"cubes": [
+						{"origin": [2.5, 43, 17], "size": [0, 8, 5], "uv": [0, 170]},
+						{"origin": [2.5, 43, 17], "size": [0, 8, 5], "pivot": [2.5, 43, 19.5], "rotation": [0, 90, 0], "uv": [0, 170]}
+					]
+				},
+				{
+					"name": "fungus5",
+					"parent": "tail",
+					"pivot": [-11, 34, 24],
+					"cubes": [
+						{"origin": [-3.5, 43, 22], "size": [0, 8, 5], "uv": [0, 170]},
+						{"origin": [-3.5, 43, 22], "size": [0, 8, 5], "pivot": [-3.5, 43, 24.5], "rotation": [0, 90, 0], "uv": [0, 170]}
+					]
+				},
+				{
+					"name": "tail_segment",
+					"parent": "tail",
+					"pivot": [0, 42, 18.5],
+					"cubes": [
+						{"origin": [-6, 19, 15.5], "size": [12, 23, 20], "uv": [94, 63]}
+					]
+				},
+				{
+					"name": "right_wing",
+					"parent": "body",
+					"pivot": [-10.5, 34, -10],
+					"cubes": [
+						{"origin": [-12.5, 29, -12], "size": [2, 6, 9], "uv": [158, 63], "mirror": true}
+					]
+				},
+				{
+					"name": "left_wing",
+					"parent": "body",
+					"pivot": [10.5, 34, -10],
+					"cubes": [
+						{"origin": [10.5, 29, -12], "size": [2, 6, 9], "uv": [158, 63]}
+					]
+				},
+				{
+					"name": "left_leg",
+					"parent": "root",
+					"pivot": [4.5, 28, 6],
+					"cubes": [
+						{"origin": [1.5, 3, 3], "size": [6, 25, 6], "uv": [130, 156], "mirror": true}
+					]
+				},
+				{
+					"name": "left_foot",
+					"parent": "left_leg",
+					"pivot": [4.5, 3, 6],
+					"cubes": [
+						{"origin": [0.5, 0, -1], "size": [8, 3, 10], "uv": [108, 19], "mirror": true},
+						{"origin": [6.5, 0, -5], "size": [2, 3, 4], "uv": [158, 85], "mirror": true},
+						{"origin": [3.5, 0, -5], "size": [2, 3, 4], "uv": [158, 85], "mirror": true},
+						{"origin": [0.5, 0, -5], "size": [2, 3, 4], "uv": [158, 85], "mirror": true}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "root",
+					"pivot": [-4.5, 28, 6],
+					"cubes": [
+						{"origin": [-7.5, 3, 3], "size": [6, 25, 6], "uv": [130, 156]}
+					]
+				},
+				{
+					"name": "right_foot",
+					"parent": "right_leg",
+					"pivot": [-4.5, 3, 6],
+					"cubes": [
+						{"origin": [-8.5, 0, -1], "size": [8, 3, 10], "uv": [108, 19]},
+						{"origin": [-8.5, 0, -5], "size": [2, 3, 4], "uv": [158, 85]},
+						{"origin": [-5.5, 0, -5], "size": [2, 3, 4], "uv": [158, 85]},
+						{"origin": [-2.5, 0, -5], "size": [2, 3, 4], "uv": [158, 85]}
+					]
+				}
+			]
+		}
+	]
+}

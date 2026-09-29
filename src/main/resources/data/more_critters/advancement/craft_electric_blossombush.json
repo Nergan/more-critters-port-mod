@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:electric_blossombush"
+    },
+    "title": {
+      "translate": "advancements.craft_electric_blossombush.title"
+    },
+    "description": {
+      "translate": "advancements.craft_electric_blossombush.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_electric_blossombush_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:electric_blossombush"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:get_electric_bottle"
+}

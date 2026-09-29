@@ -1,0 +1,7 @@
+
+{
+  "parent": "more_critters:displaysettings/confetti_popper.display",
+  "textures": {
+    "particle": "more_critters:block/confetti_popper"
+  }
+}

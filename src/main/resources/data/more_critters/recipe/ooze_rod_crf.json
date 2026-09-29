@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:glowing_ooze"
+    },
+    {
+      "item": "more_critters:glowing_ooze"
+    },
+    {
+      "item": "more_critters:glowing_ooze"
+    }
+  ],
+  "result": {
+    "id": "more_critters:ooze_rod",
+    "count": 2
+  }
+}

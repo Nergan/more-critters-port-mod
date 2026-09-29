@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:chattering_teeth_item"
+    },
+    "title": {
+      "translate": "advancements.craft_chattering_teeth.title"
+    },
+    "description": {
+      "translate": "advancements.craft_chattering_teeth.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_chattering_teeth_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:chattering_teeth_item"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:kill_corpse_crew_member"
+}

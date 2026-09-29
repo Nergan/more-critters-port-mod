@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "electric_blossombush",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bbb",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bone_meal"
+    },
+    "b": {
+      "item": "more_critters:blossombush_seed"
+    },
+    "c": {
+      "item": "more_critters:bottleo_electricity"
+    }
+  },
+  "result": {
+    "id": "more_critters:electric_blossombush",
+    "count": 1
+  }
+}

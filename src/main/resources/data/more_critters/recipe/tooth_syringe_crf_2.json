@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "c"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:shark_tooth"
+    },
+    "b": {
+      "item": "more_critters:rum_bottle"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "id": "more_critters:tooth_syringe",
+    "count": 2
+  }
+}

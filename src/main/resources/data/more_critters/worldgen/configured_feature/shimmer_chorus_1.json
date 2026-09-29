@@ -1,0 +1,9 @@
+{
+  "type": "more_critters:structure_feature",
+  "config": {
+    "structure": "more_critters:shimmer_chorus1",
+    "random_rotation": true,
+    "random_mirror": true,
+    "ignored_blocks": "minecraft:air"
+  }
+}

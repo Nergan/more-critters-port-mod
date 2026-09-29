@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:shark_tooth"
+    },
+    {
+      "item": "more_critters:infested_hardtack"
+    }
+  ],
+  "result": {
+    "id": "more_critters:hardtack",
+    "count": 1
+  }
+}

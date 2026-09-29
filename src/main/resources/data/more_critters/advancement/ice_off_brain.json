@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:torch"
+    },
+    "title": {
+      "translate": "advancements.ice_off_brain.title"
+    },
+    "description": {
+      "translate": "advancements.ice_off_brain.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ice_off_brain_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:ice_brain"
+}

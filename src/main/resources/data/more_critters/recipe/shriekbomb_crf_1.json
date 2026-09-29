@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "shriekbomb",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "ba"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:shriekbat_wing"
+    },
+    "b": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "result": {
+    "id": "more_critters:shriek_bomb",
+    "count": 1
+  }
+}

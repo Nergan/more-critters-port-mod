@@ -1,0 +1,40 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.slash_effect",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root1",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-12, 0, -12], "size": [24, 0, 24], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "root2",
+					"parent": "root1",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-12, 0, -12], "size": [24, 0, 24], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 24]}
+					]
+				},
+				{
+					"name": "root3",
+					"parent": "root2",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-12, 0, -12], "size": [24, 0, 24], "pivot": [0, 0, 0], "rotation": [0, 45, 0], "uv": [0, 48]}
+					]
+				}
+			]
+		}
+	]
+}

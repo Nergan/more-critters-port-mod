@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ancient_skeleton_exhibit",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:ancient_skeleton_item"
+    },
+    {
+      "item": "minecraft:armor_stand"
+    }
+  ],
+  "result": {
+    "id": "more_critters:ancient_skeleton_exhibit_item",
+    "count": 1
+  }
+}

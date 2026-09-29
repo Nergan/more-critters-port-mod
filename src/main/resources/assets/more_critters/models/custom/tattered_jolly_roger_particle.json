@@ -1,0 +1,7 @@
+
+{
+  "parent": "more_critters:displaysettings/tattered_jolly_roger",
+  "textures": {
+    "particle": "more_critters:block/fish_bone_block_side"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "more_critters:block/fish_bone_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "more_critters:block/fish_bone_block"
+    },
+    "axis=z": {
+      "model": "more_critters:block/fish_bone_block",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:stick"
+    },
+    "b": {
+      "item": "more_critters:ghostly_planks"
+    }
+  },
+  "result": {
+    "id": "more_critters:ghostly_fence_gate",
+    "count": 1
+  }
+}

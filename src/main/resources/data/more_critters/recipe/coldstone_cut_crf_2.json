@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "more_critters:coldstone"
+  },
+  "result": {
+    "id": "more_critters:coldstone_slab",
+    "count": 2
+  }
+}

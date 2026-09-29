@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/cannon_bottom",
+    "up": "more_critters:block/cannon_top",
+    "north": "more_critters:block/cannon_front",
+    "east": "more_critters:block/cannon_right",
+    "south": "more_critters:block/cannon_back",
+    "west": "more_critters:block/cannon_left",
+    "particle": "more_critters:block/cannon_bottom"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "more_critters:structure_feature",
+  "config": {
+    "structure": "more_critters:custodian_base",
+    "random_rotation": true,
+    "ignored_blocks": "minecraft:structure_block",
+    "offset": [
+      2,
+      0,
+      2
+    ]
+  }
+}

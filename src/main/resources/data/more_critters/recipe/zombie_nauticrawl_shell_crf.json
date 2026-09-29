@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:kelp"
+    },
+    "b": {
+      "item": "more_critters:nauticrawl_shell"
+    }
+  },
+  "result": {
+    "id": "more_critters:zombie_nauticrawl_shell",
+    "count": 1
+  }
+}

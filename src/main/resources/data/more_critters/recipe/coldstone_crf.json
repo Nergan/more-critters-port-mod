@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "coldstone",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:freezing_string"
+    },
+    "b": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "id": "more_critters:coldstone",
+    "count": 8
+  }
+}

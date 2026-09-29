@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:block/treasure_chest_open"
+    },
+    "facing=east": {
+      "model": "more_critters:block/treasure_chest_open",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:block/treasure_chest_open",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:block/treasure_chest_open",
+      "y": 270
+    }
+  }
+}

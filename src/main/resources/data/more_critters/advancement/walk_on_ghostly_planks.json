@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:ghostly_planks"
+    },
+    "title": {
+      "translate": "advancements.walk_on_ghostly_planks.title"
+    },
+    "description": {
+      "translate": "advancements.walk_on_ghostly_planks.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "walk_on_ghostly_planks_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

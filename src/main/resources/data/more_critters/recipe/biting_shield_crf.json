@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "biting_shield",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "bcb",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bone"
+    },
+    "b": {
+      "item": "more_critters:sturdy_shells"
+    },
+    "c": {
+      "item": "minecraft:shield"
+    }
+  },
+  "result": {
+    "id": "more_critters:biting_shield",
+    "count": 1
+  }
+}

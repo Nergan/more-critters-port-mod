@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:ghostly_log"
+    }
+  },
+  "result": {
+    "id": "more_critters:ghostly_wood",
+    "count": 3
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:icon_5"
+    },
+    "title": {
+      "translate": "advancements.encounter_snowflake_spider.title"
+    },
+    "description": {
+      "translate": "advancements.encounter_snowflake_spider.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "encounter_snowflake_spider_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

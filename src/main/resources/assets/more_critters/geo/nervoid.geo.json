@@ -1,0 +1,96 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.nervoid",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 17.5, 0],
+					"cubes": [
+						{"origin": [-5.5, 19, -4.5], "size": [11, 7, 9], "uv": [0, 32]}
+					]
+				},
+				{
+					"name": "r_eye",
+					"parent": "body",
+					"pivot": [-2.5, 19, -4.5],
+					"cubes": [
+						{"origin": [-3, 19, -11.5], "size": [1, 0, 7], "uv": [0, 48]},
+						{"origin": [-4, 19, -11.5], "size": [3, 3, 0], "uv": [32, 26]}
+					]
+				},
+				{
+					"name": "l_eye",
+					"parent": "body",
+					"pivot": [2.5, 19, -4.5],
+					"cubes": [
+						{"origin": [2, 19, -11.5], "size": [1, 0, 7], "uv": [0, 48], "mirror": true},
+						{"origin": [1, 19, -11.5], "size": [3, 3, 0], "uv": [32, 26], "mirror": true}
+					]
+				},
+				{
+					"name": "r_claw",
+					"parent": "body",
+					"pivot": [-5.5, 19, -0.5],
+					"cubes": [
+						{"origin": [-5.5, 5, -11.5], "size": [0, 14, 12], "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "l_claw",
+					"parent": "body",
+					"pivot": [5.5, 19, -0.5],
+					"cubes": [
+						{"origin": [5.5, 5, -11.5], "size": [0, 14, 12], "uv": [32, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "tail1",
+					"parent": "body",
+					"pivot": [0, 19, 4.5],
+					"cubes": [
+						{"origin": [-1, 10, -4.5], "size": [2, 9, 9], "uv": [40, 26]},
+						{"origin": [-6, 10, 4.5], "size": [12, 9, 0], "uv": [40, 0]}
+					]
+				},
+				{
+					"name": "tail2",
+					"parent": "tail1",
+					"pivot": [0, 10, -4.5],
+					"cubes": [
+						{"origin": [-1, 1, -4.5], "size": [2, 9, 9], "uv": [40, 44]}
+					]
+				},
+				{
+					"name": "r_nerves",
+					"parent": "body",
+					"pivot": [0, 22, 4.5],
+					"cubes": [
+						{"origin": [0, 12, 4.5], "size": [0, 20, 16], "uv": [0, -4]}
+					]
+				},
+				{
+					"name": "l_nerves",
+					"parent": "body",
+					"pivot": [0, 22, 4.5],
+					"cubes": [
+						{"origin": [0, 12, 4.5], "size": [0, 20, 16], "uv": [0, -4]}
+					]
+				}
+			]
+		}
+	]
+}

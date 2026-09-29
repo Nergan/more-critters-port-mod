@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "taser",
+  "category": "equipment",
+  "pattern": [
+    "a a",
+    "bcb",
+    "bcb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "more_critters:bottleo_electricity"
+    }
+  },
+  "result": {
+    "id": "more_critters:tazegun",
+    "count": 1
+  }
+}

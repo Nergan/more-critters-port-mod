@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "lush_caves",
+  "spawners": {
+    "type": "more_critters:armossillo",
+    "weight": 4,
+    "minCount": 3,
+    "maxCount": 4
+  }
+}

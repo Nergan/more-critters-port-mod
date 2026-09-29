@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:shriekbat_wing"
+    },
+    "title": {
+      "translate": "advancements.encounter_shriekbat.title"
+    },
+    "description": {
+      "translate": "advancements.encounter_shriekbat.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "encounter_shriekbat_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

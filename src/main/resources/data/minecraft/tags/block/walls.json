@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:black_resin_brick_wall",
+    "more_critters:polished_coldstone_wall",
+    "more_critters:coldstone_brick_wall",
+    "more_critters:coldstone_wall"
+  ]
+}

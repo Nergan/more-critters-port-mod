@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:ghostly_log",
+    "more_critters:ghostly_wood",
+    "more_critters:stripped_ghostly_log",
+    "more_critters:stripped_ghostly_wood"
+  ]
+}

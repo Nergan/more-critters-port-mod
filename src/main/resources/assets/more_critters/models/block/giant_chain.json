@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/giant_chain",
+  "textures": {
+    "all": "more_critters:block/giant_chain",
+    "particle": "more_critters:block/giant_chain",
+    "0": "more_critters:block/giant_chain"
+  },
+  "render_type": "cutout_mipped"
+}

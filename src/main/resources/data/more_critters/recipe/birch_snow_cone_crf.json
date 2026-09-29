@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "bcb",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:eerie_bark"
+    },
+    "b": {
+      "item": "more_critters:black_resin_clump"
+    },
+    "c": {
+      "item": "minecraft:snowball"
+    },
+    "d": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "id": "more_critters:birch_snow_cone",
+    "count": 1
+  }
+}

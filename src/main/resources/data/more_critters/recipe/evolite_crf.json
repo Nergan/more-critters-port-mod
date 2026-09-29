@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:evolite_block"
+    }
+  },
+  "result": {
+    "id": "more_critters:evolite",
+    "count": 9
+  }
+}

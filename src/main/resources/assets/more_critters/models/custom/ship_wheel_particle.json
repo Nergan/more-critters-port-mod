@@ -1,0 +1,7 @@
+
+{
+  "parent": "more_critters:displaysettings/ship_wheel",
+  "textures": {
+    "particle": "more_critters:block/ghostly_log_side"
+  }
+}

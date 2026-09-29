@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/fish_bone_pole",
+  "textures": {
+    "all": "more_critters:block/fish_bone_pole",
+    "particle": "more_critters:block/fish_bone_block_side",
+    "0": "more_critters:block/fish_bone_pole"
+  },
+  "render_type": "solid"
+}

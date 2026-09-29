@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/kelpire_rolls1",
+  "textures": {
+    "all": "more_critters:block/kelpire_rolls",
+    "particle": "minecraft:block/kelp",
+    "0": "more_critters:block/kelpire_rolls"
+  },
+  "render_type": "cutout_mipped"
+}

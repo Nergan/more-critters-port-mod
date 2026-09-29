@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "more_critters:textures/screens/achivement_background.png",
+    "icon": {
+      "id": "more_critters:tab_icon"
+    },
+    "title": {
+      "translate": "advancements.achivement_root.title"
+    },
+    "description": {
+      "translate": "advancements.achivement_root.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "achivement_root_0": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

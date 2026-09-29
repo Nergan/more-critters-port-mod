@@ -1,0 +1,95 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle0": {
+			"loop": true
+		},
+		"idle1": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [0, -90, 0]
+					}
+				}
+			}
+		},
+		"idle2": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [0, -180, 0]
+					}
+				}
+			}
+		},
+		"idle3": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [0, -270, 0]
+					}
+				}
+			}
+		},
+		"idle4": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [0, -315, 0]
+					}
+				}
+			}
+		},
+		"idle5": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [0, -405, 0]
+					}
+				}
+			}
+		},
+		"idle6": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [0, -495, 0]
+					}
+				}
+			}
+		},
+		"idle7": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"vector": [0, -585, 0]
+					}
+				}
+			}
+		},
+		"dance_epic": {
+			"loop": true,
+			"animation_length": 40,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"40.0": {
+							"vector": [0, 360, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "warped_forest",
+  "spawners": {
+    "type": "more_critters:warptrap",
+    "weight": 10,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "shriek_soup",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:spider_eye"
+    },
+    "b": {
+      "item": "more_critters:shriekbat_wing"
+    },
+    "c": {
+      "item": "minecraft:glow_berries"
+    },
+    "d": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "id": "more_critters:shriekbat_soup",
+    "count": 1
+  }
+}

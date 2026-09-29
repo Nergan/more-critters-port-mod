@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/vita_shroom_block",
+    "up": "more_critters:block/vita_shroom_block",
+    "north": "more_critters:block/vita_shroom_block",
+    "east": "more_critters:block/vita_shroom_block",
+    "south": "more_critters:block/vita_shroom_block",
+    "west": "more_critters:block/vita_shroom_block",
+    "particle": "more_critters:block/vita_shroom_block"
+  },
+  "render_type": "solid"
+}

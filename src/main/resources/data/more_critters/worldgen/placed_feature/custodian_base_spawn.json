@@ -1,0 +1,35 @@
+{
+  "feature": "more_critters:custodian_base_spawn",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 200
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:constant",
+        "value": {
+          "absolute": -51
+        }
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:not",
+        "predicate": {
+          "type": "minecraft:solid",
+          "offset": [
+            0,
+            6,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

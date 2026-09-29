@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "birch_forest",
+    "old_growth_birch_forest"
+  ],
+  "features": "more_critters:fallen_eerie_birch_1",
+  "step": "surface_structures"
+}

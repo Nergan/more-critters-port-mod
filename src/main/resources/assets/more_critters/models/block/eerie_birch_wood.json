@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/eerie_birch_log",
+    "up": "more_critters:block/eerie_birch_log",
+    "north": "more_critters:block/eerie_birch_log",
+    "east": "more_critters:block/eerie_birch_log",
+    "south": "more_critters:block/eerie_birch_log",
+    "west": "more_critters:block/eerie_birch_log",
+    "particle": "more_critters:block/eerie_birch_log"
+  },
+  "render_type": "solid"
+}

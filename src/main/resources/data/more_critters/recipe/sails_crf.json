@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sails_music_disc",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:shell_pieces"
+    },
+    "b": {
+      "tag": "minecraft:music_discs"
+    }
+  },
+  "result": {
+    "id": "more_critters:music_disc_sails",
+    "count": 1
+  }
+}

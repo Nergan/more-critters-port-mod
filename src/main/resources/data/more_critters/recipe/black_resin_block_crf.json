@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:black_resin_clump"
+    }
+  },
+  "result": {
+    "id": "more_critters:black_resin_block",
+    "count": 1
+  }
+}

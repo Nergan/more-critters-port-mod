@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:shriek_bomb"
+    },
+    "title": {
+      "translate": "advancements.craft_shriek_bomb.title"
+    },
+    "description": {
+      "translate": "advancements.craft_shriek_bomb.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_shriek_bomb_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:shriek_bomb"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:encounter_shriekbat"
+}

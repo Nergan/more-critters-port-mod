@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/ectometal_nail",
+  "textures": {
+    "all": "more_critters:block/ectometal_nail",
+    "particle": "more_critters:block/ectometal_nail",
+    "0": "more_critters:block/ectometal_nail"
+  },
+  "render_type": "solid"
+}

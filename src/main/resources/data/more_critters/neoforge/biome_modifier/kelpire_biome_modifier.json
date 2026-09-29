@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "deep_lukewarm_ocean",
+    "lukewarm_ocean"
+  ],
+  "spawners": {
+    "type": "more_critters:kelpire",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

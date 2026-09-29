@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/black_resin_block",
+    "up": "more_critters:block/black_resin_block",
+    "north": "more_critters:block/black_resin_block",
+    "east": "more_critters:block/black_resin_block",
+    "south": "more_critters:block/black_resin_block",
+    "west": "more_critters:block/black_resin_block",
+    "particle": "more_critters:block/black_resin_block"
+  },
+  "render_type": "solid"
+}

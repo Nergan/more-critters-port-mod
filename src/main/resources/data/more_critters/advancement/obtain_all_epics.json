@@ -1,0 +1,275 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:icon_20"
+    },
+    "title": {
+      "translate": "advancements.obtain_all_epics.title"
+    },
+    "description": {
+      "translate": "advancements.obtain_all_epics.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_all_epics_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_cubefrog_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_plainswyrm_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_dunger_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_snek_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_expy_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_scowl_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_rollball_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_opalcrab_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_mothkid_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_gillmunch_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_stalk_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_dominic_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_olmer_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_13": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_flarg_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_14": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_piranheed_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_15": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_mangotrice_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_epics_16": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_fresnoid_epic"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:obtain_all_rares"
+}

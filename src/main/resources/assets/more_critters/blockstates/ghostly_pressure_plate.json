@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "more_critters:block/ghostly_pressure_plate"
+    },
+    "powered=true": {
+      "model": "more_critters:block/ghostly_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:shimmerworm_item"
+    },
+    "title": {
+      "translate": "advancements.eat_shimmerworm.title"
+    },
+    "description": {
+      "translate": "advancements.eat_shimmerworm.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "eat_shimmerworm_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:obtain_chrysalis"
+}

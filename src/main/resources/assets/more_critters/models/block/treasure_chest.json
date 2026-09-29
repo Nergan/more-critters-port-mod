@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/treasure_chest",
+  "textures": {
+    "all": "more_critters:block/treasure_chest",
+    "particle": "more_critters:block/treasurewood",
+    "0": "more_critters:block/treasure_chest"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:eerie_birch_log"
+    }
+  ],
+  "result": {
+    "id": "minecraft:birch_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:custodian_core"
+    },
+    "title": {
+      "translate": "advancements.create_custodian.title"
+    },
+    "description": {
+      "translate": "advancements.create_custodian.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "create_custodian_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:awaken_custodian"
+}

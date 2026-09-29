@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:amalgam",
+    "more_critters:corpse_captain",
+    "more_critters:corpse_mate",
+    "more_critters:corpse_parrot",
+    "more_critters:corpse_quartermaster",
+    "more_critters:corpse_tank",
+    "more_critters:frightshroom",
+    "more_critters:fungal_zombie",
+    "more_critters:mightshroom",
+    "more_critters:rot_zombie",
+    "more_critters:tamed_corpse_parrot"
+  ]
+}

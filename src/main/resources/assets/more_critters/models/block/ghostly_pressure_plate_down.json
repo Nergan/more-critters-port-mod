@@ -1,0 +1,8 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "particle": "more_critters:block/ghostly_planks",
+    "texture": "more_critters:block/ghostly_planks"
+  },
+  "render_type": "solid"
+}

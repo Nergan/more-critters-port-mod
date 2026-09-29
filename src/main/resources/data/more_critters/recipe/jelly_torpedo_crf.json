@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "jelly_torpedo",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "more_critters:explosive_jelly"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "more_critters:avoider_tail"
+    }
+  ],
+  "result": {
+    "id": "more_critters:jelly_torpedo_item",
+    "count": 3
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/chiseled_coldstone",
+    "up": "more_critters:block/chiseled_coldstone",
+    "north": "more_critters:block/chiseled_coldstone",
+    "east": "more_critters:block/chiseled_coldstone",
+    "south": "more_critters:block/chiseled_coldstone",
+    "west": "more_critters:block/chiseled_coldstone",
+    "particle": "more_critters:block/chiseled_coldstone"
+  },
+  "render_type": "solid"
+}

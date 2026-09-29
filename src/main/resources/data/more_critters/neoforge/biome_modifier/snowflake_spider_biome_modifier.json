@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "snowy_plains",
+    "snowy_taiga",
+    "ice_spikes",
+    "snowy_slopes"
+  ],
+  "spawners": {
+    "type": "more_critters:snowflake_spider",
+    "weight": 25,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

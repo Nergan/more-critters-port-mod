@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:jelly_torpedo_item"
+    },
+    "title": {
+      "translate": "advancements.craft_jelly_torpedo.title"
+    },
+    "description": {
+      "translate": "advancements.craft_jelly_torpedo.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_jelly_torpedo_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:jelly_torpedo_item"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:explode_bomb_jelly"
+}

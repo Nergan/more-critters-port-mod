@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/rum_arrow",
+  "textures": {
+    "all": "more_critters:block/rum_arrow",
+    "particle": "more_critters:block/rum_arrow",
+    "0": "more_critters:block/rum_arrow"
+  },
+  "render_type": "translucent"
+}

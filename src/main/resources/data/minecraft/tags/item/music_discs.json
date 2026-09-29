@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:music_disc_party",
+    "more_critters:music_disc_waddle",
+    "more_critters:music_disc_grooveyard",
+    "more_critters:music_disc_sails",
+    "more_critters:music_disc_reaper"
+  ]
+}

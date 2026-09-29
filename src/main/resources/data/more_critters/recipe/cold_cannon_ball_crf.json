@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:cannon_ball"
+    },
+    "b": {
+      "item": "minecraft:powder_snow_bucket"
+    }
+  },
+  "result": {
+    "id": "more_critters:infused_cannon_ball_cold",
+    "count": 8
+  }
+}

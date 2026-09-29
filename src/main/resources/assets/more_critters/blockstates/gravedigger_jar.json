@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:custom/gravedigger_jar_particle"
+    },
+    "facing=east": {
+      "model": "more_critters:custom/gravedigger_jar_particle",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:custom/gravedigger_jar_particle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:custom/gravedigger_jar_particle",
+      "y": 270
+    }
+  }
+}

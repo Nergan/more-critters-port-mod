@@ -1,0 +1,275 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:icon_19"
+    },
+    "title": {
+      "translate": "advancements.obtain_all_rares.title"
+    },
+    "description": {
+      "translate": "advancements.obtain_all_rares.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_all_rares_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_cubefrog_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_plainswyrm_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_dunger_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_snek_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_expy_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_scowl_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_rollball_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_7": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_opalcrab_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_8": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_mothkid_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_9": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_gillmunch_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_10": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_stalk_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_11": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_dominic_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_12": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_olmer_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_13": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_flarg_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_14": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_piranheed_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_15": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_mangotrice_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_all_rares_16": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:critterling_sack_fresnoid_rare"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:evolve_critterling"
+}

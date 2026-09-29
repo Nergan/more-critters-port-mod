@@ -1,0 +1,10 @@
+{
+  "type": "more_critters:more_critters_loot_modifier",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/woodland_mansion"
+    }
+  ],
+  "lootTable": "minecraft:chests/pillager_outpost_addition"
+}

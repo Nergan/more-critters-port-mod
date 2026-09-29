@@ -1,0 +1,180 @@
+name: Release
+
+on:
+  push:
+    branches: ["main"]
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+# Пуш в main (и тег / ручной запуск) пересобирает мод и обновляет
+# GitHub Release для текущей mod_version: те же jar перезаписываются.
+# Новый номер версии в gradle.properties → новый релиз vX.Y.Z.
+# SHA-256 у каждого файла считает сам GitHub при загрузке.
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Read versions from gradle.properties
+        id: versions
+        run: |
+          set -euo pipefail
+          mod_version="$(grep -E '^mod_version=' gradle.properties | cut -d= -f2- | tr -d '\r')"
+          minecraft_version="$(grep -E '^minecraft_version=' gradle.properties | cut -d= -f2- | tr -d '\r')"
+          kff_version="$(grep -E '^kff_version=' gradle.properties | cut -d= -f2- | tr -d '\r')"
+          geckolib_version="$(grep -E '^geckolib_version=' gradle.properties | cut -d= -f2- | tr -d '\r')"
+          echo "mod_version=${mod_version}" >> "$GITHUB_OUTPUT"
+          echo "minecraft_version=${minecraft_version}" >> "$GITHUB_OUTPUT"
+          echo "kff_version=${kff_version}" >> "$GITHUB_OUTPUT"
+          echo "geckolib_version=${geckolib_version}" >> "$GITHUB_OUTPUT"
+          echo "mod_version=${mod_version}" >> "$GITHUB_ENV"
+
+      - name: Check tag matches mod_version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          set -euo pipefail
+          expected="v${{ steps.versions.outputs.mod_version }}"
+          actual="${GITHUB_REF_NAME}"
+          if [[ "${actual}" != "${expected}" ]]; then
+            echo "Tag ${actual} must be ${expected} (mod_version in gradle.properties)."
+            exit 1
+          fi
+
+      - name: Point version tag at this commit
+        if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+        run: |
+          set -euo pipefail
+          tag="v${{ steps.versions.outputs.mod_version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -f "${tag}" "${GITHUB_SHA}"
+          git push -f origin "refs/tags/${tag}"
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.10"
+
+      - name: Build and test
+        run: gradle build --stacktrace
+
+      - name: Collect release jars
+        run: |
+          set -euo pipefail
+          mkdir -p release-assets
+          shopt -s nullglob
+          jars=(build/libs/more_critters-*.jar)
+          if [[ ${#jars[@]} -eq 0 ]]; then
+            echo "No more_critters jar in build/libs"
+            exit 1
+          fi
+          for jar in "${jars[@]}"; do
+            case "${jar}" in
+              *-sources.jar|*-javadoc.jar) continue ;;
+              *) cp -v "${jar}" release-assets/ ;;
+            esac
+          done
+          test -f "release-assets/more_critters-${{ steps.versions.outputs.mod_version }}.jar"
+          chmod +x .github/scripts/fetch-companion-jars.sh
+          .github/scripts/fetch-companion-jars.sh \
+            release-assets \
+            "${{ steps.versions.outputs.minecraft_version }}" \
+            "${{ steps.versions.outputs.kff_version }}" \
+            "${{ steps.versions.outputs.geckolib_version }}"
+          find release-assets -name 'kotlinforforge-*.jar' | grep -q .
+          find release-assets -name 'geckolib-neoforge-*.jar' | grep -q .
+          ls -lh release-assets
+
+      - name: Remove stale GitHub Release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          tag="v${{ steps.versions.outputs.mod_version }}"
+          if ! gh release view "${tag}" >/dev/null 2>&1; then
+            echo "No existing release ${tag}"
+            exit 0
+          fi
+          mapfile -t existing < <(gh release view "${tag}" --json assets --jq '.assets[].name')
+          for name in "${existing[@]}"; do
+            if [[ ! -f "release-assets/${name}" ]]; then
+              echo "Deleting stale asset ${name}"
+              gh release delete-asset "${tag}" "${name}" --yes
+            fi
+          done
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.versions.outputs.mod_version }}
+          name: More Critters ${{ steps.versions.outputs.mod_version }}
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          overwrite_files: true
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            release-assets/more_critters-*.jar
+            release-assets/kotlinforforge-*.jar
+            release-assets/geckolib-neoforge-*.jar
+          body: |
+            Minecraft **${{ steps.versions.outputs.minecraft_version }}** / NeoForge. Put the jars you need into the `mods` folder.
+
+            | File | Required | Source | License |
+            | --- | --- | --- | --- |
+            | `more_critters-${{ steps.versions.outputs.mod_version }}.jar` | Yes | this mod | MPL-2.0 for the port wiring. Code and assets from [More Critters](https://modrinth.com/mod/more-critters) by Portakal_Cevheri stay MIT |
+            | `kotlinforforge-${{ steps.versions.outputs.kff_version }}-all.jar` | Yes | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) | LGPL-2.1 |
+            | `geckolib-neoforge-${{ steps.versions.outputs.minecraft_version }}-${{ steps.versions.outputs.geckolib_version }}.jar` | Yes | [GeckoLib](https://modrinth.com/mod/geckolib) | MIT |
+
+            Do not install `*-sources.jar`. The companion jars are the official Modrinth builds. GitHub shows a SHA-256 digest next to each uploaded file.
+
+      - name: Check Modrinth token
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${MODRINTH_TOKEN}" ]]; then
+            echo "Secret MODRINTH_TOKEN is missing or empty on this repository."
+            echo "GitHub → Settings → Secrets and variables → Actions → New repository secret."
+            echo "Name must be exactly MODRINTH_TOKEN. Without it mc-publish skips Modrinth and still exits 0."
+            exit 1
+          fi
+
+      - name: Publish Modrinth
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: more-critters-port
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          modrinth-featured: true
+          name: ${{ steps.versions.outputs.mod_version }}
+          version: ${{ steps.versions.outputs.mod_version }}
+          version-type: release
+          changelog: |
+            Minecraft ${{ steps.versions.outputs.minecraft_version }} / NeoForge. More Critters ${{ steps.versions.outputs.mod_version }}.
+          loaders: |
+            neoforge
+          game-versions: |
+            ${{ steps.versions.outputs.minecraft_version }}
+          java: |
+            21
+          files: release-assets/more_critters-${{ steps.versions.outputs.mod_version }}.jar
+          dependencies: |
+            kotlin-for-forge(required){modrinth:ordsPcFz}
+            geckolib(required){modrinth:8BmcQJ2H}

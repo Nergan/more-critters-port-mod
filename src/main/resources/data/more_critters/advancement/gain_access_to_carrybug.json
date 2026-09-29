@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:icon_18"
+    },
+    "title": {
+      "translate": "advancements.gain_access_to_carrybug.title"
+    },
+    "description": {
+      "translate": "advancements.gain_access_to_carrybug.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "gain_access_to_carrybug_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:trade_with_collector"
+}

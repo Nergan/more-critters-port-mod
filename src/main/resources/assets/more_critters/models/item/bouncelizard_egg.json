@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "more_critters:item/slablizard_egg"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:black_resin_block"
+    }
+  ],
+  "result": {
+    "id": "more_critters:black_resin_clump",
+    "count": 9
+  }
+}

@@ -1,0 +1,51 @@
+# Значения вида ${...} подставляются Gradle-задачей generateModMetadata
+# из gradle.properties (см. build.gradle.kts).
+
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+
+license = "${mod_license}"
+issueTrackerURL = "https://github.com/Nergan/more-critters-port/issues"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+logoFile = "logo.png"
+logoBlur = false
+displayURL = "https://modrinth.com/project/more-critters-port"
+authors = "${mod_authors}"
+credits = "Original mod: Portakal Cevheri, Natsirt, OrangeeApple, MistyJam, MSF and Skipster112"
+description = '''
+${mod_description}
+
+Новые фэнтезийные существа в ванильном стиле. Неофициальный порт More Critters от Portakal_Cevheri на NeoForge. Оригинал распространяется под MIT.
+'''
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neo_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "kotlinforforge"
+type = "required"
+versionRange = "${kff_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "geckolib"
+type = "required"
+versionRange = "${geckolib_version_range}"
+ordering = "AFTER"
+side = "BOTH"

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:gravedigger_appendage"
+    },
+    "title": {
+      "translate": "advancements.encounter_gravedigger.title"
+    },
+    "description": {
+      "translate": "advancements.encounter_gravedigger.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "encounter_gravedigger_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

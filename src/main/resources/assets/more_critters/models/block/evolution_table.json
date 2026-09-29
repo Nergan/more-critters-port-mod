@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/evolution_table",
+  "textures": {
+    "all": "more_critters:block/evolution_table_top",
+    "particle": "more_critters:block/evolution_table_top",
+    "0": "more_critters:block/evolution_table"
+  },
+  "render_type": "solid"
+}

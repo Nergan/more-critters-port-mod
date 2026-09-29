@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:block/cannon"
+    },
+    "facing=east": {
+      "model": "more_critters:block/cannon",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:block/cannon",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:block/cannon",
+      "y": 270
+    }
+  }
+}

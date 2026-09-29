@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/wet_ghostly_planks",
+    "up": "more_critters:block/wet_ghostly_planks",
+    "north": "more_critters:block/wet_ghostly_planks",
+    "east": "more_critters:block/wet_ghostly_planks",
+    "south": "more_critters:block/wet_ghostly_planks",
+    "west": "more_critters:block/wet_ghostly_planks",
+    "particle": "more_critters:block/wet_ghostly_planks"
+  },
+  "render_type": "solid"
+}

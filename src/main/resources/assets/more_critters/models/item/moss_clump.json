@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "more_critters:item/moss_clump_item"
+  },
+  "render_type": "translucent"
+}

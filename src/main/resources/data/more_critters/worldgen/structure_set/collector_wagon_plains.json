@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "more_critters:collector_wagon_plains",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 55,
+    "separation": 2,
+    "salt": 1414629709
+  }
+}

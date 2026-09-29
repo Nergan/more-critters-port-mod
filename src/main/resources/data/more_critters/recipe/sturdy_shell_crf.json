@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "sturdy_shell",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:sturdy_shell_block"
+    }
+  ],
+  "result": {
+    "id": "more_critters:sturdy_shells",
+    "count": 9
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:pirate_helmet"
+    },
+    "title": {
+      "translate": "advancements.craft_pirate_armor.title"
+    },
+    "description": {
+      "translate": "advancements.craft_pirate_armor.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_pirate_armor_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:pirate_helmet"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "craft_pirate_armor_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:pirate_chestplate"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "craft_pirate_armor_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:pirate_leggings"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "craft_pirate_armor_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:pirate_boots"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:kill_corpse_crew_member"
+}

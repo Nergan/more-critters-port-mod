@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "iropod_helmet",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:molded_shell"
+    },
+    "b": {
+      "item": "minecraft:iron_helmet"
+    }
+  },
+  "result": {
+    "id": "more_critters:iropod_helmet_helmet",
+    "count": 1
+  }
+}

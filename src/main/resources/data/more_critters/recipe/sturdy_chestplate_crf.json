@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sturdy_chestplate",
+  "category": "equipment",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:sturdy_shells"
+    }
+  },
+  "result": {
+    "id": "more_critters:sturdy_chestplate",
+    "count": 1
+  }
+}

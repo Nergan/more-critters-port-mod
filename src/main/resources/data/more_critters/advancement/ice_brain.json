@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:ice"
+    },
+    "title": {
+      "translate": "advancements.ice_brain.title"
+    },
+    "description": {
+      "translate": "advancements.ice_brain.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ice_brain_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:encounter_nervoid"
+}

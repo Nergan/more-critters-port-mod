@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "more_critters:blocks/ghostly_door",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_critters:ghostly_door",
+          "conditions": [
+            {
+              "block": "more_critters:ghostly_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

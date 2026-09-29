@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT License"
+
+[[mods]]
+modId="more_critters"
+version="1.4.5"
+displayName="More Critters"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/more-critters"
+logoFile="logo.png"
+credits="Portakal Cevheri, Natsirt, OrangeeApple, MistyJam, MSF and Skipster112"
+authors="\u00A76Portakal Cevheri"
+description="Discover the colorful Critters that inhabit the world"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.more_critters]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.more_critters]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

@@ -1,0 +1,39 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.blubberfish_fry_new",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 2, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 2, 0],
+					"cubes": [
+						{"origin": [-1, 1, -1], "size": [2, 2, 2], "uv": [12, 8]},
+						{"origin": [-2, 0, -2], "size": [4, 4, 4], "uv": [0, 0]},
+						{"origin": [0, 4, -1], "size": [0, 3, 2], "uv": [7, 10]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 2, 2],
+					"cubes": [
+						{"origin": [0, -0.5, 2], "size": [0, 5, 3], "uv": [0, 8]}
+					]
+				}
+			]
+		}
+	]
+}

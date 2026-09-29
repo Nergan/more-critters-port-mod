@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/polished_coldstone",
+    "up": "more_critters:block/polished_coldstone",
+    "north": "more_critters:block/polished_coldstone",
+    "east": "more_critters:block/polished_coldstone",
+    "south": "more_critters:block/polished_coldstone",
+    "west": "more_critters:block/polished_coldstone",
+    "particle": "more_critters:block/polished_coldstone"
+  },
+  "render_type": "solid"
+}

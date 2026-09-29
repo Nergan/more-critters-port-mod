@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:block/zombie_nauticrawl_shell"
+    },
+    "facing=east": {
+      "model": "more_critters:block/zombie_nauticrawl_shell",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:block/zombie_nauticrawl_shell",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:block/zombie_nauticrawl_shell",
+      "y": 270
+    }
+  }
+}

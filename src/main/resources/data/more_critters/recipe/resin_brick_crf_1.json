@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:black_resin_brick"
+    }
+  },
+  "result": {
+    "id": "more_critters:black_resin_bricks",
+    "count": 4
+  }
+}

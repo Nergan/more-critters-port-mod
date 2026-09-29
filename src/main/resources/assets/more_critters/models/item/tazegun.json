@@ -1,0 +1,6 @@
+{
+  "parent": "more_critters:displaysettings/tazegun",
+  "textures": {
+    "layer0": "more_critters:item/tazegun"
+  }
+}

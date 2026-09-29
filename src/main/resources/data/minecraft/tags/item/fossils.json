@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:critter_fossil_1",
+    "more_critters:critter_fossil_2",
+    "more_critters:critter_fossil_3",
+    "more_critters:critter_fossil_4",
+    "more_critters:critter_fossil_5",
+    "more_critters:critter_fossil_6",
+    "more_critters:critter_fossil_7",
+    "more_critters:critter_fossil_8",
+    "more_critters:critter_fossil_9",
+    "more_critters:critter_fossil_10",
+    "more_critters:critterling_fossil_1",
+    "more_critters:critterling_fossil_2",
+    "more_critters:critterling_fossil_3",
+    "more_critters:plant_fossil_1",
+    "more_critters:plant_fossil_2",
+    "more_critters:plant_fossil_3",
+    "more_critters:plant_fossil_4"
+  ]
+}

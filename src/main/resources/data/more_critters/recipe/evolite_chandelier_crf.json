@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcb",
+    "ddd"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "more_critters:ectometal"
+    },
+    "c": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "d": {
+      "item": "more_critters:evolite"
+    }
+  },
+  "result": {
+    "id": "more_critters:evolite_chandelier",
+    "count": 1
+  }
+}

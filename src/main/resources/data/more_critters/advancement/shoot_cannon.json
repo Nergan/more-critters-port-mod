@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:cannon"
+    },
+    "title": {
+      "translate": "advancements.shoot_cannon.title"
+    },
+    "description": {
+      "translate": "advancements.shoot_cannon.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shoot_cannon_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:walk_on_ghostly_planks"
+}

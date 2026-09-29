@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "badlands",
+    "eroded_badlands",
+    "wooded_badlands"
+  ],
+  "spawners": {
+    "type": "more_critters:balloon_rat",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

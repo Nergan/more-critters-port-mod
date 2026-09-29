@@ -1,0 +1,171 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.coprse_lookout",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "bodydy",
+					"parent": "root",
+					"pivot": [0, 22, 0]
+				},
+				{
+					"name": "body",
+					"parent": "bodydy",
+					"pivot": [0, 22, 0],
+					"cubes": [
+						{"origin": [-4, 13, -6], "size": [8, 15, 11], "inflate": 0.1, "uv": [0, 0]},
+						{"origin": [-3.5, 20, -6], "size": [7, 8, 10], "uv": [0, 72]}
+					]
+				},
+				{
+					"name": "neck",
+					"parent": "body",
+					"pivot": [0, 25, -6],
+					"cubes": [
+						{"origin": [-1.5, 23, -9], "size": [3, 17, 3], "uv": [16, 48]}
+					]
+				},
+				{
+					"name": "head_r",
+					"parent": "neck",
+					"pivot": [0, 38, -9]
+				},
+				{
+					"name": "head",
+					"parent": "head_r",
+					"pivot": [0, 38, -9],
+					"cubes": [
+						{"origin": [-1.5, 35, -16], "size": [3, 6, 7], "inflate": 0.1, "uv": [32, 26]}
+					]
+				},
+				{
+					"name": "trunk",
+					"parent": "head",
+					"pivot": [0, 36, -16],
+					"cubes": [
+						{"origin": [-1, 35, -25], "size": [2, 2, 9], "uv": [8, 37]}
+					]
+				},
+				{
+					"name": "r_cheek",
+					"parent": "head",
+					"pivot": [-1, 36, -15],
+					"cubes": [
+						{"origin": [-3.5, 34.25, -17], "size": [3, 3, 3], "uv": [62, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "l_cheek",
+					"parent": "head",
+					"pivot": [1, 36, -15],
+					"cubes": [
+						{"origin": [0.5, 34.25, -17], "size": [3, 3, 3], "uv": [62, 0]}
+					]
+				},
+				{
+					"name": "r_head_leaves",
+					"parent": "head",
+					"pivot": [-1, 41, -9],
+					"cubes": [
+						{"origin": [-6.5, 41, -9], "size": [6, 8, 0], "uv": [54, 35]}
+					]
+				},
+				{
+					"name": "l_head_leaves",
+					"parent": "head",
+					"pivot": [1, 41, -9],
+					"cubes": [
+						{"origin": [0.5, 41, -9], "size": [6, 8, 0], "uv": [54, 35], "mirror": true}
+					]
+				},
+				{
+					"name": "b_neck_leaves",
+					"parent": "neck",
+					"pivot": [0, 28.5, -6],
+					"cubes": [
+						{"origin": [0, 29, -7], "size": [0, 15, 6], "pivot": [-0.5, 29, -7], "rotation": [-45, 0, 0], "uv": [42, 39]}
+					]
+				},
+				{
+					"name": "u_neck_leaves",
+					"parent": "neck",
+					"pivot": [0, 40, -7],
+					"cubes": [
+						{"origin": [0, 40, -7], "size": [0, 15, 6], "pivot": [-0.5, 40, -7], "rotation": [-45, 0, 0], "uv": [38, 0]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 21, 3.5],
+					"cubes": [
+						{"origin": [-1.5, 6, 2], "size": [3, 15, 3], "uv": [50, 0]},
+						{"origin": [-1.5, 6, 5], "size": [3, 2, 9], "uv": [8, 26]},
+						{"origin": [0, 8, 6], "size": [0, 5, 5], "uv": [52, 25]},
+						{"origin": [-1, 8, 12], "size": [2, 5, 2], "uv": [0, 53]}
+					]
+				},
+				{
+					"name": "tail_tip",
+					"parent": "tail",
+					"pivot": [0, 13, 13],
+					"cubes": [
+						{"origin": [-4.5, 13, 13], "size": [9, 7, 0], "uv": [50, 18]}
+					]
+				},
+				{
+					"name": "r_leaves",
+					"parent": "body",
+					"pivot": [-2, 20, -5.5],
+					"cubes": [
+						{"origin": [-2, 0, -6], "size": [0, 20, 4], "uv": [8, 48]}
+					]
+				},
+				{
+					"name": "l_leaves",
+					"parent": "body",
+					"pivot": [2, 20, -5.5],
+					"cubes": [
+						{"origin": [2, 0, -6], "size": [0, 20, 4], "uv": [8, 48], "mirror": true}
+					]
+				},
+				{
+					"name": "back_leaves",
+					"parent": "body",
+					"pivot": [0, 25, 5],
+					"cubes": [
+						{"origin": [0, 25, 5], "size": [0, 15, 6], "pivot": [-0.5, 25, 5], "rotation": [-67.5, 0, 0], "uv": [30, 39]}
+					]
+				},
+				{
+					"name": "r_leg",
+					"parent": "root",
+					"pivot": [-2, 20, 0],
+					"cubes": [
+						{"origin": [-3, 0, -1], "size": [2, 25, 2], "uv": [0, 26]}
+					]
+				},
+				{
+					"name": "l_leg",
+					"parent": "root",
+					"pivot": [2, 20, 0],
+					"cubes": [
+						{"origin": [1, 0, -1], "size": [2, 25, 2], "uv": [0, 26], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

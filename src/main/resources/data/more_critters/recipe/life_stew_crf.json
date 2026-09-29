@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "life_stew",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "more_critters:regenerative_flesh"
+    },
+    {
+      "item": "more_critters:vita_shroom"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "id": "more_critters:life_stew",
+    "count": 1
+  }
+}

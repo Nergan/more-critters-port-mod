@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:block/trophy"
+    },
+    "facing=east": {
+      "model": "more_critters:block/trophy",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:block/trophy",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:block/trophy",
+      "y": 270
+    }
+  }
+}

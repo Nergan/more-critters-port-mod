@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "more_critters:glowing_ooze_block"
+  },
+  "result": {
+    "id": "more_critters:cut_glowing_ooze_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/corpse_barnacle_open",
+  "textures": {
+    "all": "more_critters:block/corpse_barnacle_open",
+    "particle": "more_critters:block/corpse_barnacle",
+    "0": "more_critters:block/corpse_barnacle_open"
+  },
+  "render_type": "cutout_mipped"
+}

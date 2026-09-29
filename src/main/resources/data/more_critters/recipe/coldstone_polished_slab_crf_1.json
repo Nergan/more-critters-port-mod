@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:polished_coldstone"
+    }
+  },
+  "result": {
+    "id": "more_critters:polished_coldstone_slab",
+    "count": 6
+  }
+}

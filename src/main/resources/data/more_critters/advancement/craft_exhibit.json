@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:ancient_skeleton_exhibit_item"
+    },
+    "title": {
+      "translate": "advancements.craft_exhibit.title"
+    },
+    "description": {
+      "translate": "advancements.craft_exhibit.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_exhibit_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:ancient_skeleton_exhibit_item"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:kill_mightshroom"
+}

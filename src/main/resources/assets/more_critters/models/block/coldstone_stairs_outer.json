@@ -1,0 +1,10 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "particle": "more_critters:block/coldstone",
+    "bottom": "more_critters:block/coldstone",
+    "top": "more_critters:block/coldstone",
+    "side": "more_critters:block/coldstone"
+  },
+  "render_type": "solid"
+}

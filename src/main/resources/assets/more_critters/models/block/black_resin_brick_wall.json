@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "more_critters:block/black_resin_bricks",
+    "particle": "more_critters:block/black_resin_bricks"
+  },
+  "render_type": "solid"
+}

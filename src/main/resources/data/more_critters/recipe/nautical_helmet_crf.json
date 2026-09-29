@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "nautical_helmet",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:shell_pieces"
+    },
+    "b": {
+      "item": "more_critters:iropod_helmet_helmet"
+    }
+  },
+  "result": {
+    "id": "more_critters:nautical_helmet_helmet",
+    "count": 1
+  }
+}

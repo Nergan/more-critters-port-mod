@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:fish_bone_block"
+    }
+  ],
+  "result": {
+    "id": "more_critters:fish_bone",
+    "count": 9
+  }
+}

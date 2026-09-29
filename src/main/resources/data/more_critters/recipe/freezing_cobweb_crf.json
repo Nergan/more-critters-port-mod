@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "coldweb",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:freezing_string"
+    }
+  },
+  "result": {
+    "id": "more_critters:freezing_cobweb",
+    "count": 8
+  }
+}

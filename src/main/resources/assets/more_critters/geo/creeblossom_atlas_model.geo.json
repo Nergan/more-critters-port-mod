@@ -1,0 +1,81 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.creeblossom",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"rotation": [43.44102, 40.78947, 30.36119]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 3, 0],
+					"cubes": [
+						{"origin": [-2, 3, -1.5], "size": [4, 6, 3], "uv": [20, 11]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 9, 0],
+					"cubes": [
+						{"origin": [-3, 9, -2], "size": [6, 6, 5], "uv": [0, 0]},
+						{"origin": [-3, 7, -2], "size": [6, 2, 5], "uv": [22, 0]}
+					]
+				},
+				{
+					"name": "face",
+					"parent": "head",
+					"pivot": [0, 12, 2],
+					"cubes": [
+						{"origin": [-3, 9, -3], "size": [6, 6, 1], "uv": [20, 20]},
+						{"origin": [-0.5, 11.5, -3], "size": [1, 1, 5], "uv": [5, 23]},
+						{"origin": [-5, 7, -2], "size": [10, 10, 0], "uv": [0, 11]}
+					]
+				},
+				{
+					"name": "f_r_leg",
+					"parent": "root",
+					"pivot": [-1.5, 3, -1.5],
+					"cubes": [
+						{"origin": [-3, 0, -3.5], "size": [3, 3, 2], "uv": [0, 21]}
+					]
+				},
+				{
+					"name": "f_l_leg",
+					"parent": "root",
+					"pivot": [1.5, 3, -1.5],
+					"cubes": [
+						{"origin": [0, 0, -3.5], "size": [3, 3, 2], "uv": [0, 21], "mirror": true}
+					]
+				},
+				{
+					"name": "b_r_leg",
+					"parent": "root",
+					"pivot": [-1.5, 3, 1.5],
+					"cubes": [
+						{"origin": [-3, 0, 1.5], "size": [3, 3, 2], "uv": [0, 21]}
+					]
+				},
+				{
+					"name": "b_l_leg",
+					"parent": "root",
+					"pivot": [1.5, 3, 1.5],
+					"cubes": [
+						{"origin": [0, 0, 1.5], "size": [3, 3, 2], "uv": [0, 21], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

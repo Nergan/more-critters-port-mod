@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "more_critters:hanging_garden_of_bouncelizards",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 100,
+    "separation": 2,
+    "salt": 1925079544
+  }
+}

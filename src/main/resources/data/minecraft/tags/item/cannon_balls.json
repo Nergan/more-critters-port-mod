@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:cannon_ball",
+    "more_critters:infused_cannon_ball_cold",
+    "more_critters:infused_cannon_ball_fire",
+    "more_critters:infused_cannon_ball_slime",
+    "more_critters:infused_cannon_ball_electric",
+    "more_critters:infused_cannon_ball_combusting"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.balloon_rat",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"rotation": [43.44102, 40.78947, 30.36119]
+				},
+				{
+					"name": "body2",
+					"parent": "root",
+					"pivot": [0, 3.5, 0]
+				},
+				{
+					"name": "body",
+					"parent": "body2",
+					"pivot": [0, 3.5, 0],
+					"cubes": [
+						{"origin": [-2.5, 2.5, -6], "size": [5, 4, 12], "uv": [0, 26]}
+					]
+				},
+				{
+					"name": "r_arm",
+					"parent": "root",
+					"pivot": [-1.25, 3, -3],
+					"cubes": [
+						{"origin": [-2.25, 0, -4], "size": [2, 3, 2], "uv": [0, 42], "mirror": true}
+					]
+				},
+				{
+					"name": "l_arm",
+					"parent": "root",
+					"pivot": [1.25, 3, -3],
+					"cubes": [
+						{"origin": [0.25, 0, -4], "size": [2, 3, 2], "uv": [0, 42]}
+					]
+				},
+				{
+					"name": "r_leg",
+					"parent": "root",
+					"pivot": [-1.25, 3, 4],
+					"cubes": [
+						{"origin": [-2.25, 0, 3], "size": [2, 3, 2], "uv": [0, 42], "mirror": true}
+					]
+				},
+				{
+					"name": "l_leg",
+					"parent": "root",
+					"pivot": [1.25, 3, 4],
+					"cubes": [
+						{"origin": [0.25, 0, 3], "size": [2, 3, 2], "uv": [0, 42]}
+					]
+				},
+				{
+					"name": "head2",
+					"parent": "root",
+					"pivot": [0, 4.5, -6]
+				},
+				{
+					"name": "head",
+					"parent": "head2",
+					"pivot": [0, 4.5, -6],
+					"cubes": [
+						{"origin": [-1.5, 3.5, -14], "size": [3, 2, 8], "uv": [34, 26]}
+					]
+				},
+				{
+					"name": "r_ear",
+					"parent": "head",
+					"pivot": [-1.5, 5.5, -7],
+					"cubes": [
+						{"origin": [-3.5, 5.5, -7], "size": [3, 5, 0], "uv": [8, 42], "mirror": true}
+					]
+				},
+				{
+					"name": "l_ear",
+					"parent": "head",
+					"pivot": [1.5, 5.5, -7],
+					"cubes": [
+						{"origin": [0.5, 5.5, -7], "size": [3, 5, 0], "uv": [8, 42]}
+					]
+				},
+				{
+					"name": "balloon",
+					"parent": "root",
+					"pivot": [0, 9.5, 0],
+					"cubes": [
+						{"origin": [-6.5, 2.5, -6], "size": [13, 13, 13], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "root",
+					"pivot": [0, 5.5, 6],
+					"cubes": [
+						{"origin": [-1, 4.5, 6], "size": [2, 2, 7], "uv": [34, 36]}
+					]
+				}
+			]
+		}
+	]
+}

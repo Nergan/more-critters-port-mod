@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "coldstone_chiseled",
+  "category": "building",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:coldstone_brick_slab"
+    }
+  },
+  "result": {
+    "id": "more_critters:chiseled_coldstone",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:avoider",
+    "more_critters:avoider_fry",
+    "more_critters:black_iropod",
+    "more_critters:blubberfish",
+    "more_critters:blubberfish_fry",
+    "more_critters:bomb_jelly",
+    "more_critters:bomb_jelly_large",
+    "more_critters:bomb_jelly_medium",
+    "more_critters:bomb_jelly_small",
+    "more_critters:bubble_entity",
+    "more_critters:iropod",
+    "more_critters:jelly_torpedo",
+    "more_critters:kelpire",
+    "more_critters:nauticrawl",
+    "more_critters:ramchu",
+    "more_critters:ramchu_fry",
+    "more_critters:stincarp",
+    "more_critters:zombie_nauticrawl"
+  ]
+}

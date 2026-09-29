@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/evolite_chandelier",
+  "textures": {
+    "all": "more_critters:block/evolite_chandelier",
+    "particle": "more_critters:block/ectometal_block",
+    "0": "more_critters:block/evolite_chandelier"
+  },
+  "render_type": "cutout_mipped"
+}

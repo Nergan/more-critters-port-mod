@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "dark_forest",
+  "spawners": {
+    "type": "more_critters:shadelet",
+    "weight": 15,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

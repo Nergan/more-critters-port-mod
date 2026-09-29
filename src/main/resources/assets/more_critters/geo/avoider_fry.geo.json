@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.avoider_fry",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, 0, -1.5], "size": [3, 2, 3], "uv": [0, 0]},
+						{"origin": [-1.5, 2, -1.5], "size": [0, 1, 1], "uv": [6, 5]},
+						{"origin": [1.5, 2, -1.5], "size": [0, 1, 1], "uv": [6, 5], "mirror": true}
+					]
+				},
+				{
+					"name": "fin",
+					"parent": "root",
+					"pivot": [0, 1, 1.5],
+					"cubes": [
+						{"origin": [0, -0.5, 1.5], "size": [0, 3, 3], "pivot": [0, 1, 1.5], "rotation": [0, 0, 90], "uv": [0, 5]},
+						{"origin": [0, -0.5, 1.5], "size": [0, 3, 3], "uv": [0, 5]}
+					]
+				}
+			]
+		}
+	]
+}

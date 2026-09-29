@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:glowing_ooze_block"
+    }
+  ],
+  "result": {
+    "id": "more_critters:glowing_ooze",
+    "count": 9
+  }
+}

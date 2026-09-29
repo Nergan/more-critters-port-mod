@@ -1,0 +1,107 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.shriekbat_new",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "tail_root",
+					"pivot": [0, 22, 0]
+				},
+				{
+					"name": "root",
+					"parent": "tail_root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [-5.5, 4, -3], "size": [11, 12, 6], "uv": [1, 19]},
+						{"origin": [-5.5, 4, -2.5], "size": [11, 12, 0], "uv": [1, 52]}
+					]
+				},
+				{
+					"name": "r_ear",
+					"parent": "body",
+					"pivot": [-4, 16, 1.5],
+					"cubes": [
+						{"origin": [-8, 16, 1], "size": [6, 11, 1], "uv": [0, 37]}
+					]
+				},
+				{
+					"name": "l_ear",
+					"parent": "body",
+					"pivot": [4, 16, 1.5],
+					"cubes": [
+						{"origin": [2, 16, 1], "size": [6, 11, 1], "uv": [0, 37], "mirror": true}
+					]
+				},
+				{
+					"name": "r_wing1",
+					"parent": "body",
+					"pivot": [-5.5, 14, 3],
+					"cubes": [
+						{"origin": [-19.5, -3, 3], "size": [18, 19, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "r_wing2",
+					"parent": "r_wing1",
+					"pivot": [-19.5, 14, 3],
+					"cubes": [
+						{"origin": [-33.5, 0, 3], "size": [14, 16, 0], "uv": [36, 0]}
+					]
+				},
+				{
+					"name": "l_wing1",
+					"parent": "body",
+					"pivot": [5.5, 14, 3],
+					"cubes": [
+						{"origin": [1.5, -3, 3], "size": [18, 19, 0], "uv": [0, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "l_wing2",
+					"parent": "l_wing1",
+					"pivot": [19.5, 14, 3],
+					"cubes": [
+						{"origin": [19.5, 0, 3], "size": [14, 16, 0], "uv": [36, 0], "mirror": true}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 4, 3],
+					"cubes": [
+						{"origin": [-3, -21, 3], "size": [6, 25, 0], "uv": [36, 16]}
+					]
+				},
+				{
+					"name": "eyes",
+					"parent": "body",
+					"pivot": [0, 7.5, -3],
+					"cubes": [
+						{"origin": [-5.5, 6, -2.75], "size": [11, 4, 0], "inflate": -0.2, "uv": [25, 58]}
+					]
+				},
+				{
+					"name": "echo_hole",
+					"parent": "body",
+					"pivot": [0, 12.5, -3],
+					"cubes": [
+						{"origin": [-2.5, 10, -2.75], "size": [5, 5, 0], "inflate": -0.2, "uv": [31, 52]}
+					]
+				}
+			]
+		}
+	]
+}

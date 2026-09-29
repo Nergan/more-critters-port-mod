@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:icon_2"
+    },
+    "title": {
+      "translate": "advancements.get_ends_blessing.title"
+    },
+    "description": {
+      "translate": "advancements.get_ends_blessing.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_ends_blessing_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:obtain_chrysalis"
+}

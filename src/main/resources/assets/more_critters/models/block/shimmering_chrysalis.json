@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/shimmering_chrysalis",
+  "textures": {
+    "all": "more_critters:block/shimmering_chrysalis",
+    "particle": "more_critters:block/shimmering_chrysalis2",
+    "0": "more_critters:block/shimmering_chrysalis"
+  },
+  "render_type": "cutout_mipped"
+}

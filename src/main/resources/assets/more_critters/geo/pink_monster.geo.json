@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pink_monster",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 8, 0]
+				},
+				{
+					"name": "root",
+					"parent": "head",
+					"pivot": [0, 8, 0],
+					"cubes": [
+						{"origin": [-8, 0, -8], "size": [16, 16, 2], "uv": [48, 30]},
+						{"origin": [-8, 0, -6], "size": [16, 16, 14], "uv": [0, 0]},
+						{"origin": [-12, -4, -6], "size": [24, 24, 0], "uv": [0, 30]}
+					]
+				},
+				{
+					"name": "eye1",
+					"parent": "root",
+					"pivot": [-3.5, 11.5, -7],
+					"cubes": [
+						{"origin": [-7.5, 7.5, -7], "size": [8, 8, 0], "uv": [0, 57]}
+					]
+				},
+				{
+					"name": "eye2",
+					"parent": "root",
+					"pivot": [3.5, 11.5, -7],
+					"cubes": [
+						{"origin": [-0.5, 7.5, -7], "size": [8, 8, 0], "uv": [0, 65], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/blubber_block",
+  "textures": {
+    "all": "more_critters:block/blubber_block",
+    "particle": "more_critters:block/blubber_block",
+    "0": "more_critters:block/blubber_block"
+  },
+  "render_type": "translucent"
+}

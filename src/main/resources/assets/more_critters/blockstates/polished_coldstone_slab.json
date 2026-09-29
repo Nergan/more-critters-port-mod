@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "more_critters:block/polished_coldstone_slab"
+    },
+    "type=top": {
+      "model": "more_critters:block/polished_coldstone_slab_top"
+    },
+    "type=double": {
+      "model": "more_critters:block/polished_coldstone_slab_full"
+    }
+  }
+}

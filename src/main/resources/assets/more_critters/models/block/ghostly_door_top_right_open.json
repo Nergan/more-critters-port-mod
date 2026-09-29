@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_top_right_open",
+  "textures": {
+    "particle": "more_critters:block/ghostly_door_bottom",
+    "bottom": "more_critters:block/ghostly_door_bottom",
+    "top": "more_critters:block/ghostly_door_top"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/confetti_trail0",
+  "textures": {
+    "all": "more_critters:block/confetti_trail0",
+    "particle": "more_critters:block/confetti_trail",
+    "0": "more_critters:block/confetti_trail0"
+  },
+  "render_type": "cutout_mipped"
+}

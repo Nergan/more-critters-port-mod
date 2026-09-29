@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:explosive_jelly"
+    },
+    "title": {
+      "translate": "advancements.explode_bomb_jelly.title"
+    },
+    "description": {
+      "translate": "advancements.explode_bomb_jelly.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "explode_bomb_jelly_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

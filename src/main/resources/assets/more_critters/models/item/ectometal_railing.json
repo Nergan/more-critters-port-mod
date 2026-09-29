@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "more_critters:block/ectometal_railing"
+  },
+  "render_type": "cutout_mipped"
+}

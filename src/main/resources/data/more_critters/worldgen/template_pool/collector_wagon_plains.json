@@ -1,0 +1,32 @@
+{
+  "name": "more_critters:collector_wagon_plains",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "more_critters:collector_wagon_plains",
+        "projection": "rigid",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:block_ignore",
+              "blocks": [
+                {
+                  "Name": "minecraft:structure_block"
+                },
+                {
+                  "Name": "minecraft:air"
+                },
+                {
+                  "Name": "minecraft:grass_block"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/ectometal_block",
+    "up": "more_critters:block/ectometal_block",
+    "north": "more_critters:block/ectometal_block",
+    "east": "more_critters:block/ectometal_block",
+    "south": "more_critters:block/ectometal_block",
+    "west": "more_critters:block/ectometal_block",
+    "particle": "more_critters:block/ectometal_block"
+  },
+  "render_type": "solid"
+}

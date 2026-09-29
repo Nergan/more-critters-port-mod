@@ -1,0 +1,81 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.blubberfish",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "rootroot",
+					"pivot": [0.5, 3.5, 0.5],
+					"rotation": [43.44102, 40.78947, 30.36119]
+				},
+				{
+					"name": "root",
+					"parent": "rootroot",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 3.5, 0],
+					"cubes": [
+						{"origin": [-3.5, 0, -4.5], "size": [7, 8, 9], "uv": [0, 0]},
+						{"origin": [-2, 0.25, -6.75], "size": [4, 2, 4], "pivot": [0, 1.25, -2.75], "rotation": [22.5, 0, 0], "uv": [23, 0]},
+						{"origin": [-5.5, 2.2, -4.4], "size": [3, 3, 3], "pivot": [-2.5, 3.7, -2.9], "rotation": [0.42396, -25.49631, 3.89361], "uv": [18, 17]},
+						{"origin": [2.5, 2.2, -4.4], "size": [3, 3, 3], "pivot": [2.5, 3.7, -2.9], "rotation": [0.42396, 25.49631, -3.89361], "uv": [18, 17], "mirror": true}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 4, 4.5],
+					"cubes": [
+						{"origin": [0, 0.5, 4.5], "size": [0, 7, 9], "uv": [0, 17]}
+					]
+				},
+				{
+					"name": "f_r_fin",
+					"parent": "body",
+					"pivot": [-3.5, 0, -2],
+					"rotation": [0, 0, 45],
+					"cubes": [
+						{"origin": [-3.5, -6, -3.5], "size": [0, 6, 3], "uv": [18, 23]}
+					]
+				},
+				{
+					"name": "f_l_fin",
+					"parent": "body",
+					"pivot": [3.5, 0, -2],
+					"rotation": [0, 0, -45],
+					"cubes": [
+						{"origin": [3.5, -6, -3.5], "size": [0, 6, 3], "uv": [18, 23], "mirror": true}
+					]
+				},
+				{
+					"name": "b_r_fin",
+					"parent": "body",
+					"pivot": [-3.5, 0.5, 3.5],
+					"cubes": [
+						{"origin": [-3.5, -3.5, 2.5], "size": [0, 4, 2], "uv": [24, 23]}
+					]
+				},
+				{
+					"name": "b_l_fin",
+					"parent": "body",
+					"pivot": [3.5, 0.5, 3.5],
+					"rotation": [0, 0, -45],
+					"cubes": [
+						{"origin": [3.5, -3.5, 2.5], "size": [0, 4, 2], "uv": [24, 23], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

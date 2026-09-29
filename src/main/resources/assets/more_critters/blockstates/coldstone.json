@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:block/coldstone"
+    },
+    "facing=east": {
+      "model": "more_critters:block/coldstone",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:block/coldstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:block/coldstone",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "more_critters:block/coldstone",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "more_critters:block/coldstone",
+      "x": 90
+    }
+  }
+}

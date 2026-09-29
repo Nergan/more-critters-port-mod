@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:cannon_ball"
+    },
+    "b": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "id": "more_critters:infused_cannon_ball_slime",
+    "count": 8
+  }
+}

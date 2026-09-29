@@ -1,0 +1,15 @@
+{
+  "parent": "more_critters:custom/biting_shield",
+  "textures": {
+    "0": "more_critters:block/biting_shield",
+    "particle": "more_critters:item/balls"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "more_critters:item/biting_shield_0"
+    }
+  ]
+}

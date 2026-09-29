@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:iropod_helmet_helmet",
+    "more_critters:nautical_helmet_helmet",
+    "more_critters:party_hat_helmet",
+    "more_critters:pirate_helmet"
+  ]
+}

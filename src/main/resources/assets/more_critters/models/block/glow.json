@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/blank",
+    "up": "more_critters:block/blank",
+    "north": "more_critters:block/blank",
+    "east": "more_critters:block/blank",
+    "south": "more_critters:block/blank",
+    "west": "more_critters:block/blank",
+    "particle": "more_critters:block/blank"
+  },
+  "render_type": "translucent"
+}

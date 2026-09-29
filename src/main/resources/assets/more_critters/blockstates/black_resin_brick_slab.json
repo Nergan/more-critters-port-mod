@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "more_critters:block/black_resin_brick_slab"
+    },
+    "type=top": {
+      "model": "more_critters:block/black_resin_brick_slab_top"
+    },
+    "type=double": {
+      "model": "more_critters:block/black_resin_brick_slab_full"
+    }
+  }
+}

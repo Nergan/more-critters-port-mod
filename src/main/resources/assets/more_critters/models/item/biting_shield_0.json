@@ -1,0 +1,7 @@
+{
+  "parent": "more_critters:custom/biting_shield_use",
+  "textures": {
+    "0": "more_critters:block/biting_shield_use",
+    "particle": "more_critters:item/balls"
+  }
+}

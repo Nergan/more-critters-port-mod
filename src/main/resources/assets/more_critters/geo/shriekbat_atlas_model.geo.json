@@ -1,0 +1,99 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.shriekbat",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"rotation": [43.44102, 40.78947, 30.36119]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 10, 0],
+					"cubes": [
+						{"origin": [-6, 4, -3], "size": [12, 12, 6], "uv": [0, 0]},
+						{"origin": [-6, 4, -2.5], "size": [12, 12, 0], "uv": [0, 41]}
+					]
+				},
+				{
+					"name": "legs",
+					"parent": "body",
+					"pivot": [0, 4, 0],
+					"cubes": [
+						{"origin": [-5, 0, 0], "size": [10, 4, 0], "uv": [0, 30]}
+					]
+				},
+				{
+					"name": "r_wing1",
+					"parent": "body",
+					"pivot": [-6, 14.5, 3],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{"origin": [-18, 4, 3], "size": [12, 12, 0], "uv": [0, 18]}
+					]
+				},
+				{
+					"name": "r_wing2",
+					"parent": "r_wing1",
+					"pivot": [-18, 15, 3],
+					"cubes": [
+						{"origin": [-30, 4, 3], "size": [12, 12, 0], "uv": [24, 18]}
+					]
+				},
+				{
+					"name": "l_wing1",
+					"parent": "body",
+					"pivot": [6, 14.5, 3],
+					"rotation": [0, 45, 0],
+					"cubes": [
+						{"origin": [6, 4, 3], "size": [12, 12, 0], "uv": [0, 18], "mirror": true}
+					]
+				},
+				{
+					"name": "l_wing2",
+					"parent": "l_wing1",
+					"pivot": [18, 15, 3],
+					"cubes": [
+						{"origin": [18, 4, 3], "size": [12, 12, 0], "uv": [24, 18], "mirror": true}
+					]
+				},
+				{
+					"name": "r_ear",
+					"parent": "body",
+					"pivot": [-4, 16, 1.5],
+					"cubes": [
+						{"origin": [-8, 16, 1], "size": [7, 7, 1], "uv": [20, 30]},
+						{"origin": [-5, 23, 1], "size": [4, 6, 1], "uv": [0, 34]}
+					]
+				},
+				{
+					"name": "l_ear",
+					"parent": "body",
+					"pivot": [4, 16, 1.5],
+					"cubes": [
+						{"origin": [1, 16, 1], "size": [7, 7, 1], "uv": [20, 30], "mirror": true},
+						{"origin": [1, 23, 1], "size": [4, 6, 1], "uv": [0, 34], "mirror": true}
+					]
+				},
+				{
+					"name": "eyes",
+					"parent": "body",
+					"pivot": [0, 10, -2.5],
+					"cubes": [
+						{"origin": [-6, 4, -2.75], "size": [12, 12, 0], "inflate": -0.2, "uv": [24, 41]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:ectometal"
+    }
+  },
+  "result": {
+    "id": "more_critters:ectometal_nail",
+    "count": 2
+  }
+}

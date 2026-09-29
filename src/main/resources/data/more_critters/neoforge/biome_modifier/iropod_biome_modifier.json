@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "deep_frozen_ocean",
+    "deep_cold_ocean",
+    "frozen_ocean",
+    "cold_ocean"
+  ],
+  "spawners": {
+    "type": "more_critters:iropod",
+    "weight": 5,
+    "minCount": 2,
+    "maxCount": 5
+  }
+}

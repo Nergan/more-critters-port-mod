@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "more_critters:block/closed_recruited_blossombush",
+    "particle": "more_critters:block/closed_recruited_blossombush"
+  },
+  "render_type": "cutout_mipped"
+}

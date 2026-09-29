@@ -1,0 +1,95 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:infused_cannon_ball_fire"
+    },
+    "title": {
+      "translate": "advancements.obtain_infused_cannon_balls.title"
+    },
+    "description": {
+      "translate": "advancements.obtain_infused_cannon_balls.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_infused_cannon_balls_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:infused_cannon_ball_cold"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_infused_cannon_balls_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:infused_cannon_ball_fire"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_infused_cannon_balls_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:infused_cannon_ball_slime"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_infused_cannon_balls_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:infused_cannon_ball_electric"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    },
+    "obtain_infused_cannon_balls_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:infused_cannon_ball_combusting"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:shoot_cannon"
+}

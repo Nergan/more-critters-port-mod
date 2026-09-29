@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "more_critters:block/ghostly_log_side",
+    "up": "more_critters:block/ghostly_log_side",
+    "north": "more_critters:block/ghostly_log_side",
+    "east": "more_critters:block/ghostly_log_side",
+    "south": "more_critters:block/ghostly_log_side",
+    "west": "more_critters:block/ghostly_log_side",
+    "particle": "more_critters:block/ghostly_log_side"
+  },
+  "render_type": "solid"
+}

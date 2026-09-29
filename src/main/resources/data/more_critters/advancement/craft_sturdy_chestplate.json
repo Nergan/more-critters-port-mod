@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:sturdy_chestplate"
+    },
+    "title": {
+      "translate": "advancements.craft_sturdy_chestplate.title"
+    },
+    "description": {
+      "translate": "advancements.craft_sturdy_chestplate.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_sturdy_chestplate_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:sturdy_chestplate"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:encounter_warptrap"
+}

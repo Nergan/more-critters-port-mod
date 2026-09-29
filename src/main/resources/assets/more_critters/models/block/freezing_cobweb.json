@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "more_critters:block/freezing_cobweb",
+    "particle": "more_critters:block/freezing_cobweb"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "more_critters:biting_shield",
+    "more_critters:taser",
+    "more_critters:tazegun",
+    "more_critters:grave_brush",
+    "more_critters:booster_pump"
+  ]
+}

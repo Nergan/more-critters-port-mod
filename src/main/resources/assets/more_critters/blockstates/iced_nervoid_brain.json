@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "more_critters:block/iced_nervoid_brain"
+    },
+    "facing=east": {
+      "model": "more_critters:block/iced_nervoid_brain",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "more_critters:block/iced_nervoid_brain",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "more_critters:block/iced_nervoid_brain",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "jungle",
+    "sparse_jungle"
+  ],
+  "features": "more_critters:bounce_bush_2",
+  "step": "surface_structures"
+}

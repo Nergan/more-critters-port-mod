@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:ancient_bone"
+    }
+  ],
+  "result": {
+    "id": "minecraft:bone_meal",
+    "count": 32
+  }
+}

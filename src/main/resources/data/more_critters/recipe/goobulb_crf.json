@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:glowing_ooze"
+    }
+  },
+  "result": {
+    "id": "more_critters:goobulb",
+    "count": 2
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ancient_skeleton",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bbb",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:fungal_flesh"
+    },
+    "b": {
+      "item": "more_critters:ancient_bone"
+    }
+  },
+  "result": {
+    "id": "more_critters:ancient_skeleton_item",
+    "count": 1
+  }
+}

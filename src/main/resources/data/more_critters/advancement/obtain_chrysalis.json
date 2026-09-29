@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:shimmering_chrysalis"
+    },
+    "title": {
+      "translate": "advancements.obtain_chrysalis.title"
+    },
+    "description": {
+      "translate": "advancements.obtain_chrysalis.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_chrysalis_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:shimmering_chrysalis"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:open_critter_atlas"
+}

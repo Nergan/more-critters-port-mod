@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "more_critters:raw_bunbug_meat"
+    },
+    "b": {
+      "item": "more_critters:cooked_blubberfish"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "more_critters:critter_kebab",
+    "count": 1
+  }
+}

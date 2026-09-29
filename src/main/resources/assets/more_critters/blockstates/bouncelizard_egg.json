@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "more_critters:block/bouncelizard_egg"
+    },
+    "blockstate=1": {
+      "model": "more_critters:block/bouncelizard_egg_blockstate_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "more_critters:block/bouncelizard_egg_blockstate_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "more_critters:block/bouncelizard_egg_blockstate_blockstate_2"
+    },
+    "blockstate=4": {
+      "model": "more_critters:block/bouncelizard_egg_blockstate_blockstate_3"
+    }
+  }
+}

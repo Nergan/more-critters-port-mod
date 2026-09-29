@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:ancient_skeleton_item"
+    },
+    "title": {
+      "translate": "advancements.kill_mightshroom.title"
+    },
+    "description": {
+      "translate": "advancements.kill_mightshroom.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kill_mightshroom_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:spawn_migthshroom"
+}

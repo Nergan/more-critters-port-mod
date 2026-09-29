@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "more_critters:block/goobulb"
+    },
+    "blockstate=1": {
+      "model": "more_critters:block/goobulb_states_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "more_critters:block/goobulb_states_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "more_critters:block/goobulb_states_blockstate_2"
+    }
+  }
+}

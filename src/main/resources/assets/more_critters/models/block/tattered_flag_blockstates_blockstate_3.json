@@ -1,0 +1,9 @@
+{
+  "parent": "more_critters:custom/tattered_flag5",
+  "textures": {
+    "all": "more_critters:block/tattered_flag5",
+    "particle": "more_critters:block/tattered_flag1",
+    "0": "more_critters:block/tattered_flag5"
+  },
+  "render_type": "cutout_mipped"
+}

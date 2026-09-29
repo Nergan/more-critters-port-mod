@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:dripstone_wall_mask"
+    },
+    "title": {
+      "translate": "advancements.craft_dripstone_wall_mask.title"
+    },
+    "description": {
+      "translate": "advancements.craft_dripstone_wall_mask.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craft_dripstone_wall_mask_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "more_critters:dripstone_wall_mask"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "more_critters:encounter_dripper"
+}

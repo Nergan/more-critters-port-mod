@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "more_critters:black_resin_bricks"
+  },
+  "result": {
+    "id": "more_critters:chiseled_black_resin_bricks",
+    "count": 1
+  }
+}

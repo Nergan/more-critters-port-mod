@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blossombush",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bbb",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bone_meal"
+    },
+    "b": {
+      "item": "more_critters:blossombush_seed"
+    },
+    "c": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "id": "more_critters:blossombush",
+    "count": 1
+  }
+}

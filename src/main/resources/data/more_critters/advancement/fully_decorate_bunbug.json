@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "more_critters:bunbug_crust_iced_chocolate_sprinkled_glow_berries"
+    },
+    "title": {
+      "translate": "advancements.fully_decorate_bunbug.title"
+    },
+    "description": {
+      "translate": "advancements.fully_decorate_bunbug.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fully_decorate_bunbug_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "more_critters:eat_bunbug_burger"
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "more_critters:block/polished_coldstone",
+    "bottom": "more_critters:block/polished_coldstone",
+    "top": "more_critters:block/polished_coldstone",
+    "side": "more_critters:block/polished_coldstone"
+  },
+  "render_type": "solid"
+}

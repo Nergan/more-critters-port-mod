@@ -1,0 +1,6 @@
+{
+  "parent": "more_critters:displaysettings/taser_display",
+  "textures": {
+    "layer0": "more_critters:item/taser"
+  }
+}

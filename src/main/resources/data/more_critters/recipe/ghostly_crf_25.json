@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "more_critters:ghostly_planks"
+    }
+  ],
+  "result": {
+    "id": "more_critters:ghostly_button",
+    "count": 1
+  }
+}
