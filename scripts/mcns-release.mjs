@@ -3,7 +3,8 @@
 // Версия auto — метка времени: номер на CDN нельзя переиспользовать,
 // а mod_version между пушами часто не меняется.
 import { createHash, createPrivateKey, randomBytes, sign } from "node:crypto";
-import { basename, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
+import { basename } from "node:path";
 
 const base = (process.env.MCNS_CDN_URL ?? "https://cdn.mikchan.net").replace(/\/$/, "");
 const token = process.env.MCNS_WORKER_TOKEN || "";
