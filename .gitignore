@@ -51,3 +51,7 @@ release-assets/
 .env
 *.key
 credentials.json
+
+# McnCDN worker private key
+mcns-ci-github.pem
+.mcns-cdn/
