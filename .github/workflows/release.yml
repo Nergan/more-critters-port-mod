@@ -18,6 +18,7 @@ permissions:
 # GitHub Release для текущей mod_version: те же jar перезаписываются.
 # Новый номер версии в gradle.properties → новый релиз vX.Y.Z.
 # SHA-256 у каждого файла считает сам GitHub при загрузке.
+# На Modrinth номер mod_version сначала освобождается, затем публикуется заново.
 
 jobs:
   release:
@@ -146,18 +147,30 @@ jobs:
             Do not install `*-sources.jar`. The companion jars are the official Modrinth builds. GitHub shows a SHA-256 digest next to each uploaded file.
 
       - name: Check Modrinth token
+        id: modrinth_token
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
         run: |
           set -euo pipefail
           if [[ -z "${MODRINTH_TOKEN}" ]]; then
-            echo "Secret MODRINTH_TOKEN is missing or empty on this repository."
-            echo "GitHub → Settings → Secrets and variables → Actions → New repository secret."
-            echo "Name must be exactly MODRINTH_TOKEN. Without it mc-publish skips Modrinth and still exits 0."
-            exit 1
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "MODRINTH_TOKEN is empty. Modrinth publish will be skipped."
+            exit 0
           fi
+          echo "present=true" >> "$GITHUB_OUTPUT"
+
+      - name: Replace Modrinth versions
+        if: steps.modrinth_token.outputs.present == 'true'
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/replace-modrinth-versions.py \
+            more-critters-port \
+            "${{ steps.versions.outputs.mod_version }}"
 
       - name: Publish Modrinth
+        if: steps.modrinth_token.outputs.present == 'true'
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           modrinth-id: more-critters-port
@@ -178,6 +191,14 @@ jobs:
           dependencies: |
             kotlin-for-forge(required){modrinth:ordsPcFz}
             geckolib(required){modrinth:8BmcQJ2H}
+
+      - name: Delete replaced Modrinth versions
+        if: steps.modrinth_token.outputs.present == 'true'
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/replace-modrinth-versions.py --finish release-assets/modrinth-delete-after-publish.txt
 
       - name: Update Modrinth description
         env:

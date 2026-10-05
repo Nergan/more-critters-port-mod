@@ -348,9 +348,9 @@ def main(argv):
     if "--clear" in argv:
         clear_release(token, repo_name, tag)
         return 0
-    if len(argv) != 2:
+    if len(argv) != 1:
         raise SystemExit("usage: sync-gitlab-release.py <assets-directory>")
-    publish_release(token, repo_name, tag, argv[1], require_env("RELEASE_META"))
+    publish_release(token, repo_name, tag, argv[0], require_env("RELEASE_META"))
     return 0
 
 

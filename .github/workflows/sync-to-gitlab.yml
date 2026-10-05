@@ -84,7 +84,7 @@ jobs:
   # Push только зеркалит git. Jar появляются после успешного workflow Release.
   gitlab-release:
     needs: sync
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') || (github.event_name == 'push' && github.run_attempt > 1) }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
