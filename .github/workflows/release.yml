@@ -52,16 +52,6 @@ jobs:
             exit 1
           fi
 
-      - name: Point version tag at this commit
-        if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
-        run: |
-          set -euo pipefail
-          tag="v${{ steps.versions.outputs.mod_version }}"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git tag -f "${tag}" "${GITHUB_SHA}"
-          git push -f origin "refs/tags/${tag}"
-
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
@@ -103,48 +93,33 @@ jobs:
           find release-assets -name 'geckolib-neoforge-*.jar' | grep -q .
           ls -lh release-assets
 
-      - name: Remove stale GitHub Release assets
+      - name: Publish split GitHub releases
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LEGACY_TAG: v${{ steps.versions.outputs.mod_version }}
         run: |
           set -euo pipefail
-          tag="v${{ steps.versions.outputs.mod_version }}"
-          if ! gh release view "${tag}" >/dev/null 2>&1; then
-            echo "No existing release ${tag}"
-            exit 0
-          fi
-          mapfile -t existing < <(gh release view "${tag}" --json assets --jq '.assets[].name')
-          for name in "${existing[@]}"; do
-            if [[ ! -f "release-assets/${name}" ]]; then
-              echo "Deleting stale asset ${name}"
-              gh release delete-asset "${tag}" "${name}" --yes
-            fi
-          done
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          shopt -s nullglob
+          rm -rf release-split
+          mc="${{ steps.versions.outputs.minecraft_version }}"
+          dir="release-split/minecraft-${mc}-neoforge"
+          mkdir -p "${dir}"
+          printf '%s\n' "more critters for minecraft ${mc} neoforge" > "${dir}/title.txt"
+          cat > "${dir}/body.md" <<EOF
+          Minecraft **${mc}** / NeoForge. Put the jars you need into the \`mods\` folder.
 
-      - name: Publish GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v${{ steps.versions.outputs.mod_version }}
-          name: More Critters ${{ steps.versions.outputs.mod_version }}
-          target_commitish: ${{ github.sha }}
-          make_latest: true
-          overwrite_files: true
-          generate_release_notes: true
-          fail_on_unmatched_files: true
-          files: |
-            release-assets/more_critters-*.jar
-            release-assets/kotlinforforge-*.jar
-            release-assets/geckolib-neoforge-*.jar
-          body: |
-            Minecraft **${{ steps.versions.outputs.minecraft_version }}** / NeoForge. Put the jars you need into the `mods` folder.
+          | File | Required | Source | License |
+          | --- | --- | --- | --- |
+          | \`more_critters-${{ steps.versions.outputs.mod_version }}.jar\` | Yes | this mod | MPL-2.0 for the port wiring. Code and assets from [More Critters](https://modrinth.com/mod/more-critters) by Portakal_Cevheri stay MIT |
+          | \`kotlinforforge-${{ steps.versions.outputs.kff_version }}-all.jar\` | Yes | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) | LGPL-2.1 |
+          | \`geckolib-neoforge-${mc}-${{ steps.versions.outputs.geckolib_version }}.jar\` | Yes | [GeckoLib](https://modrinth.com/mod/geckolib) | MIT |
 
-            | File | Required | Source | License |
-            | --- | --- | --- | --- |
-            | `more_critters-${{ steps.versions.outputs.mod_version }}.jar` | Yes | this mod | MPL-2.0 for the port wiring. Code and assets from [More Critters](https://modrinth.com/mod/more-critters) by Portakal_Cevheri stay MIT |
-            | `kotlinforforge-${{ steps.versions.outputs.kff_version }}-all.jar` | Yes | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) | LGPL-2.1 |
-            | `geckolib-neoforge-${{ steps.versions.outputs.minecraft_version }}-${{ steps.versions.outputs.geckolib_version }}.jar` | Yes | [GeckoLib](https://modrinth.com/mod/geckolib) | MIT |
-
-            Do not install `*-sources.jar`. The companion jars are the official Modrinth builds. GitHub shows a SHA-256 digest next to each uploaded file.
+          Do not install \`*-sources.jar\`. The companion jars are the official Modrinth builds. GitHub shows a SHA-256 digest next to each uploaded file. \`all-jars.zip\` contains every jar on this page.
+          EOF
+          cp -v release-assets/more_critters-*.jar release-assets/kotlinforforge-*.jar release-assets/geckolib-neoforge-*.jar "${dir}/"
+          python3 .github/scripts/publish-split-releases.py release-split
 
       - name: Check Modrinth token
         id: modrinth_token

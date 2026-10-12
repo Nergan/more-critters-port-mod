@@ -47,6 +47,7 @@ desktop.ini
 *.log
 eclipse/
 release-assets/
+release-split/
 .work/
 .env
 *.key

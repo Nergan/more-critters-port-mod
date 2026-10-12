@@ -10,7 +10,7 @@ Every critter is good for something: food, potion ingredients, tools, weapons or
 
 ## Downloads
 
-GitHub Release `v1.4.5`: [github.com/Nergan/more-critters-port](https://github.com/Nergan/more-critters-port/releases)
+GitHub Releases, one page per Minecraft version and loader: [github.com/Nergan/more-critters-port](https://github.com/Nergan/more-critters-port/releases)
 
 | File | Required | Notes |
 | --- | --- | --- |

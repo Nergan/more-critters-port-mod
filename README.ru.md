@@ -12,7 +12,7 @@
 
 ## Загрузки
 
-GitHub Release `v1.4.5`: [github.com/Nergan/more-critters-port](https://github.com/Nergan/more-critters-port/releases)
+GitHub Releases, отдельная страница на версию Minecraft и загрузчик: [github.com/Nergan/more-critters-port](https://github.com/Nergan/more-critters-port/releases)
 
 | Файл | Нужен | Примечание |
 | --- | --- | --- |
