@@ -84,6 +84,25 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function workerDraft(body) {
+  const match = /open draft ([^@\s]+)@(\d+)\.(\d+)\.(\d+)/.exec(body || "");
+  if (!match) return null;
+  return {
+    pkg: match[1],
+    version: `${match[2]}.${match[3]}.${match[4]}`,
+    createdAt: Number(match[2]) * 1000 + Number(match[3]),
+  };
+}
+
+async function discardDraft(draft) {
+  console.error(`discarding CDN draft ${draft.pkg}@${draft.version}`);
+  try {
+    await call("DELETE", `/v1/packages/${draft.pkg}/versions/${draft.version}`);
+  } catch (error) {
+    if (error.status !== 404) throw error;
+  }
+}
+
 async function main() {
   const [pkg, versionArg, ...pairs] = process.argv.slice(2);
   if (!pkg || !versionArg || pairs.length === 0) {
@@ -130,19 +149,37 @@ async function main() {
   let published = false;
   try {
     if (versionArg === "auto") {
-      for (let attempt = 1; attempt <= 5; attempt++) {
+      // One worker holds a single draft across every package. A push of
+      // several mods hits 409 until that draft is published. A draft older
+      // than three minutes was left by a failed run and is discarded.
+      const deadline = Date.now() + 12 * 60 * 1000;
+      let clockSkips = 0;
+      while (!created && Date.now() < deadline) {
         version = nextVersion();
         try {
           await call("POST", `/v1/packages/${pkg}/versions`, {
             json: { version, description, meta },
           });
           created = true;
-          break;
         } catch (error) {
-          const retry = error.status === 409 && /version|floor/i.test(error.body || "");
-          if (!retry || attempt === 5) throw error;
-          await sleep(20);
+          const draft = error.status === 409 ? workerDraft(error.body) : null;
+          if (draft) {
+            const age = Date.now() - draft.createdAt;
+            if (draft.pkg === pkg || age >= 3 * 60 * 1000) {
+              await discardDraft(draft);
+              continue;
+            }
+            console.error(`CDN worker is publishing ${draft.pkg}@${draft.version}, waiting`);
+            await sleep(20_000);
+            continue;
+          }
+          clockSkips += 1;
+          if (error.status !== 409 || clockSkips > 8) throw error;
+          await sleep(50);
         }
+      }
+      if (!created) {
+        throw new Error(`CDN worker stayed busy, ${pkg} was not published`);
       }
     } else {
       await call("POST", `/v1/packages/${pkg}/versions`, {

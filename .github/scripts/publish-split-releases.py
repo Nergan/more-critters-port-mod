@@ -16,10 +16,14 @@ the old single release such as v1.0.0.
 GITHUB_SHA is the commit the tags point at. gh must already be authenticated.
 """
 
+import json
 import os
 import pathlib
 import subprocess
 import sys
+import urllib.error
+import urllib.parse
+import urllib.request
 import zipfile
 
 
@@ -35,6 +39,67 @@ def release_exists(tag):
         stderr=subprocess.DEVNULL,
     )
     return result.returncode == 0
+
+
+def has_glob_meta(name):
+    return any(char in name for char in "*?[]")
+
+
+def github_token():
+    token = (os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or "").strip()
+    if token:
+        return token
+    result = subprocess.run(["gh", "auth", "token"], check=True, capture_output=True, text=True)
+    token = result.stdout.strip()
+    if not token:
+        raise SystemExit("GH_TOKEN is empty")
+    return token
+
+
+def upload_literal_name(tag, path):
+    # gh release upload treats []*? as a glob, so a literal name like
+    # born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar never matches the file.
+    listed = subprocess.run(
+        ["gh", "api", f"repos/{{owner}}/{{repo}}/releases/tags/{tag}"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    release = json.loads(listed.stdout)
+    for asset in release.get("assets", []):
+        if asset.get("name") == path.name:
+            run([
+                "gh", "api", "--method", "DELETE",
+                f"repos/{{owner}}/{{repo}}/releases/assets/{asset['id']}",
+            ])
+    upload_url = release["upload_url"].split("{", 1)[0]
+    url = upload_url + "?" + urllib.parse.urlencode({"name": path.name})
+    request = urllib.request.Request(
+        url,
+        data=path.read_bytes(),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {github_token()}",
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/octet-stream",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request) as response:
+            response.read()
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", "replace")[:500]
+        raise SystemExit(f"upload {path.name}: HTTP {error.code} {detail}") from error
+
+
+def upload_assets(tag, paths):
+    plain = [path for path in paths if not has_glob_meta(path.name)]
+    special = [path for path in paths if has_glob_meta(path.name)]
+    if plain:
+        run(["gh", "release", "upload", tag, *[str(path) for path in plain], "--clobber"])
+    for path in special:
+        print("upload", path.name)
+        upload_literal_name(tag, path)
 
 
 def version_key(tag):
@@ -104,17 +169,30 @@ def publish(directory, sha, latest):
         ])
 
     listed = subprocess.run(
-        ["gh", "release", "view", tag, "--json", "assets", "--jq", ".assets[].name"],
+        [
+            "gh", "release", "view", tag, "--json", "assets",
+            "--jq", '.assets[] | [.name, (.id | tostring)] | @tsv',
+        ],
         check=True,
         capture_output=True,
         text=True,
     )
-    for name in listed.stdout.splitlines():
-        if name and name not in keep:
-            print("delete", tag, name)
+    for line in listed.stdout.splitlines():
+        if not line.strip():
+            continue
+        name, asset_id = line.split("\t", 1)
+        if name in keep:
+            continue
+        print("delete", tag, name)
+        if has_glob_meta(name):
+            run([
+                "gh", "api", "--method", "DELETE",
+                f"repos/{{owner}}/{{repo}}/releases/assets/{asset_id}",
+            ])
+        else:
             run(["gh", "release", "delete-asset", tag, name, "--yes"])
 
-    run(["gh", "release", "upload", tag, *[str(path) for path in jars], str(bundle), "--clobber"])
+    upload_assets(tag, [*jars, bundle])
 
 
 def main():
