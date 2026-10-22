@@ -16,7 +16,7 @@ GitHub Releases, отдельная страница на версию Minecraft
 
 | Файл                                 | Нужен | Примечание                                                    |
 | ------------------------------------ | ----- | ------------------------------------------------------------- |
-| `more_critters-1.4.5.jar`            | Да    | Этот мод                                                      |
+| `more_critters-1.4.6.jar`            | Да    | Этот мод                                                      |
 | `kotlinforforge-5.8.0-all.jar`       | Да    | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
 | `geckolib-neoforge-1.21.1-4.9.3.jar` | Да    | [GeckoLib](https://modrinth.com/mod/geckolib)                 |
 | `*-sources.jar`                      | Нет   | В `mods` его класть не нужно                                  |
@@ -33,7 +33,7 @@ Modrinth: [more-critters-port](https://modrinth.com/project/more-critters-port)
 
 ## Установка
 
-Положи `more_critters-1.4.5.jar`, `kotlinforforge-5.8.0-all.jar` и `geckolib-neoforge-1.21.1-4.9.3.jar` в папку `mods`. Мод нужен и на клиенте, и на сервере.
+Положи `more_critters-1.4.6.jar`, `kotlinforforge-5.8.0-all.jar` и `geckolib-neoforge-1.21.1-4.9.3.jar` в папку `mods`. Мод нужен и на клиенте, и на сервере.
 
 ## Конфиг
 

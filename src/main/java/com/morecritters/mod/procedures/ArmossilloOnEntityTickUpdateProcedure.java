@@ -89,7 +89,7 @@ public class ArmossilloOnEntityTickUpdateProcedure {
                                                 || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _levelxx, _bp, null)
                                         )
                                         && !_levelxx.isClientSide()) {
-                                        _levelxx.levelEvent(2005, _bp, 0);
+                                        _levelxx.levelEvent(1505, _bp, 15);
                                     }
                                 }
 
@@ -100,7 +100,7 @@ public class ArmossilloOnEntityTickUpdateProcedure {
                                                 || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _levelx, _bp, null)
                                         )
                                         && !_levelx.isClientSide()) {
-                                        _levelx.levelEvent(2005, _bp, 0);
+                                        _levelx.levelEvent(1505, _bp, 15);
                                     }
                                 }
 
@@ -114,7 +114,7 @@ public class ArmossilloOnEntityTickUpdateProcedure {
                                                         || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _levelxxx, _bpx, null)
                                                 )
                                                 && !_levelxxx.isClientSide()) {
-                                                _levelxxx.levelEvent(2005, _bpx, 0);
+                                                _levelxxx.levelEvent(1505, _bpx, 15);
                                             }
                                         }
 
@@ -128,7 +128,7 @@ public class ArmossilloOnEntityTickUpdateProcedure {
                                                                 || BoneMealItem.growWaterPlant(new ItemStack(Items.BONE_MEAL), _levelxxxx, _bpxx, null)
                                                         )
                                                         && !_levelxxxx.isClientSide()) {
-                                                        _levelxxxx.levelEvent(2005, _bpxx, 0);
+                                                        _levelxxxx.levelEvent(1505, _bpxx, 15);
                                                     }
                                                 }
                                             }

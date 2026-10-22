@@ -309,7 +309,7 @@
 				},
 				"r_wing2": {
 					"rotation": {
-						"vector": [0, -22.5, "math.cos((query.anim_time -0.1) *2880) *-30 +NaN"]
+						"vector": [0, -22.5, "math.cos((query.anim_time -0.1) *2880) *-30"]
 					}
 				},
 				"l_wing1": {
@@ -319,7 +319,7 @@
 				},
 				"l_wing2": {
 					"rotation": {
-						"vector": [0, 22.5, "math.cos((query.anim_time -0.1) *2880) *30 +NaN"]
+						"vector": [0, 22.5, "math.cos((query.anim_time -0.1) *2880) *30"]
 					}
 				},
 				"r_leg1": {

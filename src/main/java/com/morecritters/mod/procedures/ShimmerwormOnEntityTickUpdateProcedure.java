@@ -27,12 +27,17 @@ public class ShimmerwormOnEntityTickUpdateProcedure {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
         if (entity != null) {
             double shimmer = 0.0;
-            entity.getPersistentData().putDouble("age", entity.getPersistentData().getDouble("age") - 1.0);
-            if (1.0 == entity.getPersistentData().getDouble("age")) {
-                if (!entity.level().isClientSide()) {
-                    entity.discard();
+            if (!entity.level().isClientSide()) {
+                if (!entity.getPersistentData().contains("age")) {
+                    entity.getPersistentData().putDouble("age", 12000.0);
                 }
 
+                entity.getPersistentData().putDouble("age", entity.getPersistentData().getDouble("age") - 1.0);
+            }
+
+            if (!entity.level().isClientSide() && entity.getPersistentData().getDouble("age") <= 0.0 && !entity.getPersistentData().getBoolean("grown")) {
+                entity.getPersistentData().putBoolean("grown", true);
+                entity.discard();
                 if (world instanceof ServerLevel _level) {
                     Entity entityToSpawn = MoreCrittersModEntities.SHIMMERWING.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
                     if (entityToSpawn != null) {

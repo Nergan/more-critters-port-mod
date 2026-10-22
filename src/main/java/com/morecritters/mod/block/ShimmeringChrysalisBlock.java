@@ -8,6 +8,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -74,7 +75,23 @@ public class ShimmeringChrysalisBlock extends Block {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
+        BlockPos pos = context.getClickedPos();
+        Direction clicked = context.getClickedFace();
+        if (clicked.getAxis().isHorizontal()) {
+            BlockState clickedState = this.defaultBlockState().setValue(FACING, clicked);
+            if (clickedState.canSurvive(context.getLevel(), pos)) {
+                return clickedState;
+            }
+        }
+
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            BlockState state = this.defaultBlockState().setValue(FACING, direction);
+            if (state.canSurvive(context.getLevel(), pos)) {
+                return state;
+            }
+        }
+
+        return null;
     }
 
     @Override
@@ -93,7 +110,7 @@ public class ShimmeringChrysalisBlock extends Block {
             int x = pos.getX();
             int y = pos.getY();
             int z = pos.getZ();
-            return ShimmeringChrysalisBlockValidPlacementConditionProcedure.execute(world, x, y, z);
+            return ShimmeringChrysalisBlockValidPlacementConditionProcedure.execute(world, x, y, z, blockstate.getValue(FACING));
         } else {
             return super.canSurvive(blockstate, worldIn, pos);
         }
@@ -107,11 +124,28 @@ public class ShimmeringChrysalisBlock extends Block {
     }
 
     @Override
+    public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean isMoving) {
+        super.onPlace(blockstate, world, pos, oldState, isMoving);
+        world.scheduleTick(pos, this, 1);
+    }
+
+    @Override
+    public void randomTick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+        world.scheduleTick(pos, this, 1);
+    }
+
+    @Override
     public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
         super.tick(blockstate, world, pos, random);
+        if (!blockstate.canSurvive(world, pos)) {
+            world.destroyBlock(pos, true);
+            return;
+        }
+
         int x = pos.getX();
         int y = pos.getY();
         int z = pos.getZ();
         ShimmeringChrysalisOnTickUpdateProcedure.execute(world, x, y, z);
+        world.scheduleTick(pos, this, 1);
     }
 }

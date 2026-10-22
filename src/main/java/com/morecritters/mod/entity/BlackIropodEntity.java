@@ -301,8 +301,13 @@ public class BlackIropodEntity extends PathfinderMob implements GeoEntity {
                 event.getController().forceAnimationReset();
             }
 
-            event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
-            if (event.getController().getAnimationState() == State.STOPPED) {
+            event.getController()
+                .setAnimation(
+                    this.animationprocedure.equals("lock")
+                        ? RawAnimation.begin().thenPlayAndHold("lock")
+                        : RawAnimation.begin().thenPlay(this.animationprocedure)
+                );
+            if (!this.animationprocedure.equals("lock") && event.getController().getAnimationState() == State.STOPPED) {
                 this.animationprocedure = "empty";
                 event.getController().forceAnimationReset();
             }

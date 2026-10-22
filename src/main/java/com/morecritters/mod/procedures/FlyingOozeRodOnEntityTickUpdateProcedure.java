@@ -1,47 +1,48 @@
 package com.morecritters.mod.procedures;
 
-import java.util.Map.Entry;
 import com.morecritters.mod.init.MoreCrittersModBlocks;
-import com.morecritters.mod.init.MoreCrittersModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.phys.Vec3;
 
 public class FlyingOozeRodOnEntityTickUpdateProcedure {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-        if (entity != null) {
-            double rate = 0.0;
-            if (world.getBlockState(BlockPos.containing(x, y - 0.1, z)).getBlock() == Blocks.AIR) {
-                BlockPos _bp = BlockPos.containing(x, y, z);
-                BlockState _bs = MoreCrittersModBlocks.GLOW.get().defaultBlockState();
-                BlockState _bso = world.getBlockState(_bp);
-                for (Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-                    Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-                    if (_property != null && _bs.getValue(_property) != null) {
-                        try {
-                            _bs = _bs.setValue(_property, (Comparable) entry.getValue());
-                        } catch (Exception var17) {
-                        }
-                    }
-                }
+        if (entity == null) {
+            return;
+        }
 
-                world.setBlock(_bp, _bs, 3);
-            } else {
-                if (!entity.level().isClientSide()) {
-                    entity.discard();
-                }
+        entity.setNoGravity(true);
+        CompoundTag data = entity.getPersistentData();
+        if (data.contains("vx")) {
+            entity.setDeltaMovement(data.getDouble("vx"), data.getDouble("vy"), data.getDouble("vz"));
+        }
 
-                if (world instanceof ServerLevel _level) {
-                    ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MoreCrittersModItems.OOZE_ROD.get()));
-                    entityToSpawn.setPickUpDelay(10);
-                    _level.addFreshEntity(entityToSpawn);
-                }
+        if (entity.level().isClientSide()) {
+            return;
+        }
+
+        int life = data.getInt("life") + 1;
+        data.putInt("life", life);
+        if (life > 40) {
+            entity.discard();
+            return;
+        }
+
+        Vec3 motion = entity.getDeltaMovement();
+        Vec3 start = new Vec3(x, y, z);
+        int steps = Math.max(1, (int)Math.ceil(motion.length()));
+        for (int step = 0; step <= steps; step++) {
+            Vec3 sample = start.add(motion.scale(step / (double)steps));
+            BlockPos pos = BlockPos.containing(sample);
+            BlockState state = world.getBlockState(pos);
+            if (state.isAir()) {
+                world.setBlock(pos, MoreCrittersModBlocks.GLOW.get().defaultBlockState(), 3);
+            } else if (!state.is(MoreCrittersModBlocks.GLOW.get()) && state.blocksMotion()) {
+                entity.discard();
+                return;
             }
         }
     }

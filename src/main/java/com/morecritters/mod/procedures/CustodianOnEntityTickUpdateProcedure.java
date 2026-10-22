@@ -2,6 +2,7 @@ package com.morecritters.mod.procedures;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import java.util.Comparator;
+import com.morecritters.mod.entity.AncientCustodianEntity;
 import com.morecritters.mod.entity.CustodianEntity;
 import com.morecritters.mod.init.MoreCrittersModItems;
 import com.morecritters.mod.init.MoreCrittersModParticleTypes;
@@ -21,8 +22,9 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -328,14 +330,14 @@ public class CustodianOnEntityTickUpdateProcedure {
                     }
 
                     Vec3 _center = new Vec3(x, y, z);
+                    entity.getPersistentData().putDouble("shot", 20.0);
 
                     for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25.0), e -> true)
                         .stream()
                         .sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
                         .toList()) {
-                        if (entityiterator instanceof Monster
+                        if (isBeamTarget(entityiterator, entity)
                             && entity instanceof LivingEntity _liveEnt
-                            && entityiterator != null
                             && _liveEnt.hasLineOfSight(entityiterator)) {
                             entityiterator.hurt(
                                 new DamageSource(
@@ -343,7 +345,6 @@ public class CustodianOnEntityTickUpdateProcedure {
                                 ),
                                 200.0F
                             );
-                            entity.getPersistentData().putDouble("shot", 20.0);
                         }
                     }
 
@@ -390,5 +391,17 @@ public class CustodianOnEntityTickUpdateProcedure {
 
             entity.getPersistentData().putDouble("shot", entity.getPersistentData().getDouble("shot") - 1.0);
         }
+    }
+
+    private static boolean isBeamTarget(Entity target, Entity custodian) {
+        if (!(target instanceof LivingEntity living) || target == custodian || living instanceof Player) {
+            return false;
+        }
+
+        if (living instanceof CustodianEntity || living instanceof AncientCustodianEntity) {
+            return false;
+        }
+
+        return living instanceof Enemy || living.getType().getCategory() == MobCategory.MONSTER;
     }
 }

@@ -52,6 +52,7 @@ public class FlyingOozeRodEntity extends PathfinderMob implements GeoEntity {
         super(type, world);
         this.xpReward = 0;
         this.setNoAi(false);
+        this.setNoGravity(true);
         this.setPersistenceRequired();
     }
 

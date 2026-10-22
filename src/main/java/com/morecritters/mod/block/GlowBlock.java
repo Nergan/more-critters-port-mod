@@ -26,6 +26,7 @@ public class GlowBlock extends Block {
             Properties.of()
                 .sound(SoundType.EMPTY)
                 .strength(-1.0F, 3600000.0F)
+                .lightLevel(state -> 15)
                 .noCollission()
                 .noOcclusion()
                 .hasPostProcess((bs, br, bp) -> true)
@@ -36,7 +37,7 @@ public class GlowBlock extends Block {
 
     @Override
     public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-        return 15;
+        return 0;
     }
 
     @Override
@@ -46,7 +47,7 @@ public class GlowBlock extends Block {
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return box(0.0, 0.0, 0.0, 1.0, 1.0, 1.0);
+        return Shapes.empty();
     }
 
     @Override
@@ -62,16 +63,12 @@ public class GlowBlock extends Block {
     @Override
     public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
         super.onPlace(blockstate, world, pos, oldState, moving);
-        world.scheduleTick(pos, this, 1);
+        world.scheduleTick(pos, this, 5);
     }
 
     @Override
     public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
         super.tick(blockstate, world, pos, random);
-        int x = pos.getX();
-        int y = pos.getY();
-        int z = pos.getZ();
-        GlowOnTickUpdateProcedure.execute(world, x, y, z);
-        world.scheduleTick(pos, this, 1);
+        GlowOnTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
     }
 }
