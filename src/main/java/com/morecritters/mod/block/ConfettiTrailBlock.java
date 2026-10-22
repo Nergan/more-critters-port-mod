@@ -1,5 +1,6 @@
 package com.morecritters.mod.block;
 
+import com.morecritters.mod.procedures.BlockVariants;
 import com.morecritters.mod.procedures.ConfettiTrailBlockAddedProcedure;
 import com.morecritters.mod.procedures.ConfettiTrailBlockValidPlacementConditionProcedure;
 import net.minecraft.core.BlockPos;
@@ -90,7 +91,13 @@ public class ConfettiTrailBlock extends Block {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
+        BlockState state = super.getStateForPlacement(context);
+        if (state == null) {
+            return null;
+        }
+
+        return state.setValue(FACING, context.getHorizontalDirection().getOpposite())
+            .setValue(BLOCKSTATE, BlockVariants.confetti(context.getClickedPos()));
     }
 
     @Override

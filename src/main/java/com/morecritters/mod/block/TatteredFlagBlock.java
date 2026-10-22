@@ -1,5 +1,6 @@
 package com.morecritters.mod.block;
 
+import com.morecritters.mod.procedures.BlockVariants;
 import com.morecritters.mod.procedures.TatteredFlagBlockAddedProcedure;
 import com.morecritters.mod.procedures.TatteredFlagNeighbourBlockChangesProcedure;
 import net.minecraft.core.BlockPos;
@@ -94,7 +95,14 @@ public class TatteredFlagBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-        return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, flag);
+        BlockState state = super.getStateForPlacement(context);
+        if (state == null) {
+            return null;
+        }
+
+        return state.setValue(FACING, context.getHorizontalDirection().getOpposite())
+            .setValue(WATERLOGGED, flag)
+            .setValue(BLOCKSTATE, BlockVariants.tatteredFlag(context.getLevel(), context.getClickedPos()));
     }
 
     @Override

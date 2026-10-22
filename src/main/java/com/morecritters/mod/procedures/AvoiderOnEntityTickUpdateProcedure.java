@@ -252,7 +252,7 @@ public class AvoiderOnEntityTickUpdateProcedure {
                 entity.getPersistentData().putDouble("air", 20.0);
             }
 
-            if (entity instanceof LivingEntity _livEnt70 && _livEnt70.isBaby()) {
+            if (entity instanceof LivingEntity _livEnt70 && _livEnt70.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 if (!entity.level().isClientSide()) {
                     entity.discard();
                 }

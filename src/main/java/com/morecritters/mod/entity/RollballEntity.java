@@ -1,5 +1,7 @@
 package com.morecritters.mod.entity;
 
+import com.morecritters.mod.procedures.SpawnAppearance;
+
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.minecraft.core.registries.BuiltInRegistries;
 import javax.annotation.Nullable;
@@ -173,6 +175,7 @@ public class RollballEntity extends PathfinderMob implements GeoEntity {
         if (compound.contains("Datavariant")) {
             this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
         }
+        SpawnAppearance.applyVariantTexture(this);
 
         if (compound.contains("Dataroll")) {
             this.entityData.set(DATA_roll, compound.getInt("Dataroll"));

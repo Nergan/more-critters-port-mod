@@ -17,7 +17,11 @@ public class FlyingOozeRodOnEntityTickUpdateProcedure {
         entity.setNoGravity(true);
         CompoundTag data = entity.getPersistentData();
         if (data.contains("vx")) {
-            entity.setDeltaMovement(data.getDouble("vx"), data.getDouble("vy"), data.getDouble("vz"));
+            double vx = data.getDouble("vx");
+            double vy = data.getDouble("vy") - 0.015;
+            double vz = data.getDouble("vz");
+            data.putDouble("vy", vy);
+            entity.setDeltaMovement(vx, vy, vz);
         }
 
         if (entity.level().isClientSide()) {

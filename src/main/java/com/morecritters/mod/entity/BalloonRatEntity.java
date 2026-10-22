@@ -1,5 +1,7 @@
 package com.morecritters.mod.entity;
 
+import com.morecritters.mod.procedures.SpawnAppearance;
+
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -340,6 +342,7 @@ public class BalloonRatEntity extends TamableAnimal implements GeoEntity {
         if (compound.contains("Datavariant")) {
             this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
         }
+        SpawnAppearance.applyVariantTexture(this);
 
         if (compound.contains("Datahas_stagnation")) {
             this.entityData.set(DATA_has_stagnation, compound.getBoolean("Datahas_stagnation"));

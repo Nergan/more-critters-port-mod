@@ -219,7 +219,7 @@ public class RamchuOnEntityTickUpdateProcedure {
                 _datEntSetI.getEntityData().set(RamchuEntity.DATA_state, 1);
             }
 
-            if (entity instanceof LivingEntity _livEnt67 && _livEnt67.isBaby()) {
+            if (entity instanceof LivingEntity _livEnt67 && _livEnt67.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 if (!entity.level().isClientSide()) {
                     entity.discard();
                 }

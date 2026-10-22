@@ -53,6 +53,9 @@ public class SdgdsgdsfgProcedure {
 
     private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
         if (entity != null && sourceentity != null) {
+            if (!(entity instanceof LivingEntity blocker) || !blocker.isBlocking()) {
+                return;
+            }
             if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == MoreCrittersModItems.BITING_SHIELD.get()) {
                 if (entity instanceof Player _player) {
                     _player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 3);

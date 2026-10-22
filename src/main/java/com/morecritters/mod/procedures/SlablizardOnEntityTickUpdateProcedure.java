@@ -7,7 +7,6 @@ import com.morecritters.mod.config.ServerConfig;
 import com.morecritters.mod.entity.BouncelizardEntity;
 import com.morecritters.mod.entity.MoriRootsEntity;
 import com.morecritters.mod.entity.WebEntityEntity;
-import com.morecritters.mod.init.MoreCrittersModBlocks;
 import com.morecritters.mod.init.MoreCrittersModParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -23,18 +22,15 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 public class SlablizardOnEntityTickUpdateProcedure {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
         if (entity != null) {
-            double rate = 0.0;
             double rate2 = 0.0;
             double snorerate = 0.0;
-            if (entity instanceof LivingEntity _livEnt0 && _livEnt0.isBaby()) {
+            if (entity instanceof LivingEntity _livEnt0 && _livEnt0.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 entity.getPersistentData().putDouble("size", 0.3);
                 entity.getPersistentData().putDouble("hitboxsize", 0.6);
                 if (!(entity instanceof BouncelizardEntity _datEntL3 && _datEntL3.getEntityData().get(BouncelizardEntity.DATA_fromegg))) {
@@ -42,44 +38,7 @@ public class SlablizardOnEntityTickUpdateProcedure {
                         entity.discard();
                     }
 
-                    rate = Mth.nextInt(RandomSource.create(), 1, 4);
-                    if (rate == 1.0) {
-                        world.setBlock(BlockPos.containing(x, y, z), MoreCrittersModBlocks.BOUNCELIZARD_EGG.get().defaultBlockState(), 3);
-                        int _value = 0;
-                        BlockPos _pos = BlockPos.containing(x, y, z);
-                        BlockState _bs = world.getBlockState(_pos);
-                        if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp
-                            && _integerProp.getPossibleValues().contains(_value)) {
-                            world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-                        }
-                    } else if (rate == 2.0) {
-                        world.setBlock(BlockPos.containing(x, y, z), MoreCrittersModBlocks.BOUNCELIZARD_EGG.get().defaultBlockState(), 3);
-                        int _value = 2;
-                        BlockPos _pos = BlockPos.containing(x, y, z);
-                        BlockState _bs = world.getBlockState(_pos);
-                        if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp
-                            && _integerProp.getPossibleValues().contains(_value)) {
-                            world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-                        }
-                    } else if (rate == 3.0) {
-                        world.setBlock(BlockPos.containing(x, y, z), MoreCrittersModBlocks.BOUNCELIZARD_EGG.get().defaultBlockState(), 3);
-                        int _value = 3;
-                        BlockPos _pos = BlockPos.containing(x, y, z);
-                        BlockState _bs = world.getBlockState(_pos);
-                        if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp
-                            && _integerProp.getPossibleValues().contains(_value)) {
-                            world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-                        }
-                    } else if (rate == 4.0) {
-                        world.setBlock(BlockPos.containing(x, y, z), MoreCrittersModBlocks.BOUNCELIZARD_EGG.get().defaultBlockState(), 3);
-                        int _value = 4;
-                        BlockPos _pos = BlockPos.containing(x, y, z);
-                        BlockState _bs = world.getBlockState(_pos);
-                        if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp
-                            && _integerProp.getPossibleValues().contains(_value)) {
-                            world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
-                        }
-                    }
+                    SpawnAppearance.placeBouncelizardEgg(world, BlockPos.containing(x, y, z));
                 }
             } else {
                 entity.getPersistentData().putDouble("size", 1.0);

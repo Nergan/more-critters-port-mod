@@ -188,7 +188,7 @@ public class ArmossilloOnEntityTickUpdateProcedure {
                 ((ArmossilloEntity)entity).setAnimation("sit_down");
             }
 
-            if (entity instanceof LivingEntity _livEnt30 && _livEnt30.isBaby()) {
+            if (entity instanceof LivingEntity _livEnt30 && _livEnt30.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 if (!entity.level().isClientSide()) {
                     entity.discard();
                 }

@@ -73,7 +73,7 @@ public class BlubberfishOnEntityTickUpdateProcedure {
                 entity.getPersistentData().putDouble("air", 20.0);
             }
 
-            if (entity instanceof LivingEntity _livEnt20 && _livEnt20.isBaby()) {
+            if (entity instanceof LivingEntity _livEnt20 && _livEnt20.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 if (!entity.level().isClientSide()) {
                     entity.discard();
                 }

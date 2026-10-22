@@ -15,7 +15,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -174,6 +176,28 @@ public class CorpseMateOnEntityTickUpdateProcedure {
                                                                 1.0F,
                                                                 1.0F,
                                                                 false
+                                                            );
+                                                        }
+                                                    }
+
+                                                    if (_livEnt43.level() instanceof ServerLevel shieldLevel) {
+                                                        shieldLevel.playSound(
+                                                            null,
+                                                            _livEnt43.getX(),
+                                                            _livEnt43.getY(),
+                                                            _livEnt43.getZ(),
+                                                            SoundEvents.SHIELD_BLOCK,
+                                                            SoundSource.PLAYERS,
+                                                            1.0F,
+                                                            0.8F + _livEnt43.getRandom().nextFloat() * 0.4F
+                                                        );
+                                                        ItemStack shield = _livEnt43.getUseItem();
+                                                        if (!shield.isEmpty()) {
+                                                            shield.hurtAndBreak(
+                                                                1,
+                                                                shieldLevel,
+                                                                _livEnt43 instanceof ServerPlayer shieldPlayer ? shieldPlayer : null,
+                                                                stack -> {}
                                                             );
                                                         }
                                                     }

@@ -10,6 +10,7 @@ public class AnniveteranOnInitialEntitySpawnProcedure {
         if (entity != null) {
             if (entity instanceof AnniveteranEntity _datEntSetI) {
                 _datEntSetI.getEntityData().set(AnniveteranEntity.DATA_variant, Mth.nextInt(RandomSource.create(), 0, 3));
+                SpawnAppearance.applyVariantTexture(entity);
             }
         }
     }

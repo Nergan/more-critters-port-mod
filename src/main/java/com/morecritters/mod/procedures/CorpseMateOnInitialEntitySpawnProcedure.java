@@ -15,6 +15,7 @@ public class CorpseMateOnInitialEntitySpawnProcedure {
             }
 
             entity.getPersistentData().putDouble("speech", Mth.nextDouble(RandomSource.create(), 200.0, 600.0));
+            SpawnAppearance.applyVariantTexture(entity);
         }
     }
 }

@@ -1,5 +1,7 @@
 package com.morecritters.mod.entity;
 
+import com.morecritters.mod.procedures.SpawnAppearance;
+
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -151,6 +153,7 @@ public class AnniveteranEntity extends PathfinderMob implements GeoEntity {
         if (compound.contains("Datavariant")) {
             this.entityData.set(DATA_variant, compound.getInt("Datavariant"));
         }
+        SpawnAppearance.applyVariantTexture(this);
     }
 
     @Override

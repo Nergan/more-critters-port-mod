@@ -2,6 +2,7 @@ package com.morecritters.mod.block;
 
 import com.morecritters.mod.procedures.BarnacleClusterBlockAddedProcedure;
 import com.morecritters.mod.procedures.BarnacleClusterBlockValidPlacementConditionProcedure;
+import com.morecritters.mod.procedures.BlockVariants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
@@ -132,12 +133,13 @@ public class BarnacleClusterBlock extends Block implements SimpleWaterloggedBloc
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
-        return context.getClickedFace().getAxis() == Axis.Y
+        BlockState state = context.getClickedFace().getAxis() == Axis.Y
             ? super.getStateForPlacement(context)
                 .setValue(FACE, context.getClickedFace().getOpposite() == Direction.UP ? AttachFace.CEILING : AttachFace.FLOOR)
                 .setValue(FACING, context.getHorizontalDirection())
                 .setValue(WATERLOGGED, flag)
             : super.getStateForPlacement(context).setValue(FACE, AttachFace.WALL).setValue(FACING, context.getClickedFace()).setValue(WATERLOGGED, flag);
+        return state == null ? null : state.setValue(BLOCKSTATE, BlockVariants.barnacle(context.getClickedPos()));
     }
 
     @Override

@@ -349,7 +349,7 @@ public class CreeblossomOnEntityTickUpdateProcedure {
                     }
                 }
             );
-            if (entity instanceof LivingEntity _livEnt69 && _livEnt69.isBaby()) {
+            if (entity instanceof LivingEntity _livEnt69 && _livEnt69.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 if (world instanceof ServerLevel _level) {
                     Entity entityToSpawn = MoreCrittersModEntities.CREEBLOSSOM.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
                     if (entityToSpawn != null) {

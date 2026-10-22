@@ -27,7 +27,7 @@ public class BunbugOnEntityTickUpdateProcedure {
         if (entity != null) {
             double breeding_chance = 0.0;
             boolean bred = false;
-            if (entity instanceof LivingEntity _livEnt0 && _livEnt0.isBaby()) {
+            if (entity instanceof LivingEntity _livEnt0 && _livEnt0.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 if (!entity.level().isClientSide()) {
                     entity.discard();
                 }
