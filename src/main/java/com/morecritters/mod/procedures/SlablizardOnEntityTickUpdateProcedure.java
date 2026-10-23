@@ -30,6 +30,9 @@ public class SlablizardOnEntityTickUpdateProcedure {
         if (entity != null) {
             double rate2 = 0.0;
             double snorerate = 0.0;
+            if (entity.getPersistentData().getDouble("bounce_lock") > 0.0) {
+                entity.getPersistentData().putDouble("bounce_lock", entity.getPersistentData().getDouble("bounce_lock") - 1.0);
+            }
             if (entity instanceof LivingEntity _livEnt0 && _livEnt0.isBaby() && !entity.getPersistentData().getBoolean("form_swapped")) {
                 entity.getPersistentData().putDouble("size", 0.3);
                 entity.getPersistentData().putDouble("hitboxsize", 0.6);
@@ -58,7 +61,9 @@ public class SlablizardOnEntityTickUpdateProcedure {
                         && !(entityiterator instanceof WebEntityEntity)
                         && !(entityiterator instanceof ExperienceOrb)
                         && !(entityiterator instanceof MoriRootsEntity)
-                        && !entityiterator.onGround()) {
+                        && !entityiterator.onGround()
+                        && entity.getPersistentData().getDouble("bounce_lock") <= 0.0) {
+                        entity.getPersistentData().putDouble("bounce_lock", 20.0);
                         if (entity instanceof BouncelizardEntity _datEntL24 && _datEntL24.getEntityData().get(BouncelizardEntity.DATA_sleeping)) {
                             if (entity instanceof BouncelizardEntity) {
                                 ((BouncelizardEntity)entity).setAnimation("bounce_big");

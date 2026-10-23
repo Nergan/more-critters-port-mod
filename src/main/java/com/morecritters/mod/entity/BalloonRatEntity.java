@@ -489,7 +489,12 @@ public class BalloonRatEntity extends TamableAnimal implements GeoEntity {
                 event.getController().forceAnimationReset();
             }
 
-            event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+            boolean hold = this.animationprocedure.equals("sit");
+            event.getController().setAnimation(hold ? RawAnimation.begin().thenLoop("sit") : RawAnimation.begin().thenPlay(this.animationprocedure));
+            if (hold) {
+                this.prevAnim = this.animationprocedure;
+                return PlayState.CONTINUE;
+            }
             if (event.getController().getAnimationState() == State.STOPPED) {
                 this.animationprocedure = "empty";
                 event.getController().forceAnimationReset();

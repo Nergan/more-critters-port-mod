@@ -773,28 +773,15 @@ public class RightClickMobProcedure {
                     _entity.swing(InteractionHand.MAIN_HAND, true);
                 }
 
-                if (world instanceof Level _level) {
-                    if (!_level.isClientSide()) {
-                        _level.playSound(
-                            (Player)null,
-                            BlockPos.containing(x, y, z),
-                            BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:shimmerwing_shed")),
-                            SoundSource.PLAYERS,
-                            1.0F,
-                            1.0F
-                        );
-                    } else {
-                        _level.playLocalSound(
-                            x,
-                            y,
-                            z,
-                            BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:shimmerwing_shed")),
-                            SoundSource.PLAYERS,
-                            1.0F,
-                            1.0F,
-                            false
-                        );
-                    }
+                if (world instanceof Level _level && !_level.isClientSide()) {
+                    _level.playSound(
+                        (Player)null,
+                        BlockPos.containing(x, y, z),
+                        BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:shimmerwing_shed")),
+                        SoundSource.PLAYERS,
+                        1.0F,
+                        1.0F
+                    );
                 }
 
                 if (world instanceof ServerLevel _level) {

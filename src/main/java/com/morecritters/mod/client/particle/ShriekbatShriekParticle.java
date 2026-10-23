@@ -13,8 +13,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class ShriekbatShriekParticle extends TextureSheetParticle {
     private final SpriteSet spriteSet;
-    private float angularVelocity;
-    private float angularAcceleration;
 
     public static ShriekbatShriekParticle.ShriekbatShriekParticleProvider provider(SpriteSet spriteSet) {
         return new ShriekbatShriekParticle.ShriekbatShriekParticleProvider(spriteSet);
@@ -31,8 +29,7 @@ public class ShriekbatShriekParticle extends TextureSheetParticle {
         this.xd = vx * 1.0;
         this.yd = vy * 1.0;
         this.zd = vz * 1.0;
-        this.angularVelocity = 0.2F;
-        this.angularAcceleration = 0.0F;
+        this.hasPhysics = false;
         this.setSpriteFromAge(spriteSet);
     }
 
@@ -49,11 +46,8 @@ public class ShriekbatShriekParticle extends TextureSheetParticle {
     @Override
     public void tick() {
         super.tick();
-        this.oRoll = this.roll;
-        this.roll = this.roll + this.angularVelocity;
-        this.angularVelocity = this.angularVelocity + this.angularAcceleration;
         if (!this.removed) {
-            this.setSprite(this.spriteSet.get(this.age / 1 % 11 + 1, 11));
+            this.setSpriteFromAge(this.spriteSet);
         }
     }
 

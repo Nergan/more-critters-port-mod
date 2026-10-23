@@ -247,9 +247,15 @@ public class CarrybugEntity extends PathfinderMob implements GeoEntity {
     }
 
     @Override
+    @Nullable
+    public LivingEntity getControllingPassenger() {
+        return this.getFirstPassenger() instanceof LivingEntity living ? living : null;
+    }
+
+    @Override
     public void travel(Vec3 dir) {
         Entity entity = this.getPassengers().isEmpty() ? null : this.getPassengers().get(0);
-        if (this.isVehicle()) {
+        if (this.isVehicle() && entity != null) {
             this.setYRot(entity.getYRot());
             this.yRotO = this.getYRot();
             this.setXRot(entity.getXRot() * 0.5F);
@@ -259,7 +265,10 @@ public class CarrybugEntity extends PathfinderMob implements GeoEntity {
             if (entity instanceof LivingEntity passenger) {
                 this.setSpeed((float)this.getAttributeValue(Attributes.MOVEMENT_SPEED));
                 float forward = passenger.zza;
-                float strafe = 0.0F;
+                float strafe = passenger.xxa;
+                if (forward <= 0.0F) {
+                    forward *= 0.25F;
+                }
                 super.travel(new Vec3(strafe, 0.0, forward));
             }
 

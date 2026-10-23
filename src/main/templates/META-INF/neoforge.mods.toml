@@ -43,6 +43,9 @@ versionRange = "${kff_version_range}"
 ordering = "NONE"
 side = "BOTH"
 
+[[mixins]]
+config = "more_critters.mixins.json"
+
 [[dependencies.${mod_id}]]
 modId = "geckolib"
 type = "required"

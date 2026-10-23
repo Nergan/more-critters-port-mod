@@ -1,13 +1,13 @@
 package com.morecritters.mod.procedures;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import com.morecritters.mod.entity.SlashEffectEntity;
 import com.morecritters.mod.init.MoreCrittersModEntities;
 import com.morecritters.mod.init.MoreCrittersModMobEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -31,14 +31,15 @@ public class SlashklubLivingEntityIsHitWithToolProcedure {
                 }
 
                 if (world instanceof ServerLevel _level) {
-                    Entity entityToSpawn = MoreCrittersModEntities.SLASH_EFFECT
-                        .get()
-                        .spawn(_level, BlockPos.containing(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ()), MobSpawnType.MOB_SUMMONED);
-                    if (entityToSpawn != null) {
-                        entityToSpawn.setYRot(sourceentity.getYRot());
-                        entityToSpawn.setYBodyRot(sourceentity.getYRot());
-                        entityToSpawn.setYHeadRot(sourceentity.getYRot());
-                        entityToSpawn.setDeltaMovement(0.0, 0.0, 0.0);
+                    SlashEffectEntity slash = MoreCrittersModEntities.SLASH_EFFECT.get().create(_level);
+                    if (slash != null) {
+                        slash.moveTo(sourceentity.getX(), sourceentity.getY(), sourceentity.getZ(), sourceentity.getYRot(), sourceentity.getXRot());
+                        slash.setYBodyRot(sourceentity.getYRot());
+                        slash.yBodyRotO = sourceentity.getYRot();
+                        slash.setYHeadRot(sourceentity.getYRot());
+                        slash.yHeadRotO = sourceentity.getYRot();
+                        slash.finalizeSpawn(_level, _level.getCurrentDifficultyAt(slash.blockPosition()), MobSpawnType.MOB_SUMMONED, null);
+                        _level.addFreshEntity(slash);
                     }
                 }
 

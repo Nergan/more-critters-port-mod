@@ -37,7 +37,6 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -144,8 +143,6 @@ public class ShadeletEntity extends PathfinderMob implements GeoEntity {
         if (source.is(DamageTypes.IN_FIRE)) {
             return false;
         } else if (source.getDirectEntity() instanceof AbstractArrow) {
-            return false;
-        } else if (source.getDirectEntity() instanceof Player) {
             return false;
         } else if (source.is(DamageTypes.FALL)) {
             return false;

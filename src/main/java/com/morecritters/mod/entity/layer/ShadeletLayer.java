@@ -29,6 +29,10 @@ public class ShadeletLayer extends GeoRenderLayer<ShadeletEntity> {
         int packedLight,
         int packedOverlay
     ) {
+        // The eyes pass repaints the whole body with no hurt overlay, so a hit or a death never flashes red.
+        if (animatable.hurtTime > 0 || animatable.deathTime > 0) {
+            return;
+        }
         RenderType glowRenderType = RenderType.eyes(LAYER);
         this.getRenderer()
             .reRender(this.getDefaultBakedModel(animatable), poseStack, bufferSource, animatable, glowRenderType, bufferSource.getBuffer(glowRenderType), partialTick, packedLight, OverlayTexture.NO_OVERLAY, -1);

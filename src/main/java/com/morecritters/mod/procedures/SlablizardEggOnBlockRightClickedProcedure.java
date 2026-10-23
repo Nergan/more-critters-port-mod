@@ -35,28 +35,15 @@ public class SlablizardEggOnBlockRightClickedProcedure {
                             : -1
                     )
                     == 0) {
-                    if (world instanceof Level _level) {
-                        if (!_level.isClientSide()) {
-                            _level.playSound(
-                                (Player)null,
-                                BlockPos.containing(x, y, z),
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
-                                SoundSource.BLOCKS,
-                                1.0F,
-                                1.0F
-                            );
-                        } else {
-                            _level.playLocalSound(
-                                x,
-                                y,
-                                z,
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
-                                SoundSource.BLOCKS,
-                                1.0F,
-                                1.0F,
-                                false
-                            );
-                        }
+                    if (world instanceof Level _level && !_level.isClientSide()) {
+                        _level.playSound(
+                            (Player)null,
+                            BlockPos.containing(x, y, z),
+                            BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
+                            SoundSource.BLOCKS,
+                            1.0F,
+                            1.0F
+                        );
                     }
 
                     int _value = 2;
@@ -72,28 +59,15 @@ public class SlablizardEggOnBlockRightClickedProcedure {
                             : -1
                     )
                     == 2) {
-                    if (world instanceof Level _level) {
-                        if (!_level.isClientSide()) {
-                            _level.playSound(
-                                (Player)null,
-                                BlockPos.containing(x, y, z),
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
-                                SoundSource.BLOCKS,
-                                1.0F,
-                                1.0F
-                            );
-                        } else {
-                            _level.playLocalSound(
-                                x,
-                                y,
-                                z,
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
-                                SoundSource.BLOCKS,
-                                1.0F,
-                                1.0F,
-                                false
-                            );
-                        }
+                    if (world instanceof Level _level && !_level.isClientSide()) {
+                        _level.playSound(
+                            (Player)null,
+                            BlockPos.containing(x, y, z),
+                            BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
+                            SoundSource.BLOCKS,
+                            1.0F,
+                            1.0F
+                        );
                     }
 
                     int _value = 3;
@@ -109,28 +83,15 @@ public class SlablizardEggOnBlockRightClickedProcedure {
                             : -1
                     )
                     == 3) {
-                    if (world instanceof Level _level) {
-                        if (!_level.isClientSide()) {
-                            _level.playSound(
-                                (Player)null,
-                                BlockPos.containing(x, y, z),
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
-                                SoundSource.BLOCKS,
-                                1.0F,
-                                1.0F
-                            );
-                        } else {
-                            _level.playLocalSound(
-                                x,
-                                y,
-                                z,
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
-                                SoundSource.BLOCKS,
-                                1.0F,
-                                1.0F,
-                                false
-                            );
-                        }
+                    if (world instanceof Level _level && !_level.isClientSide()) {
+                        _level.playSound(
+                            (Player)null,
+                            BlockPos.containing(x, y, z),
+                            BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")),
+                            SoundSource.BLOCKS,
+                            1.0F,
+                            1.0F
+                        );
                     }
 
                     int _value = 4;

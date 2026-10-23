@@ -207,6 +207,14 @@ public class BalloonRatOnEntityTickUpdateProcedure {
                     && entity instanceof BalloonRatEntity animatable) {
                     animatable.setTexture("balloon_rat_medic");
                 }
+                if (entity instanceof TamableAnimal rat
+                    && rat.getOwner() instanceof LivingEntity owner
+                    && owner.getHealth() < owner.getMaxHealth()
+                    && entity.distanceTo(owner) > 3.0
+                    && !(entity instanceof BalloonRatEntity sitting && sitting.getEntityData().get(BalloonRatEntity.DATA_sit))
+                    && entity instanceof Mob medic) {
+                    medic.getNavigation().moveTo(owner.getX(), owner.getY(), owner.getZ(), 1.15);
+                }
             } else if ((entity instanceof BalloonRatEntity _datEntI ? _datEntI.getEntityData().get(BalloonRatEntity.DATA_variant) : 0) == 2
                 && !(entity instanceof BalloonRatEntity animatable ? animatable.getTexture() : "null").equals("balloon_rat_soldier_inflated")
                 && entity instanceof BalloonRatEntity animatable) {
@@ -239,17 +247,19 @@ public class BalloonRatOnEntityTickUpdateProcedure {
                         .stream()
                         .sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
                         .toList()) {
-                        if (entityiterator instanceof LivingEntity
+                        if (entityiterator instanceof LivingEntity living
+                            && entity instanceof TamableAnimal rat
                             && (
-                                entityiterator == (entity instanceof TamableAnimal _tamEnt ? _tamEnt.getOwner() : null)
-                                    || entityiterator instanceof TamableAnimal _tamIsTamedBy
-                                        && (entity instanceof TamableAnimal _tamEnt ? _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt
-                                        && _tamIsTamedBy.isOwnedBy(_livEnt)
+                                rat.isOwnedBy(living)
+                                    || entityiterator instanceof TamableAnimal pet
+                                        && rat.getOwner() instanceof LivingEntity owner
+                                        && pet.isOwnedBy(owner)
                                     || entityiterator == entity
                             )) {
                             MoreCritters.queueServerWork(20, () -> {
-                                if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
-                                    _entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 2, false, true));
+                                if (!living.level().isClientSide() && living.isAlive()) {
+                                    living.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 2, false, true));
+                                    living.heal(4.0F);
                                 }
                             });
                         }

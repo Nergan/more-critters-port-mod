@@ -14,7 +14,7 @@ GitHub Releases, one page per Minecraft version and loader: [github.com/Nergan/m
 
 | File                                 | Required | Notes                                                         |
 | ------------------------------------ | -------- | ------------------------------------------------------------- |
-| `more_critters-1.4.7.jar`            | Yes      | This mod                                                      |
+| `more_critters-1.4.8.jar`            | Yes      | This mod                                                      |
 | `kotlinforforge-5.8.0-all.jar`       | Yes      | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
 | `geckolib-neoforge-1.21.1-4.9.3.jar` | Yes      | [GeckoLib](https://modrinth.com/mod/geckolib)                 |
 | `*-sources.jar`                      | No       | Do not put this in `mods`                                     |
@@ -31,7 +31,7 @@ Modrinth: [more-critters-port](https://modrinth.com/project/more-critters-port)
 
 ## Install
 
-Put `more_critters-1.4.7.jar`, `kotlinforforge-5.8.0-all.jar` and `geckolib-neoforge-1.21.1-4.9.3.jar` into the `mods` folder. The mod is needed on both the client and the server.
+Put `more_critters-1.4.8.jar`, `kotlinforforge-5.8.0-all.jar` and `geckolib-neoforge-1.21.1-4.9.3.jar` into the `mods` folder. The mod is needed on both the client and the server.
 
 ## Config
 

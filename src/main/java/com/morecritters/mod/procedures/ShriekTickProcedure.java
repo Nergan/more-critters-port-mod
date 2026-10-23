@@ -5,7 +5,6 @@ import com.morecritters.mod.entity.ShriekbatEntity;
 import com.morecritters.mod.entity.TesterShriekEntity;
 import com.morecritters.mod.init.MoreCrittersModMobEffects;
 import net.minecraft.client.Minecraft;
-import net.minecraft.commands.arguments.EntityAnchorArgument.Anchor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
@@ -27,7 +26,6 @@ public class ShriekTickProcedure {
                 entity.setDeltaMovement(new Vec3(0.0, 0.0, 0.0));
             }
 
-            entity.lookAt(Anchor.EYES, new Vec3(x, y, z));
             entity.getPersistentData().putDouble("timer", entity.getPersistentData().getDouble("timer") - 1.0);
             if (entity.getPersistentData().getDouble("timer") < 0.0 && !entity.level().isClientSide()) {
                 entity.discard();

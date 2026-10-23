@@ -80,6 +80,9 @@ public class ShadeletOnEntityTickUpdateProcedure {
                 }
             } else {
                 entity.setSprinting(false);
+                if (entity instanceof ShadeletEntity shadelet && "idle_shiver".equals(shadelet.animationprocedure)) {
+                    shadelet.setAnimation("empty");
+                }
             }
 
             if (entity.getPersistentData().getDouble("spook") < -1.0) {
@@ -130,7 +133,7 @@ public class ShadeletOnEntityTickUpdateProcedure {
                                             }
                                         }
                                     })
-                                    .checkGamemode(entity)
+                                    .checkGamemode(entityiterator)
                                 && !(new Object() {
                                         public boolean checkGamemode(Entity _ent) {
                                             if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -147,7 +150,7 @@ public class ShadeletOnEntityTickUpdateProcedure {
                                             }
                                         }
                                     })
-                                    .checkGamemode(entity)
+                                    .checkGamemode(entityiterator)
                                 && !(entityiterator instanceof LivingEntity _livEnt37 && _livEnt37.hasEffect(MoreCrittersModMobEffects.SPOOKED))) {
                                 if (entity instanceof ShadeletEntity _datEntSetL) {
                                     _datEntSetL.getEntityData().set(ShadeletEntity.DATA_chasing, true);
@@ -322,7 +325,7 @@ public class ShadeletOnEntityTickUpdateProcedure {
                                         }
                                     }
                                 })
-                                .checkGamemode(entity)
+                                .checkGamemode(entityiterator)
                             && !(new Object() {
                                     public boolean checkGamemode(Entity _ent) {
                                         if (_ent instanceof ServerPlayer _serverPlayer) {
@@ -336,7 +339,7 @@ public class ShadeletOnEntityTickUpdateProcedure {
                                         }
                                     }
                                 })
-                                .checkGamemode(entity)
+                                .checkGamemode(entityiterator)
                             && !(entityiterator instanceof LivingEntity _livEnt75 && _livEnt75.hasEffect(MoreCrittersModMobEffects.SPOOKED))) {
                             if (entity instanceof Mob _entity) {
                                 _entity.getNavigation().moveTo(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ(), 1.5);
