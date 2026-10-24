@@ -2,7 +2,7 @@ New fantasy creatures in a vanilla style for Minecraft 1.21.1 / NeoForge. An uno
 
 ## NeoForge
 
-Required: `more_critters-1.4.9.jar`, Kotlin for Forge 5.8.0 or newer, and GeckoLib 4.9.3 or newer.
+Required: `more_critters-1.4.10.jar`, Kotlin for Forge 5.8.0 or newer, and GeckoLib 4.9.3 or newer.
 
 ## Fabric
 

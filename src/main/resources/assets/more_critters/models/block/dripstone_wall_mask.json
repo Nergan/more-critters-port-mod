@@ -1,6 +1,7 @@
 {
   "parent": "more_critters:custom/dripstone_wall_mask",
   "textures": {
+    "0": "more_critters:block/dripstone_wall_mask1",
     "all": "more_critters:block/dripstone_wall_mask1",
     "particle": "more_critters:block/dripstone_wall_mask1"
   },
