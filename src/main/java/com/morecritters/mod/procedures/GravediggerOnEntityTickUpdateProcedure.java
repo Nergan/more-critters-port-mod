@@ -20,6 +20,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.GameType;
@@ -160,10 +161,15 @@ public class GravediggerOnEntityTickUpdateProcedure {
                             })
                             .checkGamemode(entityiterator)
                         && entity.onGround()) {
-                        if (entity instanceof GravediggerEntity) {
-                            ((GravediggerEntity)entity).setAnimation("dig_down");
+                        if (entity instanceof GravediggerEntity digger) {
+                            digger.setAnimation("dig_down");
+                            digger.animationprocedure = "dig_down";
                         }
 
+                        entity.getPersistentData().putDouble("digx", x);
+                        entity.getPersistentData().putDouble("digy", y);
+                        entity.getPersistentData().putDouble("digz", z);
+                        entity.getPersistentData().putBoolean("burrowing", true);
                         entity.getPersistentData().putDouble("wait", 40.0);
                         if (!world.isClientSide() && world instanceof Level _level) {
                             if (!_level.isClientSide()) {
@@ -192,8 +198,11 @@ public class GravediggerOnEntityTickUpdateProcedure {
                 }
             }
 
-            if (((GravediggerEntity)entity).animationprocedure.equals("dig_down")) {
-                entity.setDeltaMovement(new Vec3(0.0, -2.0, 0.0));
+            if (entity.getPersistentData().getBoolean("burrowing")) {
+                entity.noPhysics = true;
+                entity.setNoGravity(true);
+                entity.fallDistance = 0.0F;
+                entity.setDeltaMovement(new Vec3(0.0, -0.08, 0.0));
                 if (world instanceof ServerLevel _level) {
                     _level.getServer()
                         .getCommands()
@@ -209,8 +218,15 @@ public class GravediggerOnEntityTickUpdateProcedure {
             }
 
             if (entity.getPersistentData().getDouble("wait") == 0.0) {
-                if (entity instanceof GravediggerEntity) {
-                    ((GravediggerEntity)entity).setAnimation("dig_up");
+                if (entity.getPersistentData().getBoolean("burrowing")) {
+                    x = entity.getPersistentData().getDouble("digx");
+                    y = entity.getPersistentData().getDouble("digy");
+                    z = entity.getPersistentData().getDouble("digz");
+                }
+
+                if (entity instanceof GravediggerEntity digger) {
+                    digger.setAnimation("dig_up");
+                    digger.animationprocedure = "dig_up";
                 }
 
                 if (!world.isClientSide() && world instanceof Level _level) {
@@ -237,6 +253,29 @@ public class GravediggerOnEntityTickUpdateProcedure {
                     }
                 }
 
+                entity.noPhysics = false;
+                entity.setNoGravity(false);
+                entity.getPersistentData().putBoolean("burrowing", false);
+                Monster swapWith = null;
+                if (!entity.level().isClientSide()) {
+                double nearest = Double.MAX_VALUE;
+                for (Monster candidate : world.getEntitiesOfClass(Monster.class, new AABB(x, y, z, x, y, z).inflate(12.0), Monster::isAlive)) {
+                    double distance = candidate.distanceToSqr(x, y, z);
+                    if (distance < nearest) {
+                        nearest = distance;
+                        swapWith = candidate;
+                    }
+                }
+
+                if (swapWith != null) {
+                    double tx = swapWith.getX();
+                    double ty = swapWith.getY();
+                    double tz = swapWith.getZ();
+                    swapWith.teleportTo(x, y, z);
+                    swapWith.setDeltaMovement(0.0, 0.4, 0.0);
+                    entity.teleportTo(tx, ty, tz);
+                    entity.setDeltaMovement(0.0, 0.2, 0.0);
+                } else {
                 rarity = Mth.nextInt(RandomSource.create(), 1, 5);
                 if (rarity == 1.0) {
                     rarity2 = Mth.nextInt(RandomSource.create(), 1, 3);
@@ -321,6 +360,11 @@ public class GravediggerOnEntityTickUpdateProcedure {
                             entityToSpawn.setDeltaMovement(0.0, 0.5, 0.0);
                         }
                     }
+                }
+
+                    entity.teleportTo(x + 5.0, y, z);
+                    entity.setDeltaMovement(0.0, 0.2, 0.0);
+                }
                 }
 
                 MoreCritters.queueServerWork(30, () -> {

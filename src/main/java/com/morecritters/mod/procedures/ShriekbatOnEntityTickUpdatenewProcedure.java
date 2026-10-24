@@ -19,11 +19,8 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ClipContext.Block;
-import net.minecraft.world.level.ClipContext.Fluid;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
@@ -102,30 +99,6 @@ public class ShriekbatOnEntityTickUpdatenewProcedure {
                         ((ShriekbatEntity)entity).setAnimation("idle_angry");
                     }
 
-                    if (!world.isClientSide() && world instanceof Level _level) {
-                        if (!_level.isClientSide()) {
-                            _level.playSound(
-                                (Player)null,
-                                BlockPos.containing(x, y, z),
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:entity.shriekbat.test_shriek")),
-                                SoundSource.HOSTILE,
-                                3.0F,
-                                1.0F
-                            );
-                        } else {
-                            _level.playLocalSound(
-                                x,
-                                y,
-                                z,
-                                BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:entity.shriekbat.test_shriek")),
-                                SoundSource.HOSTILE,
-                                3.0F,
-                                1.0F,
-                                false
-                            );
-                        }
-                    }
-
                     MoreCritters.queueServerWork(59, () -> {
                         if (entity instanceof ShriekbatEntity) {
                             ((ShriekbatEntity)entity).setAnimation("idle_hang");
@@ -135,6 +108,17 @@ public class ShriekbatOnEntityTickUpdatenewProcedure {
                         MoreCritters.queueServerWork(
                             42,
                             () -> {
+                                if (world instanceof Level level && !level.isClientSide()) {
+                                    level.playSound(
+                                        null,
+                                        BlockPos.containing(x, y, z),
+                                        BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:entity.shriekbat.test_shriek")),
+                                        SoundSource.HOSTILE,
+                                        3.0F,
+                                        1.0F
+                                    );
+                                }
+
                                 if (world instanceof ServerLevel _level) {
                                     Entity entityToSpawn = MoreCrittersModEntities.TESTER_SHRIEK
                                         .get()
@@ -307,43 +291,24 @@ public class ShriekbatOnEntityTickUpdatenewProcedure {
             }
 
             if (entity instanceof ShriekbatEntity _datEntL82 && _datEntL82.getEntityData().get(ShriekbatEntity.DATA_agro)) {
-                entity.setDeltaMovement(
-                    new Vec3(
-                        (
-                                entity.level()
-                                        .clip(
-                                            new ClipContext(
-                                                entity.getEyePosition(1.0F),
-                                                entity.getEyePosition(1.0F).add(entity.getViewVector(1.0F).scale(2.0)),
-                                                Block.OUTLINE,
-                                                Fluid.NONE,
-                                                entity
-                                            )
-                                        )
-                                        .getBlockPos()
-                                        .getX()
-                                    - x
-                            )
-                            / 3.0,
-                        Mth.nextDouble(RandomSource.create(), -0.5, 0.5),
-                        (
-                                entity.level()
-                                        .clip(
-                                            new ClipContext(
-                                                entity.getEyePosition(1.0F),
-                                                entity.getEyePosition(1.0F).add(entity.getViewVector(1.0F).scale(2.0)),
-                                                Block.OUTLINE,
-                                                Fluid.NONE,
-                                                entity
-                                            )
-                                        )
-                                        .getBlockPos()
-                                        .getZ()
-                                    - z
-                            )
-                            / 3.0
-                    )
-                );
+                Player seen = world.getEntitiesOfClass(Player.class, new AABB(x, y, z, x, y, z).inflate(32.0), Player::isAlive)
+                    .stream()
+                    .min(Comparator.comparingDouble(player -> player.distanceToSqr(x, y, z)))
+                    .orElse(null);
+                if (seen != null) {
+                    double dx = seen.getX() - x;
+                    double dy = seen.getEyeY() - entity.getEyeY();
+                    double dz = seen.getZ() - z;
+                    double horizontal = Math.sqrt(dx * dx + dz * dz);
+                    entity.setDeltaMovement(
+                        horizontal < 1.0E-4 ? 0.0 : dx / horizontal * 0.35,
+                        Math.max(-0.25, Math.min(0.25, dy * 0.08)),
+                        horizontal < 1.0E-4 ? 0.0 : dz / horizontal * 0.35
+                    );
+                } else {
+                    Vec3 look = entity.getLookAngle();
+                    entity.setDeltaMovement(look.x * 0.3, look.y * 0.1, look.z * 0.3);
+                }
                 if (!((ShriekbatEntity)entity).animationprocedure.equals("shriek") && entity instanceof ShriekbatEntity) {
                     ((ShriekbatEntity)entity).setAnimation("fly_angry");
                 }
