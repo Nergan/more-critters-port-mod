@@ -53,7 +53,8 @@ public class MoriRootsOnEntityTickUpdateProcedure {
                 .stream()
                 .sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
                 .toList()) {
-                if (entityiterator instanceof LivingEntity) {
+                if (entityiterator instanceof LivingEntity
+                    && !entityiterator.getStringUUID().equals(entity.getPersistentData().getString("staff_user"))) {
                     Entity _ent = entityiterator;
                     _ent.teleportTo(entity.getX(), entity.getY(), entity.getZ());
                     if (_ent instanceof ServerPlayer _serverPlayer) {

@@ -87,16 +87,16 @@ public class BalloonRatRightClickedOnEntityProcedure {
                             }
                         }
                     }
-                } else if (entity instanceof BalloonRatEntity _datEntL12 && _datEntL12.getEntityData().get(BalloonRatEntity.DATA_sit)) {
-                    if (entity instanceof BalloonRatEntity _datEntSetL) {
-                        _datEntSetL.getEntityData().set(BalloonRatEntity.DATA_sit, false);
-                    }
-
-                    if (entity instanceof BalloonRatEntity) {
-                        ((BalloonRatEntity)entity).setAnimation("sit_rise");
-                    }
-                } else if (entity instanceof BalloonRatEntity _datEntSetL) {
-                    _datEntSetL.getEntityData().set(BalloonRatEntity.DATA_sit, true);
+                } else if (entity instanceof BalloonRatEntity rat && rat.getEntityData().get(BalloonRatEntity.DATA_sit)) {
+                    rat.getEntityData().set(BalloonRatEntity.DATA_sit, false);
+                    rat.setAnimation("sit_rise");
+                    rat.animationprocedure = "sit_rise";
+                } else if (entity instanceof BalloonRatEntity rat) {
+                    rat.getEntityData().set(BalloonRatEntity.DATA_sit, true);
+                    rat.setAnimation("sit");
+                    rat.animationprocedure = "sit";
+                    rat.getNavigation().stop();
+                    rat.setDeltaMovement(0.0, rat.getDeltaMovement().y, 0.0);
                 }
             }
         }

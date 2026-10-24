@@ -235,14 +235,9 @@ public class AncientSkeletonEntity extends PathfinderMob implements GeoEntity {
     private PlayState procedurePredicate(AnimationState event) {
         if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState() == State.STOPPED
             || !this.animationprocedure.equals(this.prevAnim) && !this.animationprocedure.equals("empty")) {
-            if (!this.animationprocedure.equals(this.prevAnim)) {
-                event.getController().forceAnimationReset();
-            }
-
             event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
             if (event.getController().getAnimationState() == State.STOPPED) {
                 this.animationprocedure = "empty";
-                event.getController().forceAnimationReset();
             }
         } else if (this.animationprocedure.equals("empty")) {
             this.prevAnim = "empty";

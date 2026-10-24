@@ -95,7 +95,7 @@ public class ShriekbombProjectileProjectileHitsBlockProcedure {
                         && !(entityiterator instanceof RotSplashEntity)
                         && !(entityiterator instanceof IroballEntity)
                         && entityiterator instanceof Mob _entity) {
-                        _entity.getNavigation().moveTo(x, y, z, 2.0);
+                        _entity.getNavigation().moveTo(x, y, z, 1.0);
                     }
                 }
             } else {

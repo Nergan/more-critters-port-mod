@@ -5,7 +5,6 @@ import com.morecritters.mod.entity.MightshroomEchoEntity;
 import com.morecritters.mod.entity.ShockCubeEntity;
 import com.morecritters.mod.entity.SmallHealEchoEntity;
 import com.morecritters.mod.entity.TesterShriekEntity;
-import net.minecraft.commands.arguments.EntityAnchorArgument.Anchor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 
@@ -14,7 +13,6 @@ public class EchoOnEntityTickUpdateProcedure {
         if (entity != null) {
             double rate = 0.0;
             entity.setDeltaMovement(new Vec3(0.0, 0.0, 0.0));
-            entity.lookAt(Anchor.EYES, new Vec3(x, y, z));
             entity.getPersistentData().putDouble("timer", entity.getPersistentData().getDouble("timer") - 1.0);
             if (entity.getPersistentData().getDouble("timer") < 0.0 && !entity.level().isClientSide()) {
                 entity.discard();

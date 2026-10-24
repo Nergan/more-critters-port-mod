@@ -9,7 +9,6 @@ import com.morecritters.mod.init.MoreCrittersModEntities;
 import com.morecritters.mod.init.MoreCrittersModMobEffects;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.arguments.EntityAnchorArgument.Anchor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -280,12 +279,15 @@ public class MightshroomOnEntityTickUpdateProcedure {
                                 20,
                                 () -> {
                                     Vec3 _centerx = new Vec3(x, y, z);
+                                    Entity peckTarget = entity instanceof Mob mob ? mob.getTarget() : null;
+                                    boolean struck = false;
 
                                     for (Entity entityiteratorx : world.getEntitiesOfClass(Entity.class, new AABB(_centerx, _centerx).inflate(3.0), e -> true)
                                         .stream()
                                         .sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_centerx)))
                                         .toList()) {
-                                        if (entityiteratorx == (entity instanceof Mob _mobEnt ? _mobEnt.getTarget() : null)) {
+                                        if (entityiteratorx == peckTarget) {
+                                            struck = true;
                                             if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
                                                 _entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10, 30, false, false));
                                             }
@@ -321,54 +323,53 @@ public class MightshroomOnEntityTickUpdateProcedure {
                                                 }
                                             }
 
-                                            (entity instanceof Mob _mobEnt ? _mobEnt.getTarget() : null)
-                                                .hurt(
-                                                    new DamageSource(
-                                                        world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)
-                                                    ),
-                                                    5.0F
-                                                );
-                                        } else {
-                                            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
-                                                _entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 80, 30, false, false));
-                                            }
-
-                                            if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
-                                                _entity.addEffect(new MobEffectInstance(MoreCrittersModMobEffects.STUNNED, 80, 30, false, false));
-                                            }
-
-                                            if (entity instanceof MightshroomEntity) {
-                                                ((MightshroomEntity)entity).setAnimation("peck_fail");
-                                            }
-
-                                            if (world instanceof Level _level) {
-                                                if (!_level.isClientSide()) {
-                                                    _level.playSound(
-                                                        (Player)null,
-                                                        BlockPos.containing(x, y, z),
-                                                        BuiltInRegistries.SOUND_EVENT
-                                                            .get(ResourceLocation.parse("more_critters:entity.mightshroom.peck_miss")),
-                                                        SoundSource.HOSTILE,
-                                                        1.0F,
-                                                        1.0F
-                                                    );
-                                                } else {
-                                                    _level.playLocalSound(
-                                                        x,
-                                                        y,
-                                                        z,
-                                                        BuiltInRegistries.SOUND_EVENT
-                                                            .get(ResourceLocation.parse("more_critters:entity.mightshroom.peck_miss")),
-                                                        SoundSource.HOSTILE,
-                                                        1.0F,
-                                                        1.0F,
-                                                        false
-                                                    );
-                                                }
-                                            }
-
-                                            MoreCritters.queueServerWork(80, () -> entity.getPersistentData().putBoolean("stun", false));
+                                            peckTarget.hurt(
+                                                new DamageSource(
+                                                    world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)
+                                                ),
+                                                5.0F
+                                            );
                                         }
+                                    }
+
+                                    if (!struck) {
+                                        if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
+                                            _entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 80, 30, false, false));
+                                        }
+
+                                        if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
+                                            _entity.addEffect(new MobEffectInstance(MoreCrittersModMobEffects.STUNNED, 80, 30, false, false));
+                                        }
+
+                                        if (entity instanceof MightshroomEntity) {
+                                            ((MightshroomEntity)entity).setAnimation("peck_fail");
+                                        }
+
+                                        if (world instanceof Level _level) {
+                                            if (!_level.isClientSide()) {
+                                                _level.playSound(
+                                                    (Player)null,
+                                                    BlockPos.containing(x, y, z),
+                                                    BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:entity.mightshroom.peck_miss")),
+                                                    SoundSource.HOSTILE,
+                                                    1.0F,
+                                                    1.0F
+                                                );
+                                            } else {
+                                                _level.playLocalSound(
+                                                    x,
+                                                    y,
+                                                    z,
+                                                    BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("more_critters:entity.mightshroom.peck_miss")),
+                                                    SoundSource.HOSTILE,
+                                                    1.0F,
+                                                    1.0F,
+                                                    false
+                                                );
+                                            }
+                                        }
+
+                                        MoreCritters.queueServerWork(80, () -> entity.getPersistentData().putBoolean("stun", false));
                                     }
                                 }
                             );
@@ -409,15 +410,20 @@ public class MightshroomOnEntityTickUpdateProcedure {
                         MoreCritters.queueServerWork(
                             10,
                             () -> {
-                                entity.lookAt(
-                                    Anchor.EYES,
-                                    new Vec3(
-                                        (entity instanceof Mob _mobEnt ? _mobEnt.getTarget() : null).getX(),
-                                        (entity instanceof Mob _mobEnt ? _mobEnt.getTarget() : null).getY(),
-                                        (entity instanceof Mob _mobEnt ? _mobEnt.getTarget() : null).getZ()
-                                    )
-                                );
-                                entity.setDeltaMovement(new Vec3(entity.getLookAngle().x * 2.0, 1.5, entity.getLookAngle().z * 2.0));
+                                LivingEntity leapTarget = entity instanceof Mob mob ? mob.getTarget() : null;
+                                if (leapTarget != null) {
+                                    double dx = leapTarget.getX() - entity.getX();
+                                    double dz = leapTarget.getZ() - entity.getZ();
+                                    double horiz = Math.sqrt(dx * dx + dz * dz);
+                                    float yaw = (float)(Math.atan2(dz, dx) * (180.0 / Math.PI)) - 90.0F;
+                                    entity.setYRot(yaw);
+                                    entity.setYBodyRot(yaw);
+                                    entity.setYHeadRot(yaw);
+                                    double speed = horiz < 1.0E-4 ? 0.0 : Math.min(0.9, horiz / 14.0);
+                                    entity.setDeltaMovement(
+                                        horiz < 1.0E-4 ? 0.0 : dx / horiz * speed, 0.85, horiz < 1.0E-4 ? 0.0 : dz / horiz * speed
+                                    );
+                                }
                                 if (world instanceof Level _level) {
                                     if (!_level.isClientSide()) {
                                         _level.playSound(

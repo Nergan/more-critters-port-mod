@@ -3,11 +3,9 @@ package com.morecritters.mod.procedures;
 import net.minecraft.core.registries.BuiltInRegistries;
 import com.morecritters.mod.entity.MoriRootsEntity;
 import com.morecritters.mod.init.MoreCrittersModEnchantments;
+import com.morecritters.mod.init.MoreCrittersModEntities;
 import com.morecritters.mod.init.MoreCrittersModMobEffects;
-import net.minecraft.commands.CommandSource;
-import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
@@ -16,12 +14,11 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.phys.Vec3;
 
 public class FungalStaffLivingEntityIsHitWithToolProcedure {
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, ItemStack itemstack) {
@@ -70,15 +67,11 @@ public class FungalStaffLivingEntityIsHitWithToolProcedure {
                     }
 
                     if (world instanceof ServerLevel _level) {
-                        _level.getServer()
-                            .getCommands()
-                            .performPrefixedCommand(
-                                new CommandSourceStack(
-                                        CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null
-                                    )
-                                    .withSuppressedOutput(),
-                                "/summon more_critters:mori_roots"
-                            );
+                        Entity roots = MoreCrittersModEntities.MORI_ROOTS.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+                        if (roots != null) {
+                            roots.setDeltaMovement(0.0, 0.0, 0.0);
+                            roots.getPersistentData().putString("staff_user", sourceentity.getStringUUID());
+                        }
                     }
 
                     if (world instanceof Level _level) {

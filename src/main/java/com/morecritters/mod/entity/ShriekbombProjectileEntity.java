@@ -7,6 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import com.morecritters.mod.init.MoreCrittersModEntities;
 import com.morecritters.mod.init.MoreCrittersModItems;
 import com.morecritters.mod.procedures.ShriekbombProjectileProjectileHitsBlockProcedure;
+import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -83,9 +84,8 @@ public class ShriekbombProjectileEntity extends AbstractArrow implements ItemSup
     @Override
     public void onHitBlock(BlockHitResult blockHitResult) {
         super.onHitBlock(blockHitResult);
-        ShriekbombProjectileProjectileHitsBlockProcedure.execute(
-            this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ(), this.getOwner()
-        );
+        BlockPos open = blockHitResult.getBlockPos().relative(blockHitResult.getDirection());
+        ShriekbombProjectileProjectileHitsBlockProcedure.execute(this.level(), open.getX() + 0.5, open.getY(), open.getZ() + 0.5, this.getOwner());
     }
 
     @Override
