@@ -27,3 +27,12 @@ The `mod_id` is already `more_critters`. Do not rename it. Generated Java become
 Search GitHub before writing a replacement or decompiling. Commit and push only when the owner asks. The player downloads the GitHub Release, not a jar copied into Prism.
 
 Before calling the mod done, from this directory: build, run the client until the main menu, run the local server until it is ready. A jar that only compiled is not done.
+
+## Local tools
+
+Kidou and Mikchan CDN are local tools of this workshop. Searching the internet for them is pointless: there is no public documentation. Kidou's source is the spec inside `D:\DATA\soft\code\projects\minecraft\modpacks\Kidou-1.1.4-release.jar` and `D:\DATA\soft\code\projects\minecraft\modpacks\AGENTS.md`. Mikchan CDN's source is https://cdn.mikchan.net/ai/SKILL.md and `GET https://cdn.mikchan.net/version`.
+
+## Testing a mod or pack
+
+Work on a mod or a pack is done only after tests, a local server run, and a local client run. A jar that only compiled is not done.
+
