@@ -36,3 +36,7 @@ Kidou and Mikchan CDN are local tools of this workshop. Searching the internet f
 
 Work on a mod or a pack is done only after tests, a local server run, and a local client run. A jar that only compiled is not done.
 
+
+## Modrinth
+
+На Modrinth у каждой пары версии Minecraft и загрузчика одна версия: самая новая. Релиз снимает прежние версии этого слота и ставит на их место текущий jar.

@@ -1,0 +1,25 @@
+name: Collapse Modrinth versions
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  collapse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Keep one version per Minecraft version and loader
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${MODRINTH_TOKEN}" ]]; then
+            echo "MODRINTH_TOKEN is empty."
+            exit 1
+          fi
+          python3 .github/scripts/replace-modrinth-versions.py --collapse more-critters-port

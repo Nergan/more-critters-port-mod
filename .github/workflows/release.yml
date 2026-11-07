@@ -142,7 +142,7 @@ jobs:
           set -euo pipefail
           python3 .github/scripts/replace-modrinth-versions.py \
             more-critters-port \
-            "${{ steps.versions.outputs.mod_version }}"
+            --slot "${{ steps.versions.outputs.mod_version }}" neoforge "${{ steps.versions.outputs.minecraft_version }}"
 
       - name: Publish Modrinth
         if: steps.modrinth_token.outputs.present == 'true'
