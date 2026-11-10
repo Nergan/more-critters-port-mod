@@ -40,3 +40,11 @@ Work on a mod or a pack is done only after tests, a local server run, and a loca
 ## Modrinth
 
 На Modrinth у каждой пары версии Minecraft и загрузчика одна версия: самая новая. Релиз снимает прежние версии этого слота и ставит на их место текущий jar.
+
+## Craft Anything
+
+[Craft Anything](https://github.com/storytold/craft-anything) is an early alpha. It inspects how someone else's program, site, or game is built, and it builds a new version only when the owner separately asks for that. An agent uses `craft-anything-cli`; `craft-anything-cli mcp` exposes the same tools. If the command is missing, do not install it in the middle of a task and do not open the foreign file instead.
+
+Clean room is the default: source, files, and page source stay closed. It reports only what is visible: a picture, text, measurements, colors, fonts, and menus that were opened. Deep mode is `--deep`. It reads code and files with its own decoders, and with Ghidra when that is installed. It is not an operating-system sandbox and it does not bypass protection, a login, or anti-cheat. Point it only at a target the owner is allowed to examine. Do not copy logos, photos, or someone else's text into the repository. A result is evidence with a confidence and a limit, not a replacement for our code. A new build goes to `Documents/Craft Anything` unless the owner asked for a build and the command has `--project-folder` on this repository and `--existing edit`. Installing dependencies runs package code; do not choose "always allow" for `npm`. Website checks at three widths work today. Behavior checks for programs and games are still partial. Status is `docs/STATUS.md` in that repository.
+
+This is the NeoForge 1.21.1 port. Search for an existing fork before any study. Deep mode stays off unless the owner explicitly asks and the license allows reading the jar. Do not paste decompiler output into the tree and do not add a Fabric build. A clean-room look is only for visible behavior the owner asked to compare; the change still lands in this source.
