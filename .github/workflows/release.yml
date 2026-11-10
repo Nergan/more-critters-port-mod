@@ -22,6 +22,7 @@ permissions:
 
 jobs:
   release:
+    if: ${{ github.server_url == 'https://github.com' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
